@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Find Your Next Flix — SBC</title>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root { --navy:#0f1c2e; --pink:#e0218a; --yellow:#f5c744; --cream:#f5ecd7; --teal:#00b4a6; }
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--navy) url(noise.png);color:var(--cream);font-family:'Inter',sans-serif}
+.wrap{max-width:1100px;margin:0 auto;padding:30px 28px 50px}
+nav{display:flex;gap:22px;justify-content:center;padding:18px 0;font-weight:800;flex-wrap:wrap}
+nav a{color:var(--cream);text-decoration:none;font-size:15px;letter-spacing:.5px}
+nav a:hover,nav a.on{color:var(--yellow)}
+h1{font-family:'Alfa Slab One',serif;font-size:44px;color:var(--yellow);text-shadow:4px 4px 0 #000;transform:rotate(-1.5deg);text-align:center;margin:14px 0 6px}
+.tag{text-align:center;color:var(--teal);font-style:italic;margin-bottom:24px}
+.search{display:block;width:100%;max-width:560px;margin:0 auto 30px;padding:13px 18px;font-size:16px;border-radius:12px;border:2px solid var(--teal);background:rgba(0,0,0,.35);color:var(--cream)}
+h2{font-family:'Alfa Slab One',serif;font-size:26px;color:var(--pink);text-shadow:3px 3px 0 #000;margin:34px 0 14px;transform:rotate(-1deg)}
+h2 span{color:var(--yellow)}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.fcard{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:13px 15px}
+.ft{font-weight:800;font-size:15.5px}
+.fm{font-size:12.5px;color:#c9c2b4;margin:3px 0 7px}
+.chips{display:flex;flex-wrap:wrap;gap:5px}
+.chip{font-size:10.5px;font-weight:700;background:rgba(0,180,166,.18);border:1px solid var(--teal);color:var(--teal);border-radius:20px;padding:2px 8px}
+.chip.dim{border-color:#666;color:#999;background:rgba(255,255,255,.05)}
+.cols{columns:3 240px;column-gap:26px;list-style:none}
+.cols li{font-size:14px;padding:4px 0;break-inside:avoid;border-bottom:1px dotted rgba(255,255,255,.12)}
+.note{font-size:13px;color:#c9c2b4;font-style:italic;margin-top:10px}
+footer{text-align:center;margin-top:44px;font-size:13px;color:#c9c2b4}
+</style></head><body><div class="wrap">
+<nav><a href="index.html">📺 Channel Guide</a><a class="on" href="flix.html">🍿 Find Your Next Flix</a><a href="access.html">🔒 How to Watch</a></nav>
+<h1>Find Your Next Flix</h1>
+<div class="tag">Everything on SBC — and everything on its way.</div>
+<input class="search" id="q" placeholder="Search shows &amp; movies…" oninput="flt()">
+<h2>TV <span>Shows</span> <small style="font-size:14px;color:#c9c2b4">— watch on demand, or catch them on their channels</small></h2>
+<div class="fgrid" id="shows">
+<div class="fcard" data-t="he-man and the masters of the universe ">
+  <div class="ft">He-Man and the Masters of the Universe</div>
+  <div class="fm">1983 · 130 episodes</div>
+  <div class="chips"><span class="chip dim">library only</span></div>
+</div>
+<div class="fcard" data-t="that '70s show savage at nite">
+  <div class="ft">That '70s Show</div>
+  <div class="fm">1998 · 203 episodes</div>
+  <div class="chips"><span class="chip">Savage at Nite</span></div>
+</div>
+<div class="fcard" data-t="beverly hills, 90210 taba tv prime time the peach pit">
+  <div class="ft">Beverly Hills, 90210</div>
+  <div class="fm">1990 · 277 episodes</div>
+  <div class="chips"><span class="chip">Taba TV</span><span class="chip">Prime Time</span><span class="chip">The Peach Pit</span></div>
+</div>
+<div class="fcard" data-t="the fresh prince of bel-air savage at nite taba tv prime time tgif (fridays) bel-air">
+  <div class="ft">The Fresh Prince of Bel-Air</div>
+  <div class="fm">1990 · 140 episodes</div>
+  <div class="chips"><span class="chip">Savage at Nite</span><span class="chip">Taba TV</span><span class="chip">Prime Time</span><span class="chip">TGIF (Fridays)</span><span class="chip">Bel-Air</span></div>
+</div>
+<div class="fcard" data-t="glee y2k the jukebox">
+  <div class="ft">Glee</div>
+  <div class="fm">2009 · 22 episodes</div>
+  <div class="chips"><span class="chip">Y2K</span><span class="chip">The Jukebox</span></div>
+</div>
+<div class="fcard" data-t="the goldbergs (2013) savage at nite y2k tgif (fridays)">
+  <div class="ft">The Goldbergs (2013)</div>
+  <div class="fm">2013 · 71 episodes</div>
+  <div class="chips"><span class="chip">Savage at Nite</span><span class="chip">Y2K</span><span class="chip">TGIF (Fridays)</span></div>
+</div>
+<div class="fcard" data-t="in living color prime time late nite">
+  <div class="ft">In Living Color</div>
+  <div class="fm">1990 · 66 episodes</div>
+  <div class="chips"><span class="chip">Prime Time</span><span class="chip">Late Nite</span></div>
+</div>
+<div class="fcard" data-t="jem and the holograms taba tv saturday morning i ♥ 80s">
+  <div class="ft">Jem and the Holograms</div>
+  <div class="fm">1985 · 41 episodes</div>
+  <div class="chips"><span class="chip">Taba TV</span><span class="chip">Saturday Morning</span><span class="chip">I ♥ 80s</span></div>
+</div>
+<div class="fcard" data-t="macho man the randy savage story ">
+  <div class="ft">Macho Man the Randy Savage Story</div>
+  <div class="fm">2014 · 1 episodes</div>
+  <div class="chips"><span class="chip dim">library only</span></div>
+</div>
+<div class="fcard" data-t="teenage mutant ninja turtles saturday morning i ♥ 80s">
+  <div class="ft">Teenage Mutant Ninja Turtles</div>
+  <div class="fm">1987 · 157 episodes</div>
+  <div class="chips"><span class="chip">Saturday Morning</span><span class="chip">I ♥ 80s</span></div>
+</div>
+<div class="fcard" data-t="pee-wee's playhouse saturday morning i ♥ 80s">
+  <div class="ft">Pee-wee's Playhouse</div>
+  <div class="fm">1986 · 48 episodes</div>
+  <div class="chips"><span class="chip">Saturday Morning</span><span class="chip">I ♥ 80s</span></div>
+</div>
+<div class="fcard" data-t="power rangers saturday morning">
+  <div class="ft">Power Rangers</div>
+  <div class="fm">1993 · 145 episodes</div>
+  <div class="chips"><span class="chip">Saturday Morning</span></div>
+</div>
+<div class="fcard" data-t="quantum leap the fifth dimension">
+  <div class="ft">Quantum Leap</div>
+  <div class="fm">1989 · 96 episodes</div>
+  <div class="chips"><span class="chip">The Fifth Dimension</span></div>
+</div>
+<div class="fcard" data-t="raising hope savage at nite y2k tgif (fridays)">
+  <div class="ft">Raising Hope</div>
+  <div class="fm">2010 · 47 episodes</div>
+  <div class="chips"><span class="chip">Savage at Nite</span><span class="chip">Y2K</span><span class="chip">TGIF (Fridays)</span></div>
+</div>
+<div class="fcard" data-t="robot chicken late nite">
+  <div class="ft">Robot Chicken</div>
+  <div class="fm">2005 · 102 episodes</div>
+  <div class="chips"><span class="chip">Late Nite</span></div>
+</div>
+<div class="fcard" data-t="saturday night live groovy tv late nite">
+  <div class="ft">Saturday Night Live</div>
+  <div class="fm">1975 · 24 episodes</div>
+  <div class="chips"><span class="chip">Groovy TV</span><span class="chip">Late Nite</span></div>
+</div>
+<div class="fcard" data-t="saved by the bell savage at nite prime time tgif (fridays)">
+  <div class="ft">Saved by the Bell</div>
+  <div class="fm">1989 · 78 episodes</div>
+  <div class="chips"><span class="chip">Savage at Nite</span><span class="chip">Prime Time</span><span class="chip">TGIF (Fridays)</span></div>
+</div>
+<div class="fcard" data-t="schitt's creek y2k">
+  <div class="ft">Schitt's Creek</div>
+  <div class="fm">2015 · 80 episodes</div>
+  <div class="chips"><span class="chip">Y2K</span></div>
+</div>
+<div class="fcard" data-t="sex and the city prime time">
+  <div class="ft">Sex and the City</div>
+  <div class="fm">1998 · 95 episodes</div>
+  <div class="chips"><span class="chip">Prime Time</span></div>
+</div>
+<div class="fcard" data-t="the twilight zone the fifth dimension the silver screen">
+  <div class="ft">The Twilight Zone</div>
+  <div class="fm">1959 · 156 episodes</div>
+  <div class="chips"><span class="chip">The Fifth Dimension</span><span class="chip">The Silver Screen</span></div>
+</div>
+<div class="fcard" data-t="the wonder years savage at nite taba tv i ♥ 80s">
+  <div class="ft">The Wonder Years</div>
+  <div class="fm">1988 · 116 episodes</div>
+  <div class="chips"><span class="chip">Savage at Nite</span><span class="chip">Taba TV</span><span class="chip">I ♥ 80s</span></div>
+</div>
+</div>
+<h2>Movies <span>Now</span></h2>
+<ul class="cols" id="mnow">
+<li data-t="the secret of the sword">The Secret of the Sword</li>
+</ul>
+<h2>Coming <span>Soon</span> <small style="font-size:14px;color:#c9c2b4">— on the shelf, headed for the screen</small></h2>
+<h2 style="font-size:19px;margin-top:18px">🎬 Movies (212)</h2>
+<ul class="cols" id="csm">
+<li data-t="28 weeks later (2007)">28 Weeks Later (2007)</li>
+<li data-t="300 / troy (director's cut) / alexander revisited: the final cut (triple feature) (2012) (blu-ray)">300 / Troy (Director's Cut) / Alexander Revisited: The Final Cut (Triple Feature) (2012) (Blu-ray)</li>
+<li data-t="3: the dale earnhardt story (2004)">3: The Dale Earnhardt Story (2004)</li>
+<li data-t="a beautiful mind (2001)">A Beautiful Mind (2001)</li>
+<li data-t="a knight's tale (2001)">A Knight's Tale (2001)</li>
+<li data-t="a star is born (2018) (blu-ray)">A Star Is Born (2018) (Blu-ray)</li>
+<li data-t="abraham lincoln: vampire hunter (2012) (blu-ray)">Abraham Lincoln: Vampire Hunter (2012) (Blu-ray)</li>
+<li data-t="american beauty (1999)">American Beauty (1999)</li>
+<li data-t="anchorman 2: the legend continues (2013) (blu-ray)">Anchorman 2: The Legend Continues (2013) (Blu-ray)</li>
+<li data-t="anchorman: the legend of ron burgundy (2004)">Anchorman: The Legend of Ron Burgundy (2004)</li>
+<li data-t="anger management (2003)">Anger Management (2003)</li>
+<li data-t="annabelle (2014)">Annabelle (2014)</li>
+<li data-t="annabelle: creation (2017) (blu-ray)">Annabelle: Creation (2017) (Blu-ray)</li>
+<li data-t="austin powers triple feature (international man of mystery / the spy who shagged me / goldmember) (2012) (blu-ray)">Austin Powers Triple Feature (International Man of Mystery / The Spy Who Shagged Me / Goldmember) (2012) (Blu-ray)</li>
+<li data-t="baby mama (2008)">Baby Mama (2008)</li>
+<li data-t="baby mama (exclusive bonus disc) (2008)">Baby Mama (Exclusive Bonus Disc) (2008)</li>
+<li data-t="back to the future: the complete trilogy (1985)">Back to the Future: The Complete Trilogy (1985)</li>
+<li data-t="bad boys (1995)">Bad Boys (1995)</li>
+<li data-t="bad boys ii (2003)">Bad Boys II (2003)</li>
+<li data-t="batman / batman returns (double feature) (1989)">Batman / Batman Returns (Double Feature) (1989)</li>
+<li data-t="batman begins (2005)">Batman Begins (2005)</li>
+<li data-t="batman vs. two-face (2017)">Batman vs. Two-Face (2017)</li>
+<li data-t="batman: return of the caped crusaders (2016)">Batman: Return of the Caped Crusaders (2016)</li>
+<li data-t="because i said so (2007)">Because I Said So (2007)</li>
+<li data-t="beetlejuice (1988) (blu-ray)">Beetlejuice (1988) (Blu-ray)</li>
+<li data-t="behind enemy lines (2001)">Behind Enemy Lines (2001)</li>
+<li data-t="beowulf (director's cut) (2007)">Beowulf (Director's Cut) (2007)</li>
+<li data-t="black hawk down (2001)">Black Hawk Down (2001)</li>
+<li data-t="blow (2001)">Blow (2001)</li>
+<li data-t="blue collar comedy tour: the movie (2003)">Blue Collar Comedy Tour: The Movie (2003)</li>
+<li data-t="bohemian rhapsody (2018) (blu-ray)">Bohemian Rhapsody (2018) (Blu-ray)</li>
+<li data-t="braveheart (1995)">Braveheart (1995)</li>
+<li data-t="bridesmaids (2011) (blu-ray)">Bridesmaids (2011) (Blu-ray)</li>
+<li data-t="celtic pride (1996)">Celtic Pride (1996)</li>
+<li data-t="cloudy with a chance of meatballs 2 (2013) (blu-ray)">Cloudy with a Chance of Meatballs 2 (2013) (Blu-ray)</li>
+<li data-t="corrina, corrina (1994)">Corrina, Corrina (1994)</li>
+<li data-t="daredevil (2003)">Daredevil (2003)</li>
+<li data-t="dawn of the dead (2004)">Dawn of the Dead (2004)</li>
+<li data-t="dawn of the planet of the apes (2014) (blu-ray)">Dawn of the Planet of the Apes (2014) (Blu-ray)</li>
+<li data-t="dead silence (2007)">Dead Silence (2007)</li>
+<li data-t="definitely, maybe (2008)">Definitely, Maybe (2008)</li>
+<li data-t="dirty dancing (1987)">Dirty Dancing (1987)</li>
+<li data-t="dirty dancing (twentieth anniversary edition) (1987) (blu-ray)">Dirty Dancing (Twentieth Anniversary Edition) (1987) (Blu-ray)</li>
+<li data-t="dodgeball: a true underdog story (2004)">DodgeBall: A True Underdog Story (2004)</li>
+<li data-t="drillbit taylor (extended survival edition) (2008)">Drillbit Taylor (Extended Survival Edition) (2008)</li>
+<li data-t="due date (2010)">Due Date (2010)</li>
+<li data-t="dumb and dumber (1994)">Dumb and Dumber (1994)</li>
+<li data-t="dumb and dumber to (2014) (blu-ray)">Dumb and Dumber To (2014) (Blu-ray)</li>
+<li data-t="elvis (2022) (blu-ray)">Elvis (2022) (Blu-ray)</li>
+<li data-t="enemy of the state (1998)">Enemy of the State (1998)</li>
+<li data-t="father of the bride (15th anniversary special edition) (1991)">Father of the Bride (15th Anniversary Special Edition) (1991)</li>
+<li data-t="flags of our fathers (2006)">Flags of Our Fathers (2006)</li>
+<li data-t="forrest gump (1994)">Forrest Gump (1994)</li>
+<li data-t="fracture (2007)">Fracture (2007)</li>
+<li data-t="frankenstein (75th anniversary edition, universal legacy series) (1931)">Frankenstein (75th Anniversary Edition, Universal Legacy Series) (1931)</li>
+<li data-t="friends with benefits (2011) (blu-ray)">Friends with Benefits (2011) (Blu-ray)</li>
+<li data-t="fun with dick and jane (2005)">Fun with Dick and Jane (2005)</li>
+<li data-t="george a. romero's dawn of the dead (1978)">George A. Romero's Dawn of the Dead (1978)</li>
+<li data-t="get out (2017)">Get Out (2017)</li>
+<li data-t="ghost (special collector's edition) (1990)">Ghost (Special Collector's Edition) (1990)</li>
+<li data-t="ghostbusters 1 &amp; 2 (1984)">Ghostbusters 1 &amp; 2 (1984)</li>
+<li data-t="ghostbusters: afterlife (2021) (blu-ray)">Ghostbusters: Afterlife (2021) (Blu-ray)</li>
+<li data-t="ghostbusters: afterlife / ghostbusters: frozen empire 2-movie collection (2024)">Ghostbusters: Afterlife / Ghostbusters: Frozen Empire 2-Movie Collection (2024)</li>
+<li data-t="gladiator (2000)">Gladiator (2000)</li>
+<li data-t="godzilla (2014) (blu-ray)">Godzilla (2014) (Blu-ray)</li>
+<li data-t="gone with the wind (1939) — blu-ray">Gone with the Wind (1939) — BLU-RAY</li>
+<li data-t="grease (rockin' rydell edition) (1978)">Grease (Rockin' Rydell Edition) (1978)</li>
+<li data-t="grease live! (2016)">Grease Live! (2016)</li>
+<li data-t="grudge match (2013)">Grudge Match (2013)</li>
+<li data-t="guardians of the galaxy (2014) (blu-ray)">Guardians of the Galaxy (2014) (Blu-ray)</li>
+<li data-t="hercules (2014) (blu-ray)">Hercules (2014) (Blu-ray)</li>
+<li data-t="hitch (2005)">Hitch (2005)</li>
+<li data-t="hope floats (1998) (blu-ray)">Hope Floats (1998) (Blu-ray)</li>
+<li data-t="i am sam (2001)">I Am Sam (2001)</li>
+<li data-t="i, robot (2004) (blu-ray)">I, Robot (2004) (Blu-ray)</li>
+<li data-t="in time (2011) (blu-ray)">In Time (2011) (Blu-ray)</li>
+<li data-t="inception (2010) (blu-ray)">Inception (2010) (Blu-ray)</li>
+<li data-t="indiana jones and the last crusade (1989)">Indiana Jones and the Last Crusade (1989)</li>
+<li data-t="indiana jones and the raiders of the lost ark (1981)">Indiana Jones and the Raiders of the Lost Ark (1981)</li>
+<li data-t="indiana jones and the temple of doom (1984)">Indiana Jones and the Temple of Doom (1984)</li>
+<li data-t="indiana jones: bonus material (2003)">Indiana Jones: Bonus Material (2003)</li>
+<li data-t="interview with the vampire: the vampire chronicles (1994)">Interview with the Vampire: The Vampire Chronicles (1994)</li>
+<li data-t="jackass presents: bad grandpa (2013) (blu-ray)">Jackass Presents: Bad Grandpa (2013) (Blu-ray)</li>
+<li data-t="jackass: the movie (2002)">Jackass: The Movie (2002)</li>
+<li data-t="jeff foxworthy: you might be a redneck if... &amp; check your neck (2004)">Jeff Foxworthy: You Might Be A Redneck If... &amp; Check Your Neck (2004)</li>
+<li data-t="joker (2019) (blu-ray)">Joker (2019) (Blu-ray)</li>
+<li data-t="jurassic park (1993) (blu-ray)">Jurassic Park (1993) (Blu-ray)</li>
+<li data-t="jurassic world (2015) (blu-ray)">Jurassic World (2015) (Blu-ray)</li>
+<li data-t="just friends (2005)">Just Friends (2005)</li>
+<li data-t="kingpin (1996)">Kingpin (1996)</li>
+<li data-t="madagascar (2005)">Madagascar (2005)</li>
+<li data-t="man of steel (2013) (blu-ray)">Man of Steel (2013) (Blu-ray)</li>
+<li data-t="maverick (1994)">Maverick (1994)</li>
+<li data-t="me, myself &amp; irene (2000)">Me, Myself &amp; Irene (2000)</li>
+<li data-t="mean girls (2004)">Mean Girls (2004)</li>
+<li data-t="meet the parents (2000)">Meet the Parents (2000)</li>
+<li data-t="men in black (1997)">Men in Black (1997)</li>
+<li data-t="men in black 3 (2012) (blu-ray)">Men in Black 3 (2012) (Blu-ray)</li>
+<li data-t="men in black ii (2002)">Men in Black II (2002)</li>
+<li data-t="mermaids (1990)">Mermaids (1990)</li>
+<li data-t="miracle (2004)">Miracle (2004)</li>
+<li data-t="monster-in-law (2005)">Monster-in-Law (2005)</li>
+<li data-t="mr. brooks (2007)">Mr. Brooks (2007)</li>
+<li data-t="mrs. doubtfire (behind-the-seams edition) (1993)">Mrs. Doubtfire (Behind-the-Seams Edition) (1993)</li>
+<li data-t="napoleon dynamite (2004)">Napoleon Dynamite (2004)</li>
+<li data-t="new year's eve (2011) (blu-ray)">New Year's Eve (2011) (Blu-ray)</li>
+<li data-t="night at the museum collection (2010) (blu-ray)">Night at the Museum Collection (2010) (Blu-ray)</li>
+<li data-t="night of the living dead (1968)">Night of the Living Dead (1968)</li>
+<li data-t="nitro circus: the movie (2012) (blu-ray)">Nitro Circus: The Movie (2012) (Blu-ray)</li>
+<li data-t="now and then (1995)">Now and Then (1995)</li>
+<li data-t="ocean's eleven (2001)">Ocean's Eleven (2001)</li>
+<li data-t="one hour photo (2002)">One Hour Photo (2002)</li>
+<li data-t="oz the great and powerful (2013) (blu-ray)">Oz the Great and Powerful (2013) (Blu-ray)</li>
+<li data-t="p.s. i love you (2007)">P.S. I Love You (2007)</li>
+<li data-t="pacific rim (2013) (blu-ray)">Pacific Rim (2013) (Blu-ray)</li>
+<li data-t="pearl harbor (2001)">Pearl Harbor (2001)</li>
+<li data-t="pirates of the caribbean: the curse of the black pearl (2003)">Pirates of the Caribbean: The Curse of the Black Pearl (2003)</li>
+<li data-t="pitch perfect (2012) (blu-ray)">Pitch Perfect (2012) (Blu-ray)</li>
+<li data-t="pitch perfect 2 (2015) (blu-ray)">Pitch Perfect 2 (2015) (Blu-ray)</li>
+<li data-t="puss in boots (2011)">Puss in Boots (2011)</li>
+<li data-t="puss in boots: the three diablos (2012)">Puss in Boots: The Three Diablos (2012)</li>
+<li data-t="red dragon (2002)">Red Dragon (2002)</li>
+<li data-t="resident evil (2002)">Resident Evil (2002)</li>
+<li data-t="rise of the planet of the apes (2011) (blu-ray)">Rise of the Planet of the Apes (2011) (Blu-ray)</li>
+<li data-t="robots (2005)">Robots (2005)</li>
+<li data-t="rocky: the undisputed collection (2009) (blu-ray)">Rocky: The Undisputed Collection (2009) (Blu-ray)</li>
+<li data-t="rogue one: a star wars story (2016)">Rogue One: A Star Wars Story (2016)</li>
+<li data-t="save the last dance (2001)">Save the Last Dance (2001)</li>
+<li data-t="saving private ryan (1998)">Saving Private Ryan (1998)</li>
+<li data-t="saw (2004)">Saw (2004)</li>
+<li data-t="saw ii (2005)">Saw II (2005)</li>
+<li data-t="saw iii (unrated edition) (2006)">Saw III (Unrated Edition) (2006)</li>
+<li data-t="saw iv (unrated director's cut) (2007)">Saw IV (Unrated Director's Cut) (2007)</li>
+<li data-t="saw v (2008)">Saw V (2008)</li>
+<li data-t="saw vi (2009)">Saw VI (2009)</li>
+<li data-t="saw: the final chapter (2010)">Saw: The Final Chapter (2010)</li>
+<li data-t="secret window (2004)">Secret Window (2004)</li>
+<li data-t="semi-pro (2008)">Semi-Pro (2008)</li>
+<li data-t="serendipity (2001)">Serendipity (2001)</li>
+<li data-t="shrek: the complete collection (2010) (blu-ray)">Shrek: The Complete Collection (2010) (Blu-ray)</li>
+<li data-t="sisters (unrated) (2015) (blu-ray)">Sisters (Unrated) (2015) (Blu-ray)</li>
+<li data-t="sleepless in seattle (1993)">Sleepless in Seattle (1993)</li>
+<li data-t="something's gotta give (2003)">Something's Gotta Give (2003)</li>
+<li data-t="spaceballs (1987)">Spaceballs (1987)</li>
+<li data-t="spider-man (2002)">Spider-Man (2002)</li>
+<li data-t="stand by me (1986)">Stand By Me (1986)</li>
+<li data-t="star wars: the complete saga (2011) (blu-ray)">Star Wars: The Complete Saga (2011) (Blu-ray)</li>
+<li data-t="step brothers (2008)">Step Brothers (2008)</li>
+<li data-t="superman returns (2006)">Superman Returns (2006)</li>
+<li data-t="talladega nights: the ballad of ricky bobby (2006)">Talladega Nights: The Ballad of Ricky Bobby (2006)</li>
+<li data-t="tammy (extended cut) (2014) (blu-ray)">Tammy (Extended Cut) (2014) (Blu-ray)</li>
+<li data-t="teenage mutant ninja turtles (2014) (blu-ray)">Teenage Mutant Ninja Turtles (2014) (Blu-ray)</li>
+<li data-t="teenage mutant ninja turtles triple feature (2012) (blu-ray)">Teenage Mutant Ninja Turtles Triple Feature (2012) (Blu-ray)</li>
+<li data-t="teenage mutant ninja turtles: out of the shadows (2016) (blu-ray)">Teenage Mutant Ninja Turtles: Out of the Shadows (2016) (Blu-ray)</li>
+<li data-t="the 40-year-old virgin (unrated) (2005)">The 40-Year-Old Virgin (Unrated) (2005)</li>
+<li data-t="the bone collector (1999)">The Bone Collector (1999)</li>
+<li data-t="the bourne identity (2002)">The Bourne Identity (2002)</li>
+<li data-t="the break-up (2006)">The Break-Up (2006)</li>
+<li data-t="the campaign (2012) (blu-ray)">The Campaign (2012) (Blu-ray)</li>
+<li data-t="the conjuring (2013)">The Conjuring (2013)</li>
+<li data-t="the dark knight (2008)">The Dark Knight (2008)</li>
+<li data-t="the first wives club (1996)">The First Wives Club (1996)</li>
+<li data-t="the gift (2015) (blu-ray)">The Gift (2015) (Blu-ray)</li>
+<li data-t="the greatest showman (2017) (blu-ray)">The Greatest Showman (2017) (Blu-ray)</li>
+<li data-t="the green mile (1999)">The Green Mile (1999)</li>
+<li data-t="the hangover (unrated) (2009) (blu-ray)">The Hangover (Unrated) (2009) (Blu-ray)</li>
+<li data-t="the hangover part ii (2011) (blu-ray)">The Hangover Part II (2011) (Blu-ray)</li>
+<li data-t="the jerk (25th/26th anniversary edition) (1979)">The Jerk (25th/26th Anniversary Edition) (1979)</li>
+<li data-t="the ladies man (2000)">The Ladies Man (2000)</li>
+<li data-t="the lego movie (2014) (blu-ray)">The Lego Movie (2014) (Blu-ray)</li>
+<li data-t="the lord of the rings (2003) (blu-ray)">The Lord of the Rings (2003) (Blu-ray)</li>
+<li data-t="the lord of the rings: the fellowship of the ring (2001) (blu-ray)">The Lord of the Rings: The Fellowship of the Ring (2001) (Blu-ray)</li>
+<li data-t="the lord of the rings: the two towers (2002)">The Lord of the Rings: The Two Towers (2002)</li>
+<li data-t="the mummy (collector's edition) (1999)">The Mummy (Collector's Edition) (1999)</li>
+<li data-t="the mummy (ultimate edition) (1999)">The Mummy (Ultimate Edition) (1999)</li>
+<li data-t="the mummy / the mummy returns (1999)">The Mummy / The Mummy Returns (1999)</li>
+<li data-t="the notebook (2004)">The Notebook (2004)</li>
+<li data-t="the omen (2006)">The Omen (2006)</li>
+<li data-t="the omen (collector's edition) (1976)">The Omen (Collector's Edition) (1976)</li>
+<li data-t="the other guys (2010) (blu-ray)">The Other Guys (2010) (Blu-ray)</li>
+<li data-t="the punisher (2004)">The Punisher (2004)</li>
+<li data-t="the pursuit of happyness (2006)">The Pursuit of Happyness (2006)</li>
+<li data-t="the quick and the dead (1995)">The Quick and the Dead (1995)</li>
+<li data-t="the ring (2002)">The Ring (2002)</li>
+<li data-t="the ring two (2005)">The Ring Two (2005)</li>
+<li data-t="the scorpion king (2002)">The Scorpion King (2002)</li>
+<li data-t="the silence of the lambs (1991)">The Silence of the Lambs (1991)</li>
+<li data-t="the simpsons movie (2007)">The Simpsons Movie (2007)</li>
+<li data-t="the sum of all fears (2002)">The Sum of All Fears (2002)</li>
+<li data-t="the super mario bros. movie (2023) (blu-ray)">The Super Mario Bros. Movie (2023) (Blu-ray)</li>
+<li data-t="the twilight saga: breaking dawn - part 1 (2011)">The Twilight Saga: Breaking Dawn - Part 1 (2011)</li>
+<li data-t="the twilight saga: breaking dawn - part 2 (2012)">The Twilight Saga: Breaking Dawn - Part 2 (2012)</li>
+<li data-t="the twilight saga: eclipse (2010)">The Twilight Saga: Eclipse (2010)</li>
+<li data-t="the twilight saga: new moon (2009)">The Twilight Saga: New Moon (2009)</li>
+<li data-t="the wizard of oz (1939) (blu-ray)">The Wizard of Oz (1939) (Blu-ray)</li>
+<li data-t="tombstone (1993)">Tombstone (1993)</li>
+<li data-t="top gun (1986) (blu-ray)">Top Gun (1986) (Blu-ray)</li>
+<li data-t="transformers: dark of the moon (2011) (blu-ray)">Transformers: Dark of the Moon (2011) (Blu-ray)</li>
+<li data-t="tropic thunder (director's cut) (2008)">Tropic Thunder (Director's Cut) (2008)</li>
+<li data-t="twilight (2008)">Twilight (2008)</li>
+<li data-t="unforgiven (1992)">Unforgiven (1992)</li>
+<li data-t="universal classic monsters: the essential collection (2012) (blu-ray)">Universal Classic Monsters: The Essential Collection (2012) (Blu-ray)</li>
+<li data-t="valentine's day (2010)">Valentine's Day (2010)</li>
+<li data-t="walk the line (2005)">Walk the Line (2005)</li>
+<li data-t="we were soldiers (2002)">We Were Soldiers (2002)</li>
+<li data-t="wicked: 2-film collection (2026) (blu-ray)">Wicked: 2-Film Collection (2026) (Blu-ray)</li>
+<li data-t="wing commander (1999)">Wing Commander (1999)</li>
+<li data-t="world war z (2013) (blu-ray)">World War Z (2013) (Blu-ray)</li>
+<li data-t="wreck-it ralph (2012) (blu-ray)">Wreck-It Ralph (2012) (Blu-ray)</li>
+<li data-t="you've got mail (1998)">You've Got Mail (1998)</li>
+<li data-t="young guns (1988)">Young Guns (1988)</li>
+<li data-t="young guns ii (1990)">Young Guns II (1990)</li>
+</ul>
+<h2 style="font-size:19px;margin-top:24px">📺 TV Sets (53)</h2>
+<ul class="cols" id="cst">
+<li data-t="alf (1986)">ALF (1986)</li>
+<li data-t="band of brothers (2001)">Band of Brothers (2001)</li>
+<li data-t="batman beyond: the complete series (2019)">Batman Beyond: The Complete Series (2019)</li>
+<li data-t="batman: the complete animated series - part 1 (2008)">Batman: The Complete Animated Series - Part 1 (2008)</li>
+<li data-t="batman: the complete animated series - part 2 (2008)">Batman: The Complete Animated Series - Part 2 (2008)</li>
+<li data-t="better call saul (2015)">Better Call Saul (2015)</li>
+<li data-t="breaking bad: the complete first season (2008) (blu-ray)">Breaking Bad: The Complete First Season (2008) (Blu-ray)</li>
+<li data-t="breaking bad: the complete fourth season (2011) (blu-ray)">Breaking Bad: The Complete Fourth Season (2011) (Blu-ray)</li>
+<li data-t="breaking bad: the complete second season (2009) (blu-ray)">Breaking Bad: The Complete Second Season (2009) (Blu-ray)</li>
+<li data-t="breaking bad: the complete third season (2010) (blu-ray)">Breaking Bad: The Complete Third Season (2010) (Blu-ray)</li>
+<li data-t="breaking bad: the fifth season (2012) (blu-ray)">Breaking Bad: The Fifth Season (2012) (Blu-ray)</li>
+<li data-t="breaking bad: the final season (2013) (blu-ray)">Breaking Bad: The Final Season (2013) (Blu-ray)</li>
+<li data-t="duck dynasty: the complete series (2017)">Duck Dynasty: The Complete Series (2017)</li>
+<li data-t="gilligan's island (1964)">Gilligan's Island (1964)</li>
+<li data-t="gilmore girls (2000)">Gilmore Girls (2000)</li>
+<li data-t="gumby's greatest adventures (2003)">Gumby's Greatest Adventures (2003)</li>
+<li data-t="happy days (1974)">Happy Days (1974)</li>
+<li data-t="king of the hill (1997)">King of the Hill (1997)</li>
+<li data-t="king of the hill (likely a season/complete set) (unknown)">King of the Hill (likely a season/complete set) (unknown)</li>
+<li data-t="king of the hill: the complete first season (2003)">King of the Hill: The Complete First Season (2003)</li>
+<li data-t="mad men (2007)">Mad Men (2007)</li>
+<li data-t="mad men s6">Mad Men S6</li>
+<li data-t="married... with children (1987)">Married... with Children (1987)</li>
+<li data-t="north and south: the complete collection (books one, two &amp; three) (1985)">North and South: The Complete Collection (Books One, Two &amp; Three) (1985)</li>
+<li data-t="saturday night live: the best of will ferrell (2002)">Saturday Night Live: The Best of Will Ferrell (2002)</li>
+<li data-t="saturday night live: the best of will ferrell - volume 2 (2004)">Saturday Night Live: The Best of Will Ferrell - Volume 2 (2004)</li>
+<li data-t="star wars: clone wars volume one (2005)">Star Wars: Clone Wars Volume One (2005)</li>
+<li data-t="survivor - borneo: the complete first season (2004)">Survivor - Borneo: The Complete First Season (2004)</li>
+<li data-t="the andy griffith show: the complete series (2007)">The Andy Griffith Show: The Complete Series (2007)</li>
+<li data-t="the brady bunch (1969)">The Brady Bunch (1969)</li>
+<li data-t="the girls next door: season one (2006)">The Girls Next Door: Season One (2006)</li>
+<li data-t="the girls next door: the complete series (2011)">The Girls Next Door: The Complete Series (2011)</li>
+<li data-t="the golden girls (1985)">The Golden Girls (1985)</li>
+<li data-t="the monkees: our favorite episodes (2008)">The Monkees: Our Favorite Episodes (2008)</li>
+<li data-t="the munsters (1964)">The Munsters (1964)</li>
+<li data-t="the oprah winfrey show: 20th anniversary collection (2005)">The Oprah Winfrey Show: 20th Anniversary Collection (2005)</li>
+<li data-t="the oprah winfrey show: 20th anniversary collection (oprah's angel network) (2005)">The Oprah Winfrey Show: 20th Anniversary Collection (Oprah's Angel Network) (2005)</li>
+<li data-t="the pacific (2010) (blu-ray)">The Pacific (2010) (Blu-ray)</li>
+<li data-t="the penguins' whacked-out adventure (2006)">The Penguins' Whacked-Out Adventure (2006)</li>
+<li data-t="the walking dead: the complete eighth season (2017) (blu-ray)">The Walking Dead: The Complete Eighth Season (2017) (Blu-ray)</li>
+<li data-t="the walking dead: the complete eleventh season (2021) (blu-ray)">The Walking Dead: The Complete Eleventh Season (2021) (Blu-ray)</li>
+<li data-t="the walking dead: the complete fifth season (2014) (blu-ray)">The Walking Dead: The Complete Fifth Season (2014) (Blu-ray)</li>
+<li data-t="the walking dead: the complete first season (2010) (blu-ray)">The Walking Dead: The Complete First Season (2010) (Blu-ray)</li>
+<li data-t="the walking dead: the complete fourth season (2013) (blu-ray)">The Walking Dead: The Complete Fourth Season (2013) (Blu-ray)</li>
+<li data-t="the walking dead: the complete ninth season (2018) (blu-ray)">The Walking Dead: The Complete Ninth Season (2018) (Blu-ray)</li>
+<li data-t="the walking dead: the complete second season (2011) (blu-ray)">The Walking Dead: The Complete Second Season (2011) (Blu-ray)</li>
+<li data-t="the walking dead: the complete seventh season (2016) (blu-ray)">The Walking Dead: The Complete Seventh Season (2016) (Blu-ray)</li>
+<li data-t="the walking dead: the complete sixth season (2015) (blu-ray)">The Walking Dead: The Complete Sixth Season (2015) (Blu-ray)</li>
+<li data-t="the walking dead: the complete tenth season (2019) (blu-ray)">The Walking Dead: The Complete Tenth Season (2019) (Blu-ray)</li>
+<li data-t="the walking dead: the complete third season (2012) (blu-ray)">The Walking Dead: The Complete Third Season (2012) (Blu-ray)</li>
+<li data-t="the wiz live! (2015)">The Wiz Live! (2015)</li>
+<li data-t="thundercats: season one, volume one (2005)">ThunderCats: Season One, Volume One (2005)</li>
+<li data-t="thundercats: the complete series (2019)">ThunderCats: The Complete Series (2019)</li>
+</ul>
+<div class="note">Plus 114+ wrestling sets in Randy's collection, premiering on the wrestling block (channels 300–304).</div>
+<footer>☾ A Savage Family Production · Television the way you remember it</footer>
+</div>
+<script>
+function flt(){
+  const q=document.getElementById('q').value.toLowerCase();
+  document.querySelectorAll('[data-t]').forEach(e=>{
+    e.style.display=e.dataset.t.includes(q)||e.textContent.toLowerCase().includes(q)?'':'none';
+  });
+}
+</script>
+</body></html>

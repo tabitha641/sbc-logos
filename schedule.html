@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tonight on SBC</title>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root { --navy:#0f1c2e; --pink:#e0218a; --yellow:#f5c744; --cream:#f5ecd7; --teal:#00b4a6; }
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--navy) url(noise.png);color:var(--cream);font-family:'Inter',sans-serif}
+.wrap{max-width:1000px;margin:0 auto;padding:30px 24px 50px}
+nav{display:flex;gap:22px;justify-content:center;padding:18px 0;font-weight:800;flex-wrap:wrap}
+nav a{color:var(--cream);text-decoration:none;font-size:15px}
+nav a:hover,nav a.on{color:var(--yellow)}
+h1{font-family:'Alfa Slab One',serif;font-size:44px;color:var(--yellow);text-shadow:4px 4px 0 #000;transform:rotate(-1.5deg);text-align:center;margin:14px 0 4px}
+.tag{text-align:center;color:var(--teal);font-style:italic;margin-bottom:26px}
+.chan{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.1);border-radius:14px;margin-bottom:18px;overflow:hidden}
+.chead{display:flex;align-items:center;gap:14px;padding:12px 16px;background:rgba(0,0,0,.25)}
+.chead img{width:56px;height:56px;border-radius:10px}
+.cnum{font-family:'Alfa Slab One',serif;font-size:13px;color:var(--yellow)}
+.cname{font-weight:800;font-size:18px}
+.progs{padding:8px 16px 12px;max-height:238px;overflow:hidden}
+.prog{display:flex;gap:12px;align-items:baseline;padding:5px 0;border-bottom:1px dotted rgba(255,255,255,.1);font-size:14px}
+.prog.past{display:none}
+.prog.now{background:rgba(245,199,68,.12);border-radius:8px;padding:7px 10px;margin:2px -10px}
+.prog.now .ptime::before{content:"ON NOW · ";color:var(--pink);font-weight:800}
+.ptime{color:var(--teal);font-weight:700;white-space:nowrap;min-width:86px}
+.pshow{font-weight:600}
+.pep{color:#c9c2b4;font-size:12.5px}
+.stamp{text-align:center;font-size:12.5px;color:#c9c2b4;margin-top:26px;font-style:italic}
+footer{text-align:center;margin-top:20px;font-size:13px;color:#c9c2b4}
+</style></head><body><div class="wrap">
+<nav><a href="index.html">📺 Channel Guide</a><a href="flix.html">🍿 Find Your Next Flix</a><a class="on" href="schedule.html">🕗 Tonight on SBC</a><a href="access.html">🔒 How to Watch</a></nav>
+<h1>Tonight on SBC</h1>
+<div class="tag">What's on right now — and the rest of the broadcast day. Times shown in your local time.</div>
+<div class="chan">
+  <div class="chead"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/silver-screen-v2.png" loading="lazy"><div><div class="cnum">CH 1</div><div class="cname">The Silver Screen</div></div></div>
+  <div class="progs"><div class="prog" data-s="1783202161" data-e="1783203717"><span class="ptime" data-ts="1783202161"></span><span class="pshow">The Twilight Zone</span><span class="pep">Eye of the Beholder</span></div>
+<div class="prog" data-s="1783203717" data-e="1783205236"><span class="ptime" data-ts="1783203717"></span><span class="pshow">The Twilight Zone</span><span class="pep">Nick of Time</span></div>
+<div class="prog" data-s="1783205236" data-e="1783206804"><span class="ptime" data-ts="1783205236"></span><span class="pshow">The Twilight Zone</span><span class="pep">The Lateness of the Hour</span></div>
+<div class="prog" data-s="1783206804" data-e="1783208358"><span class="ptime" data-ts="1783206804"></span><span class="pshow">The Twilight Zone</span><span class="pep">The Trouble with Templeton</span></div>
+<div class="prog" data-s="1783208358" data-e="1783209912"><span class="ptime" data-ts="1783208358"></span><span class="pshow">The Twilight Zone</span><span class="pep">A Most Unusual Camera</span></div>
+<div class="prog" data-s="1783209912" data-e="1783211428"><span class="ptime" data-ts="1783209912"></span><span class="pshow">The Twilight Zone</span><span class="pep">The Night of the Meek</span></div>
+<div class="prog" data-s="1783211428" data-e="1783212984"><span class="ptime" data-ts="1783211428"></span><span class="pshow">The Twilight Zone</span><span class="pep">Dust</span></div>
+<div class="prog" data-s="1783212984" data-e="1783214538"><span class="ptime" data-ts="1783212984"></span><span class="pshow">The Twilight Zone</span><span class="pep">Back There</span></div>
+<div class="prog" data-s="1783214538" data-e="1783216089"><span class="ptime" data-ts="1783214538"></span><span class="pshow">The Twilight Zone</span><span class="pep">The Whole Truth</span></div>
+<div class="prog" data-s="1783216089" data-e="1783217643"><span class="ptime" data-ts="1783216089"></span><span class="pshow">The Twilight Zone</span><span class="pep">The Invaders</span></div>
+<div class="prog" data-s="1783217643" data-e="1783219196"><span class="ptime" data-ts="1783217643"></span><span class="pshow">The Twilight Zone</span><span class="pep">A Penny for Your Thoughts</span></div>
+<div class="prog" data-s="1783219196" data-e="1783220748"><span class="ptime" data-ts="1783219196"></span><span class="pshow">The Twilight Zone</span><span class="pep">Twenty Two</span></div>
+<div class="prog" data-s="1783220748" data-e="1783222300"><span class="ptime" data-ts="1783220748"></span><span class="pshow">The Twilight Zone</span><span class="pep">The Odyssey of Flight 33</span></div>
+<div class="prog" data-s="1783222300" data-e="1783223843"><span class="ptime" data-ts="1783222300"></span><span class="pshow">The Twilight Zone</span><span class="pep">Mr. Dingle, the Strong</span></div>
+<div class="prog" data-s="1783223843" data-e="1783225374"><span class="ptime" data-ts="1783223843"></span><span class="pshow">The Twilight Zone</span><span class="pep">Static</span></div>
+<div class="prog" data-s="1783225374" data-e="1783226930"><span class="ptime" data-ts="1783225374"></span><span class="pshow">The Twilight Zone</span><span class="pep">The Prime Mover</span></div>
+<div class="prog" data-s="1783226930" data-e="1783228485"><span class="ptime" data-ts="1783226930"></span><span class="pshow">The Twilight Zone</span><span class="pep">Long Distance Call</span></div>
+<div class="prog" data-s="1783228485" data-e="1783230006"><span class="ptime" data-ts="1783228485"></span><span class="pshow">The Twilight Zone</span><span class="pep">A Hundred Yards Over the Rim</span></div>
+<div class="prog" data-s="1783230006" data-e="1783231570"><span class="ptime" data-ts="1783230006"></span><span class="pshow">The Twilight Zone</span><span class="pep">The Rip Van Winkle Caper</span></div>
+<div class="prog" data-s="1783231570" data-e="1783233124"><span class="ptime" data-ts="1783231570"></span><span class="pshow">The Twilight Zone</span><span class="pep">The Silence</span></div>
+<div class="prog" data-s="1783233124" data-e="1783234689"><span class="ptime" data-ts="1783233124"></span><span class="pshow">The Twilight Zone</span><span class="pep">Shadow Play</span></div>
+<div class="prog" data-s="1783234689" data-e="1783236242"><span class="ptime" data-ts="1783234689"></span><span class="pshow">The Twilight Zone</span><span class="pep">The Mind and the Matter</span></div>
+<div class="prog" data-s="1783236242" data-e="1783237794"><span class="ptime" data-ts="1783236242"></span><span class="pshow">The Twilight Zone</span><span class="pep">Will the Real Martian Please Stand Up?</span></div>
+<div class="prog" data-s="1783237794" data-e="1783239361"><span class="ptime" data-ts="1783237794"></span><span class="pshow">The Twilight Zone</span><span class="pep">The Obsolete Man</span></div>
+<div class="prog" data-s="1783239361" data-e="1783240907"><span class="ptime" data-ts="1783239361"></span><span class="pshow">The Twilight Zone</span><span class="pep">Two</span></div>
+<div class="prog" data-s="1783240907" data-e="1783242448"><span class="ptime" data-ts="1783240907"></span><span class="pshow">The Twilight Zone</span><span class="pep">The Arrival</span></div>
+<div class="prog" data-s="1783242448" data-e="1783243992"><span class="ptime" data-ts="1783242448"></span><span class="pshow">The Twilight Zone</span><span class="pep">The Shelter</span></div>
+<div class="prog" data-s="1783243992" data-e="1783245534"><span class="ptime" data-ts="1783243992"></span><span class="pshow">The Twilight Zone</span><span class="pep">The Passersby</span></div>
+<div class="prog" data-s="1783245534" data-e="1783247074"><span class="ptime" data-ts="1783245534"></span><span class="pshow">The Twilight Zone</span><span class="pep">A Game of Pool</span></div>
+<div class="prog" data-s="1783247074" data-e="1783248616"><span class="ptime" data-ts="1783247074"></span><span class="pshow">The Twilight Zone</span><span class="pep">The Mirror</span></div>
+<div class="prog" data-s="1783248616" data-e="1783250157"><span class="ptime" data-ts="1783248616"></span><span class="pshow">The Twilight Zone</span><span class="pep">The Grave</span></div>
+<div class="prog" data-s="1783250157" data-e="1783251696"><span class="ptime" data-ts="1783250157"></span><span class="pshow">The Twilight Zone</span><span class="pep">It's a Good Life</span></div>
+<div class="prog" data-s="1783251696" data-e="1783253235"><span class="ptime" data-ts="1783251696"></span><span class="pshow">The Twilight Zone</span><span class="pep">Deaths-Head Revisited</span></div>
+<div class="prog" data-s="1783253235" data-e="1783254775"><span class="ptime" data-ts="1783253235"></span><span class="pshow">The Twilight Zone</span><span class="pep">The Midnight Sun</span></div>
+<div class="prog" data-s="1783254775" data-e="1783256316"><span class="ptime" data-ts="1783254775"></span><span class="pshow">The Twilight Zone</span><span class="pep">Still Valley</span></div>
+<div class="prog" data-s="1783256316" data-e="1783257855"><span class="ptime" data-ts="1783256316"></span><span class="pshow">The Twilight Zone</span><span class="pep">The Jungle</span></div>
+<div class="prog" data-s="1783257855" data-e="1783259395"><span class="ptime" data-ts="1783257855"></span><span class="pshow">The Twilight Zone</span><span class="pep">Once Upon a Time</span></div>
+<div class="prog" data-s="1783259395" data-e="1783260937"><span class="ptime" data-ts="1783259395"></span><span class="pshow">The Twilight Zone</span><span class="pep">Five Characters in Search of an Exit</span></div>
+<div class="prog" data-s="1783260937" data-e="1783262479"><span class="ptime" data-ts="1783260937"></span><span class="pshow">The Twilight Zone</span><span class="pep">A Quality of Mercy</span></div>
+<div class="prog" data-s="1783262479" data-e="1783264019"><span class="ptime" data-ts="1783262479"></span><span class="pshow">The Twilight Zone</span><span class="pep">Nothing in the Dark</span></div>
+<div class="prog" data-s="1783264019" data-e="1783265561"><span class="ptime" data-ts="1783264019"></span><span class="pshow">The Twilight Zone</span><span class="pep">One More Pallbearer</span></div>
+<div class="prog" data-s="1783265561" data-e="1783267111"><span class="ptime" data-ts="1783265561"></span><span class="pshow">The Twilight Zone</span><span class="pep">Dead Man's Shoes</span></div>
+<div class="prog" data-s="1783267111" data-e="1783268652"><span class="ptime" data-ts="1783267111"></span><span class="pshow">The Twilight Zone</span><span class="pep">The Hunt</span></div>
+<div class="prog" data-s="1783268652" data-e="1783270205"><span class="ptime" data-ts="1783268652"></span><span class="pshow">The Twilight Zone</span><span class="pep">Showdown with Rance McGrew</span></div>
+<div class="prog" data-s="1783270205" data-e="1783271748"><span class="ptime" data-ts="1783270205"></span><span class="pshow">The Twilight Zone</span><span class="pep">Kick the Can</span></div>
+<div class="prog" data-s="1783271748" data-e="1783273304"><span class="ptime" data-ts="1783271748"></span><span class="pshow">The Twilight Zone</span><span class="pep">A Piano in the House</span></div>
+<div class="prog" data-s="1783273304" data-e="1783274810"><span class="ptime" data-ts="1783273304"></span><span class="pshow">The Twilight Zone</span><span class="pep">The Last Rites of Jeff Myrtlebank</span></div>
+<div class="prog" data-s="1783274810" data-e="1783276351"><span class="ptime" data-ts="1783274810"></span><span class="pshow">The Twilight Zone</span><span class="pep">To Serve Man</span></div>
+<div class="prog" data-s="1783276351" data-e="1783277887"><span class="ptime" data-ts="1783276351"></span><span class="pshow">The Twilight Zone</span><span class="pep">The Fugitive</span></div>
+<div class="prog" data-s="1783277887" data-e="1783279434"><span class="ptime" data-ts="1783277887"></span><span class="pshow">The Twilight Zone</span><span class="pep">Little Girl Lost</span></div>
+<div class="prog" data-s="1783279434" data-e="1783280974"><span class="ptime" data-ts="1783279434"></span><span class="pshow">The Twilight Zone</span><span class="pep">Person or Persons Unknown</span></div>
+<div class="prog" data-s="1783280974" data-e="1783282535"><span class="ptime" data-ts="1783280974"></span><span class="pshow">The Twilight Zone</span><span class="pep">The Little People</span></div>
+<div class="prog" data-s="1783282535" data-e="1783284076"><span class="ptime" data-ts="1783282535"></span><span class="pshow">The Twilight Zone</span><span class="pep">Four O'Clock</span></div>
+<div class="prog" data-s="1783284076" data-e="1783285631"><span class="ptime" data-ts="1783284076"></span><span class="pshow">The Twilight Zone</span><span class="pep">Hocus-Pocus and Frisby</span></div>
+<div class="prog" data-s="1783285631" data-e="1783287172"><span class="ptime" data-ts="1783285631"></span><span class="pshow">The Twilight Zone</span><span class="pep">The Trade-Ins</span></div>
+<div class="prog" data-s="1783287172" data-e="1783288726"><span class="ptime" data-ts="1783287172"></span><span class="pshow">The Twilight Zone</span><span class="pep">The Gift</span></div>
+<div class="prog" data-s="1783288726" data-e="1783290269"><span class="ptime" data-ts="1783288726"></span><span class="pshow">The Twilight Zone</span><span class="pep">The Dummy</span></div>
+<div class="prog" data-s="1783290269" data-e="1783291811"><span class="ptime" data-ts="1783290269"></span><span class="pshow">The Twilight Zone</span><span class="pep">Young Man's Fancy</span></div>
+<div class="prog" data-s="1783291811" data-e="1783293352"><span class="ptime" data-ts="1783291811"></span><span class="pshow">The Twilight Zone</span><span class="pep">I Sing the Body Electric</span></div>
+<div class="prog" data-s="1783293352" data-e="1783294860"><span class="ptime" data-ts="1783293352"></span><span class="pshow">The Twilight Zone</span><span class="pep">Cavender is Coming</span></div>
+<div class="prog" data-s="1783294860" data-e="1783296365"><span class="ptime" data-ts="1783294860"></span><span class="pshow">The Twilight Zone</span><span class="pep">The Changing of the Guard</span></div>
+<div class="prog" data-s="1783296365" data-e="1783299495"><span class="ptime" data-ts="1783296365"></span><span class="pshow">The Twilight Zone</span><span class="pep">In His Image</span></div></div>
+</div>
+<div class="chan">
+  <div class="chead"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/machovision-v3.png" loading="lazy"><div><div class="cnum">CH 3</div><div class="cname">MachoVision</div></div></div>
+  <div class="progs"><div class="prog" data-s="1783202877" data-e="1783204337"><span class="ptime" data-ts="1783202877"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Diamond Dallas Page — Las Vegas Sudden Death (Halloween Havoc, Oct 26 1997)</span></div>
+<div class="prog" data-s="1783204337" data-e="1783205154"><span class="ptime" data-ts="1783204337"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Ricky Steamboat — IC Title (Superstars, Nov 22 1986)</span></div>
+<div class="prog" data-s="1783205154" data-e="1783205673"><span class="ptime" data-ts="1783205154"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Bruno Sammartino — Lumberjack IC Title (Boston Garden, Feb 7 1987)</span></div>
+<div class="prog" data-s="1783205673" data-e="1783206751"><span class="ptime" data-ts="1783205673"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Ricky Steamboat — IC Title (Maple Leaf Gardens, Feb 15 1987)</span></div>
+<div class="prog" data-s="1783206751" data-e="1783207507"><span class="ptime" data-ts="1783206751"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Harley Race (Philadelphia, Sept 18 1987)</span></div>
+<div class="prog" data-s="1783207507" data-e="1783208153"><span class="ptime" data-ts="1783207507"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">Savage &amp; Strike Force vs Honky Tonk Man &amp; Hart Foundation — 6-Man Steel Cage (Boston Garden, Mar 5 1988)</span></div>
+<div class="prog" data-s="1783208153" data-e="1783209057"><span class="ptime" data-ts="1783208153"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Ted DiBiase — WWE Title (Boston Garden, Jul 9 1988)</span></div>
+<div class="prog" data-s="1783209057" data-e="1783209760"><span class="ptime" data-ts="1783209057"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Bad News Brown — Harlem Street Fight, WWE Title (Hamilton ON, Jan 16 1989)</span></div>
+<div class="prog" data-s="1783209760" data-e="1783210758"><span class="ptime" data-ts="1783209760"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">Hulk Hogan vs Savage — WWE Title (MSG, Apr 24 1989)</span></div>
+<div class="prog" data-s="1783210758" data-e="1783211606"><span class="ptime" data-ts="1783210758"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Roddy Piper (Miami, Jan 22 1990)</span></div>
+<div class="prog" data-s="1783211606" data-e="1783212790"><span class="ptime" data-ts="1783211606"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Shawn Michaels — WWE Title (Munich, Apr 14 1992)</span></div>
+<div class="prog" data-s="1783212790" data-e="1783215264"><span class="ptime" data-ts="1783212790"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Ultimate Warrior — WWE Title (SummerSlam, Aug 31 1992)</span></div>
+<div class="prog" data-s="1783215264" data-e="1783216376"><span class="ptime" data-ts="1783215264"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Ric Flair — WWE Title (Prime Time Wrestling, Sept 14 1992)</span></div>
+<div class="prog" data-s="1783216376" data-e="1783217555"><span class="ptime" data-ts="1783216376"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Arn Anderson — WCW TV Title (WCW Saturday Night, Jan 28 1995)</span></div>
+<div class="prog" data-s="1783217555" data-e="1783219365"><span class="ptime" data-ts="1783217555"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Ric Flair — Steel Cage, WCW Title (SuperBrawl VI, Feb 11 1996)</span></div>
+<div class="prog" data-s="1783219365" data-e="1783220825"><span class="ptime" data-ts="1783219365"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Diamond Dallas Page — Las Vegas Sudden Death (Halloween Havoc, Oct 26 1997)</span></div>
+<div class="prog" data-s="1783220825" data-e="1783221642"><span class="ptime" data-ts="1783220825"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Ricky Steamboat — IC Title (Superstars, Nov 22 1986)</span></div>
+<div class="prog" data-s="1783221642" data-e="1783222161"><span class="ptime" data-ts="1783221642"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Bruno Sammartino — Lumberjack IC Title (Boston Garden, Feb 7 1987)</span></div>
+<div class="prog" data-s="1783222161" data-e="1783223240"><span class="ptime" data-ts="1783222161"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Ricky Steamboat — IC Title (Maple Leaf Gardens, Feb 15 1987)</span></div>
+<div class="prog" data-s="1783223240" data-e="1783223996"><span class="ptime" data-ts="1783223240"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Harley Race (Philadelphia, Sept 18 1987)</span></div>
+<div class="prog" data-s="1783223996" data-e="1783224641"><span class="ptime" data-ts="1783223996"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">Savage &amp; Strike Force vs Honky Tonk Man &amp; Hart Foundation — 6-Man Steel Cage (Boston Garden, Mar 5 1988)</span></div>
+<div class="prog" data-s="1783224641" data-e="1783225546"><span class="ptime" data-ts="1783224641"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Ted DiBiase — WWE Title (Boston Garden, Jul 9 1988)</span></div>
+<div class="prog" data-s="1783225546" data-e="1783226249"><span class="ptime" data-ts="1783225546"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Bad News Brown — Harlem Street Fight, WWE Title (Hamilton ON, Jan 16 1989)</span></div>
+<div class="prog" data-s="1783226249" data-e="1783227246"><span class="ptime" data-ts="1783226249"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">Hulk Hogan vs Savage — WWE Title (MSG, Apr 24 1989)</span></div>
+<div class="prog" data-s="1783227246" data-e="1783228094"><span class="ptime" data-ts="1783227246"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Roddy Piper (Miami, Jan 22 1990)</span></div>
+<div class="prog" data-s="1783228094" data-e="1783229279"><span class="ptime" data-ts="1783228094"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Shawn Michaels — WWE Title (Munich, Apr 14 1992)</span></div>
+<div class="prog" data-s="1783229279" data-e="1783231753"><span class="ptime" data-ts="1783229279"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Ultimate Warrior — WWE Title (SummerSlam, Aug 31 1992)</span></div>
+<div class="prog" data-s="1783231753" data-e="1783232865"><span class="ptime" data-ts="1783231753"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Ric Flair — WWE Title (Prime Time Wrestling, Sept 14 1992)</span></div>
+<div class="prog" data-s="1783232865" data-e="1783234043"><span class="ptime" data-ts="1783232865"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Arn Anderson — WCW TV Title (WCW Saturday Night, Jan 28 1995)</span></div>
+<div class="prog" data-s="1783234043" data-e="1783235853"><span class="ptime" data-ts="1783234043"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Ric Flair — Steel Cage, WCW Title (SuperBrawl VI, Feb 11 1996)</span></div>
+<div class="prog" data-s="1783235853" data-e="1783237313"><span class="ptime" data-ts="1783235853"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Diamond Dallas Page — Las Vegas Sudden Death (Halloween Havoc, Oct 26 1997)</span></div>
+<div class="prog" data-s="1783237313" data-e="1783238131"><span class="ptime" data-ts="1783237313"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Ricky Steamboat — IC Title (Superstars, Nov 22 1986)</span></div>
+<div class="prog" data-s="1783238131" data-e="1783238649"><span class="ptime" data-ts="1783238131"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Bruno Sammartino — Lumberjack IC Title (Boston Garden, Feb 7 1987)</span></div>
+<div class="prog" data-s="1783238649" data-e="1783239728"><span class="ptime" data-ts="1783238649"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Ricky Steamboat — IC Title (Maple Leaf Gardens, Feb 15 1987)</span></div>
+<div class="prog" data-s="1783239728" data-e="1783240484"><span class="ptime" data-ts="1783239728"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Harley Race (Philadelphia, Sept 18 1987)</span></div>
+<div class="prog" data-s="1783240484" data-e="1783241130"><span class="ptime" data-ts="1783240484"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">Savage &amp; Strike Force vs Honky Tonk Man &amp; Hart Foundation — 6-Man Steel Cage (Boston Garden, Mar 5 1988)</span></div>
+<div class="prog" data-s="1783241130" data-e="1783242034"><span class="ptime" data-ts="1783241130"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Ted DiBiase — WWE Title (Boston Garden, Jul 9 1988)</span></div>
+<div class="prog" data-s="1783242034" data-e="1783242737"><span class="ptime" data-ts="1783242034"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Bad News Brown — Harlem Street Fight, WWE Title (Hamilton ON, Jan 16 1989)</span></div>
+<div class="prog" data-s="1783242737" data-e="1783243734"><span class="ptime" data-ts="1783242737"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">Hulk Hogan vs Savage — WWE Title (MSG, Apr 24 1989)</span></div>
+<div class="prog" data-s="1783243734" data-e="1783244583"><span class="ptime" data-ts="1783243734"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Roddy Piper (Miami, Jan 22 1990)</span></div>
+<div class="prog" data-s="1783244583" data-e="1783245767"><span class="ptime" data-ts="1783244583"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Shawn Michaels — WWE Title (Munich, Apr 14 1992)</span></div>
+<div class="prog" data-s="1783245767" data-e="1783248241"><span class="ptime" data-ts="1783245767"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Ultimate Warrior — WWE Title (SummerSlam, Aug 31 1992)</span></div>
+<div class="prog" data-s="1783248241" data-e="1783249353"><span class="ptime" data-ts="1783248241"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Ric Flair — WWE Title (Prime Time Wrestling, Sept 14 1992)</span></div>
+<div class="prog" data-s="1783249353" data-e="1783250531"><span class="ptime" data-ts="1783249353"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Arn Anderson — WCW TV Title (WCW Saturday Night, Jan 28 1995)</span></div>
+<div class="prog" data-s="1783250531" data-e="1783252341"><span class="ptime" data-ts="1783250531"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Ric Flair — Steel Cage, WCW Title (SuperBrawl VI, Feb 11 1996)</span></div>
+<div class="prog" data-s="1783252341" data-e="1783253801"><span class="ptime" data-ts="1783252341"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Diamond Dallas Page — Las Vegas Sudden Death (Halloween Havoc, Oct 26 1997)</span></div>
+<div class="prog" data-s="1783253801" data-e="1783254619"><span class="ptime" data-ts="1783253801"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Ricky Steamboat — IC Title (Superstars, Nov 22 1986)</span></div>
+<div class="prog" data-s="1783254619" data-e="1783255138"><span class="ptime" data-ts="1783254619"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Bruno Sammartino — Lumberjack IC Title (Boston Garden, Feb 7 1987)</span></div>
+<div class="prog" data-s="1783255138" data-e="1783256216"><span class="ptime" data-ts="1783255138"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Ricky Steamboat — IC Title (Maple Leaf Gardens, Feb 15 1987)</span></div>
+<div class="prog" data-s="1783256216" data-e="1783256972"><span class="ptime" data-ts="1783256216"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Harley Race (Philadelphia, Sept 18 1987)</span></div>
+<div class="prog" data-s="1783256972" data-e="1783257618"><span class="ptime" data-ts="1783256972"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">Savage &amp; Strike Force vs Honky Tonk Man &amp; Hart Foundation — 6-Man Steel Cage (Boston Garden, Mar 5 1988)</span></div>
+<div class="prog" data-s="1783257618" data-e="1783258522"><span class="ptime" data-ts="1783257618"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Ted DiBiase — WWE Title (Boston Garden, Jul 9 1988)</span></div>
+<div class="prog" data-s="1783258522" data-e="1783259225"><span class="ptime" data-ts="1783258522"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Bad News Brown — Harlem Street Fight, WWE Title (Hamilton ON, Jan 16 1989)</span></div>
+<div class="prog" data-s="1783259225" data-e="1783260223"><span class="ptime" data-ts="1783259225"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">Hulk Hogan vs Savage — WWE Title (MSG, Apr 24 1989)</span></div>
+<div class="prog" data-s="1783260223" data-e="1783261071"><span class="ptime" data-ts="1783260223"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Roddy Piper (Miami, Jan 22 1990)</span></div>
+<div class="prog" data-s="1783261071" data-e="1783262255"><span class="ptime" data-ts="1783261071"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Shawn Michaels — WWE Title (Munich, Apr 14 1992)</span></div>
+<div class="prog" data-s="1783262255" data-e="1783264729"><span class="ptime" data-ts="1783262255"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Ultimate Warrior — WWE Title (SummerSlam, Aug 31 1992)</span></div>
+<div class="prog" data-s="1783264729" data-e="1783265841"><span class="ptime" data-ts="1783264729"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Ric Flair — WWE Title (Prime Time Wrestling, Sept 14 1992)</span></div>
+<div class="prog" data-s="1783265841" data-e="1783267019"><span class="ptime" data-ts="1783265841"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Arn Anderson — WCW TV Title (WCW Saturday Night, Jan 28 1995)</span></div>
+<div class="prog" data-s="1783267019" data-e="1783268830"><span class="ptime" data-ts="1783267019"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Ric Flair — Steel Cage, WCW Title (SuperBrawl VI, Feb 11 1996)</span></div>
+<div class="prog" data-s="1783268830" data-e="1783270290"><span class="ptime" data-ts="1783268830"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Diamond Dallas Page — Las Vegas Sudden Death (Halloween Havoc, Oct 26 1997)</span></div>
+<div class="prog" data-s="1783270290" data-e="1783271107"><span class="ptime" data-ts="1783270290"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Ricky Steamboat — IC Title (Superstars, Nov 22 1986)</span></div>
+<div class="prog" data-s="1783271107" data-e="1783271626"><span class="ptime" data-ts="1783271107"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Bruno Sammartino — Lumberjack IC Title (Boston Garden, Feb 7 1987)</span></div>
+<div class="prog" data-s="1783271626" data-e="1783272704"><span class="ptime" data-ts="1783271626"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Ricky Steamboat — IC Title (Maple Leaf Gardens, Feb 15 1987)</span></div>
+<div class="prog" data-s="1783272704" data-e="1783273460"><span class="ptime" data-ts="1783272704"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Harley Race (Philadelphia, Sept 18 1987)</span></div>
+<div class="prog" data-s="1783273460" data-e="1783274106"><span class="ptime" data-ts="1783273460"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">Savage &amp; Strike Force vs Honky Tonk Man &amp; Hart Foundation — 6-Man Steel Cage (Boston Garden, Mar 5 1988)</span></div>
+<div class="prog" data-s="1783274106" data-e="1783275010"><span class="ptime" data-ts="1783274106"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Ted DiBiase — WWE Title (Boston Garden, Jul 9 1988)</span></div>
+<div class="prog" data-s="1783275010" data-e="1783275713"><span class="ptime" data-ts="1783275010"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Bad News Brown — Harlem Street Fight, WWE Title (Hamilton ON, Jan 16 1989)</span></div>
+<div class="prog" data-s="1783275713" data-e="1783276711"><span class="ptime" data-ts="1783275713"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">Hulk Hogan vs Savage — WWE Title (MSG, Apr 24 1989)</span></div>
+<div class="prog" data-s="1783276711" data-e="1783277559"><span class="ptime" data-ts="1783276711"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Roddy Piper (Miami, Jan 22 1990)</span></div>
+<div class="prog" data-s="1783277559" data-e="1783278743"><span class="ptime" data-ts="1783277559"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Shawn Michaels — WWE Title (Munich, Apr 14 1992)</span></div>
+<div class="prog" data-s="1783278743" data-e="1783281217"><span class="ptime" data-ts="1783278743"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Ultimate Warrior — WWE Title (SummerSlam, Aug 31 1992)</span></div>
+<div class="prog" data-s="1783281217" data-e="1783282329"><span class="ptime" data-ts="1783281217"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Ric Flair — WWE Title (Prime Time Wrestling, Sept 14 1992)</span></div>
+<div class="prog" data-s="1783282329" data-e="1783283508"><span class="ptime" data-ts="1783282329"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Arn Anderson — WCW TV Title (WCW Saturday Night, Jan 28 1995)</span></div>
+<div class="prog" data-s="1783283508" data-e="1783285318"><span class="ptime" data-ts="1783283508"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Ric Flair — Steel Cage, WCW Title (SuperBrawl VI, Feb 11 1996)</span></div>
+<div class="prog" data-s="1783285318" data-e="1783286778"><span class="ptime" data-ts="1783285318"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Diamond Dallas Page — Las Vegas Sudden Death (Halloween Havoc, Oct 26 1997)</span></div>
+<div class="prog" data-s="1783286778" data-e="1783287595"><span class="ptime" data-ts="1783286778"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Ricky Steamboat — IC Title (Superstars, Nov 22 1986)</span></div>
+<div class="prog" data-s="1783287595" data-e="1783288114"><span class="ptime" data-ts="1783287595"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Bruno Sammartino — Lumberjack IC Title (Boston Garden, Feb 7 1987)</span></div>
+<div class="prog" data-s="1783288114" data-e="1783289193"><span class="ptime" data-ts="1783288114"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Ricky Steamboat — IC Title (Maple Leaf Gardens, Feb 15 1987)</span></div>
+<div class="prog" data-s="1783289193" data-e="1783289949"><span class="ptime" data-ts="1783289193"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Harley Race (Philadelphia, Sept 18 1987)</span></div>
+<div class="prog" data-s="1783289949" data-e="1783290594"><span class="ptime" data-ts="1783289949"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">Savage &amp; Strike Force vs Honky Tonk Man &amp; Hart Foundation — 6-Man Steel Cage (Boston Garden, Mar 5 1988)</span></div>
+<div class="prog" data-s="1783290594" data-e="1783291499"><span class="ptime" data-ts="1783290594"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Ted DiBiase — WWE Title (Boston Garden, Jul 9 1988)</span></div>
+<div class="prog" data-s="1783291499" data-e="1783292202"><span class="ptime" data-ts="1783291499"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Bad News Brown — Harlem Street Fight, WWE Title (Hamilton ON, Jan 16 1989)</span></div>
+<div class="prog" data-s="1783292202" data-e="1783293199"><span class="ptime" data-ts="1783292202"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">Hulk Hogan vs Savage — WWE Title (MSG, Apr 24 1989)</span></div>
+<div class="prog" data-s="1783293199" data-e="1783294047"><span class="ptime" data-ts="1783293199"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Roddy Piper (Miami, Jan 22 1990)</span></div>
+<div class="prog" data-s="1783294047" data-e="1783295232"><span class="ptime" data-ts="1783294047"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Shawn Michaels — WWE Title (Munich, Apr 14 1992)</span></div>
+<div class="prog" data-s="1783295232" data-e="1783297705"><span class="ptime" data-ts="1783295232"></span><span class="pshow">Macho Man the Randy Savage Story</span><span class="pep">vs Ultimate Warrior — WWE Title (SummerSlam, Aug 31 1992)</span></div></div>
+</div>
+<div class="chan">
+  <div class="chead"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/fifth-dimension-v2.png" loading="lazy"><div><div class="cnum">CH 5</div><div class="cname">The Fifth Dimension</div></div></div>
+  <div class="progs"><div class="prog" data-s="1783203513" data-e="1783206375"><span class="ptime" data-ts="1783203513"></span><span class="pshow">Quantum Leap</span><span class="pep">The Color of Truth</span></div>
+<div class="prog" data-s="1783206375" data-e="1783207929"><span class="ptime" data-ts="1783206375"></span><span class="pshow">The Twilight Zone</span><span class="pep">The Lonely</span></div>
+<div class="prog" data-s="1783207929" data-e="1783209484"><span class="ptime" data-ts="1783207929"></span><span class="pshow">The Twilight Zone</span><span class="pep">Time Enough at Last</span></div>
+<div class="prog" data-s="1783209484" data-e="1783212334"><span class="ptime" data-ts="1783209484"></span><span class="pshow">Quantum Leap</span><span class="pep">Camikazi Kid</span></div>
+<div class="prog" data-s="1783212334" data-e="1783215178"><span class="ptime" data-ts="1783212334"></span><span class="pshow">Quantum Leap</span><span class="pep">Play it Again, Seymour</span></div>
+<div class="prog" data-s="1783215178" data-e="1783216733"><span class="ptime" data-ts="1783215178"></span><span class="pshow">The Twilight Zone</span><span class="pep">Perchance to Dream</span></div>
+<div class="prog" data-s="1783216733" data-e="1783218288"><span class="ptime" data-ts="1783216733"></span><span class="pshow">The Twilight Zone</span><span class="pep">Judgment Night</span></div>
+<div class="prog" data-s="1783218288" data-e="1783221164"><span class="ptime" data-ts="1783218288"></span><span class="pshow">Quantum Leap</span><span class="pep">Honeymoon Express</span></div>
+<div class="prog" data-s="1783221164" data-e="1783224043"><span class="ptime" data-ts="1783221164"></span><span class="pshow">Quantum Leap</span><span class="pep">Disco Inferno</span></div>
+<div class="prog" data-s="1783224043" data-e="1783225596"><span class="ptime" data-ts="1783224043"></span><span class="pshow">The Twilight Zone</span><span class="pep">And When the Sky Was Opened</span></div>
+<div class="prog" data-s="1783225596" data-e="1783227150"><span class="ptime" data-ts="1783225596"></span><span class="pshow">The Twilight Zone</span><span class="pep">What You Need</span></div>
+<div class="prog" data-s="1783227150" data-e="1783229962"><span class="ptime" data-ts="1783227150"></span><span class="pshow">Quantum Leap</span><span class="pep">The Americanization of Machiko</span></div>
+<div class="prog" data-s="1783229962" data-e="1783232854"><span class="ptime" data-ts="1783229962"></span><span class="pshow">Quantum Leap</span><span class="pep">What Price Gloria?</span></div>
+<div class="prog" data-s="1783232854" data-e="1783234409"><span class="ptime" data-ts="1783232854"></span><span class="pshow">The Twilight Zone</span><span class="pep">The Four of Us are Dying</span></div>
+<div class="prog" data-s="1783234409" data-e="1783235964"><span class="ptime" data-ts="1783234409"></span><span class="pshow">The Twilight Zone</span><span class="pep">Third from the Sun</span></div>
+<div class="prog" data-s="1783235964" data-e="1783238790"><span class="ptime" data-ts="1783235964"></span><span class="pshow">Quantum Leap</span><span class="pep">Blind Faith</span></div>
+<div class="prog" data-s="1783238790" data-e="1783241677"><span class="ptime" data-ts="1783238790"></span><span class="pshow">Quantum Leap</span><span class="pep">Good Morning, Peoria</span></div>
+<div class="prog" data-s="1783241677" data-e="1783243230"><span class="ptime" data-ts="1783241677"></span><span class="pshow">The Twilight Zone</span><span class="pep">I Shot an Arrow into the Air</span></div>
+<div class="prog" data-s="1783243230" data-e="1783244787"><span class="ptime" data-ts="1783243230"></span><span class="pshow">The Twilight Zone</span><span class="pep">The Hitch-Hiker</span></div>
+<div class="prog" data-s="1783244787" data-e="1783247646"><span class="ptime" data-ts="1783244787"></span><span class="pshow">Quantum Leap</span><span class="pep">Thou Shalt Not...</span></div>
+<div class="prog" data-s="1783247646" data-e="1783250517"><span class="ptime" data-ts="1783247646"></span><span class="pshow">Quantum Leap</span><span class="pep">Jimmy</span></div>
+<div class="prog" data-s="1783250517" data-e="1783252071"><span class="ptime" data-ts="1783250517"></span><span class="pshow">The Twilight Zone</span><span class="pep">The Fever</span></div>
+<div class="prog" data-s="1783252071" data-e="1783253626"><span class="ptime" data-ts="1783252071"></span><span class="pshow">The Twilight Zone</span><span class="pep">The Last Flight</span></div>
+<div class="prog" data-s="1783253626" data-e="1783256493"><span class="ptime" data-ts="1783253626"></span><span class="pshow">Quantum Leap</span><span class="pep">So Help Me God</span></div>
+<div class="prog" data-s="1783256493" data-e="1783259374"><span class="ptime" data-ts="1783256493"></span><span class="pshow">Quantum Leap</span><span class="pep">Catch A Falling Star</span></div>
+<div class="prog" data-s="1783259374" data-e="1783260927"><span class="ptime" data-ts="1783259374"></span><span class="pshow">The Twilight Zone</span><span class="pep">The Purple Testament</span></div>
+<div class="prog" data-s="1783260927" data-e="1783262478"><span class="ptime" data-ts="1783260927"></span><span class="pshow">The Twilight Zone</span><span class="pep">Elegy</span></div>
+<div class="prog" data-s="1783262478" data-e="1783265289"><span class="ptime" data-ts="1783262478"></span><span class="pshow">Quantum Leap</span><span class="pep">A Portrait for Troian</span></div>
+<div class="prog" data-s="1783265289" data-e="1783268103"><span class="ptime" data-ts="1783265289"></span><span class="pshow">Quantum Leap</span><span class="pep">Animal Frat</span></div>
+<div class="prog" data-s="1783268103" data-e="1783269656"><span class="ptime" data-ts="1783268103"></span><span class="pshow">The Twilight Zone</span><span class="pep">Mirror Image</span></div>
+<div class="prog" data-s="1783269656" data-e="1783271213"><span class="ptime" data-ts="1783269656"></span><span class="pshow">The Twilight Zone</span><span class="pep">The Monsters are Due on Maple Street</span></div>
+<div class="prog" data-s="1783271213" data-e="1783274080"><span class="ptime" data-ts="1783271213"></span><span class="pshow">Quantum Leap</span><span class="pep">Another Mother</span></div>
+<div class="prog" data-s="1783274080" data-e="1783276966"><span class="ptime" data-ts="1783274080"></span><span class="pshow">Quantum Leap</span><span class="pep">All-Americans</span></div>
+<div class="prog" data-s="1783276966" data-e="1783278521"><span class="ptime" data-ts="1783276966"></span><span class="pshow">The Twilight Zone</span><span class="pep">A World of Difference</span></div>
+<div class="prog" data-s="1783278521" data-e="1783280073"><span class="ptime" data-ts="1783278521"></span><span class="pshow">The Twilight Zone</span><span class="pep">Long Live Walter Jameson</span></div>
+<div class="prog" data-s="1783280073" data-e="1783282950"><span class="ptime" data-ts="1783280073"></span><span class="pshow">Quantum Leap</span><span class="pep">Her Charm</span></div>
+<div class="prog" data-s="1783282950" data-e="1783285772"><span class="ptime" data-ts="1783282950"></span><span class="pshow">Quantum Leap</span><span class="pep">Freedom</span></div>
+<div class="prog" data-s="1783285772" data-e="1783287326"><span class="ptime" data-ts="1783285772"></span><span class="pshow">The Twilight Zone</span><span class="pep">People are Alike All Over</span></div>
+<div class="prog" data-s="1783287326" data-e="1783288879"><span class="ptime" data-ts="1783287326"></span><span class="pshow">The Twilight Zone</span><span class="pep">Execution</span></div>
+<div class="prog" data-s="1783288879" data-e="1783291766"><span class="ptime" data-ts="1783288879"></span><span class="pshow">Quantum Leap</span><span class="pep">Good Night, Dear Heart</span></div>
+<div class="prog" data-s="1783291766" data-e="1783294644"><span class="ptime" data-ts="1783291766"></span><span class="pshow">Quantum Leap</span><span class="pep">Pool Hall Blues</span></div>
+<div class="prog" data-s="1783294644" data-e="1783296200"><span class="ptime" data-ts="1783294644"></span><span class="pshow">The Twilight Zone</span><span class="pep">The Big Tall Wish</span></div>
+<div class="prog" data-s="1783296200" data-e="1783297753"><span class="ptime" data-ts="1783296200"></span><span class="pshow">The Twilight Zone</span><span class="pep">A Nice Place to Visit</span></div></div>
+</div>
+<div class="chan">
+  <div class="chead"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/saturday-morning-v1.png" loading="lazy"><div><div class="cnum">CH 6</div><div class="cname">Saturday Morning</div></div></div>
+  <div class="progs"><div class="prog" data-s="1783203250" data-e="1783204617"><span class="ptime" data-ts="1783203250"></span><span class="pshow">Jem and the Holograms</span><span class="pep">Nowhere To Go</span></div>
+<div class="prog" data-s="1783204617" data-e="1783206078"><span class="ptime" data-ts="1783204617"></span><span class="pshow">Pee-wee's Playhouse</span><span class="pep">Rainy Day</span></div>
+<div class="prog" data-s="1783206078" data-e="1783207607"><span class="ptime" data-ts="1783206078"></span><span class="pshow">Pee-wee's Playhouse</span><span class="pep">Now You See Me, Now You Don't</span></div>
+<div class="prog" data-s="1783207607" data-e="1783208976"><span class="ptime" data-ts="1783207607"></span><span class="pshow">Teenage Mutant Ninja Turtles</span><span class="pep">Shredder &amp; Splintered</span></div>
+<div class="prog" data-s="1783208976" data-e="1783210393"><span class="ptime" data-ts="1783208976"></span><span class="pshow">Teenage Mutant Ninja Turtles</span><span class="pep">Episode 6</span></div>
+<div class="prog" data-s="1783210393" data-e="1783211602"><span class="ptime" data-ts="1783210393"></span><span class="pshow">Power Rangers</span><span class="pep">A Pressing Engagement</span></div>
+<div class="prog" data-s="1783211602" data-e="1783212815"><span class="ptime" data-ts="1783211602"></span><span class="pshow">Power Rangers</span><span class="pep">Different Drum</span></div>
+<div class="prog" data-s="1783212815" data-e="1783214182"><span class="ptime" data-ts="1783212815"></span><span class="pshow">Jem and the Holograms</span><span class="pep">The Mansion</span></div>
+<div class="prog" data-s="1783214182" data-e="1783215548"><span class="ptime" data-ts="1783214182"></span><span class="pshow">Jem and the Holograms</span><span class="pep">Starbright (1): Falling Star</span></div>
+<div class="prog" data-s="1783215548" data-e="1783217010"><span class="ptime" data-ts="1783215548"></span><span class="pshow">Pee-wee's Playhouse</span><span class="pep">Just Another Day</span></div>
+<div class="prog" data-s="1783217010" data-e="1783218474"><span class="ptime" data-ts="1783217010"></span><span class="pshow">Pee-wee's Playhouse</span><span class="pep">Beauty Makeover</span></div>
+<div class="prog" data-s="1783218474" data-e="1783219891"><span class="ptime" data-ts="1783218474"></span><span class="pshow">Teenage Mutant Ninja Turtles</span><span class="pep">Episode 7</span></div>
+<div class="prog" data-s="1783219891" data-e="1783221301"><span class="ptime" data-ts="1783219891"></span><span class="pshow">Teenage Mutant Ninja Turtles</span><span class="pep">Episode 8</span></div>
+<div class="prog" data-s="1783221301" data-e="1783222437"><span class="ptime" data-ts="1783221301"></span><span class="pshow">Power Rangers</span><span class="pep">I, Eye Guy</span></div>
+<div class="prog" data-s="1783222437" data-e="1783223593"><span class="ptime" data-ts="1783222437"></span><span class="pshow">Power Rangers</span><span class="pep">For Whom the Bell Trolls</span></div>
+<div class="prog" data-s="1783223593" data-e="1783224958"><span class="ptime" data-ts="1783223593"></span><span class="pshow">Jem and the Holograms</span><span class="pep">Starbright (2): Colliding Stars</span></div>
+<div class="prog" data-s="1783224958" data-e="1783226323"><span class="ptime" data-ts="1783224958"></span><span class="pshow">Jem and the Holograms</span><span class="pep">Starbright (3): Rising Star</span></div>
+<div class="prog" data-s="1783226323" data-e="1783227785"><span class="ptime" data-ts="1783226323"></span><span class="pshow">Pee-wee's Playhouse</span><span class="pep">Restaurant</span></div>
+<div class="prog" data-s="1783227785" data-e="1783229248"><span class="ptime" data-ts="1783227785"></span><span class="pshow">Pee-wee's Playhouse</span><span class="pep">Ants In Your Pants</span></div>
+<div class="prog" data-s="1783229248" data-e="1783230666"><span class="ptime" data-ts="1783229248"></span><span class="pshow">Teenage Mutant Ninja Turtles</span><span class="pep">Episode 9</span></div>
+<div class="prog" data-s="1783230666" data-e="1783232001"><span class="ptime" data-ts="1783230666"></span><span class="pshow">Teenage Mutant Ninja Turtles</span><span class="pep">Return of the Shredder</span></div>
+<div class="prog" data-s="1783232001" data-e="1783233217"><span class="ptime" data-ts="1783232001"></span><span class="pshow">Power Rangers</span><span class="pep">Happy Birthday, Zack</span></div>
+<div class="prog" data-s="1783233217" data-e="1783234433"><span class="ptime" data-ts="1783233217"></span><span class="pshow">Power Rangers</span><span class="pep">No Clowning Around</span></div>
+<div class="prog" data-s="1783234433" data-e="1783235797"><span class="ptime" data-ts="1783234433"></span><span class="pshow">Jem and the Holograms</span><span class="pep">The World Hunger Shindig</span></div>
+<div class="prog" data-s="1783235797" data-e="1783237163"><span class="ptime" data-ts="1783235797"></span><span class="pshow">Jem and the Holograms</span><span class="pep">Adventure in China</span></div>
+<div class="prog" data-s="1783237163" data-e="1783238625"><span class="ptime" data-ts="1783237163"></span><span class="pshow">Pee-wee's Playhouse</span><span class="pep">Monster In the Playhouse</span></div>
+<div class="prog" data-s="1783238625" data-e="1783240089"><span class="ptime" data-ts="1783238625"></span><span class="pshow">Pee-wee's Playhouse</span><span class="pep">The Cowboy and the Cowntess</span></div>
+<div class="prog" data-s="1783240089" data-e="1783241427"><span class="ptime" data-ts="1783240089"></span><span class="pshow">Teenage Mutant Ninja Turtles</span><span class="pep">The Incredible Shrinking Turtles</span></div>
+<div class="prog" data-s="1783241427" data-e="1783242765"><span class="ptime" data-ts="1783241427"></span><span class="pshow">Teenage Mutant Ninja Turtles</span><span class="pep">It Came from Beneath the Sewers</span></div>
+<div class="prog" data-s="1783242765" data-e="1783243981"><span class="ptime" data-ts="1783242765"></span><span class="pshow">Power Rangers</span><span class="pep">Power Ranger Punks</span></div>
+<div class="prog" data-s="1783243981" data-e="1783245198"><span class="ptime" data-ts="1783243981"></span><span class="pshow">Power Rangers</span><span class="pep">Peace, Love and Woe</span></div>
+<div class="prog" data-s="1783245198" data-e="1783246562"><span class="ptime" data-ts="1783245198"></span><span class="pshow">Jem and the Holograms</span><span class="pep">Last Resorts</span></div>
+<div class="prog" data-s="1783246562" data-e="1783247928"><span class="ptime" data-ts="1783246562"></span><span class="pshow">Jem and the Holograms</span><span class="pep">In Stitches</span></div>
+<div class="prog" data-s="1783247928" data-e="1783249392"><span class="ptime" data-ts="1783247928"></span><span class="pshow">Pee-wee's Playhouse</span><span class="pep">Stolen Apples</span></div>
+<div class="prog" data-s="1783249392" data-e="1783250856"><span class="ptime" data-ts="1783249392"></span><span class="pshow">Pee-wee's Playhouse</span><span class="pep">The Gang's All Here</span></div>
+<div class="prog" data-s="1783250856" data-e="1783252192"><span class="ptime" data-ts="1783250856"></span><span class="pshow">Teenage Mutant Ninja Turtles</span><span class="pep">The Mean Machines</span></div>
+<div class="prog" data-s="1783252192" data-e="1783253524"><span class="ptime" data-ts="1783252192"></span><span class="pshow">Teenage Mutant Ninja Turtles</span><span class="pep">Curse of the Evil Eye</span></div>
+<div class="prog" data-s="1783253524" data-e="1783254731"><span class="ptime" data-ts="1783253524"></span><span class="pshow">Power Rangers</span><span class="pep">Foul Play in the Sky</span></div>
+<div class="prog" data-s="1783254731" data-e="1783255947"><span class="ptime" data-ts="1783254731"></span><span class="pshow">Power Rangers</span><span class="pep">Dark Warrior</span></div>
+<div class="prog" data-s="1783255947" data-e="1783257299"><span class="ptime" data-ts="1783255947"></span><span class="pshow">Jem and the Holograms</span><span class="pep">The Music Awards (1)</span></div>
+<div class="prog" data-s="1783257299" data-e="1783258652"><span class="ptime" data-ts="1783257299"></span><span class="pshow">Jem and the Holograms</span><span class="pep">The Music Awards (2)</span></div>
+<div class="prog" data-s="1783258652" data-e="1783260115"><span class="ptime" data-ts="1783258652"></span><span class="pshow">Pee-wee's Playhouse</span><span class="pep">Party</span></div>
+<div class="prog" data-s="1783260115" data-e="1783261578"><span class="ptime" data-ts="1783260115"></span><span class="pshow">Pee-wee's Playhouse</span><span class="pep">Episode 14</span></div>
+<div class="prog" data-s="1783261578" data-e="1783262915"><span class="ptime" data-ts="1783261578"></span><span class="pshow">Teenage Mutant Ninja Turtles</span><span class="pep">The Case of the Killer Pizzas</span></div>
+<div class="prog" data-s="1783262915" data-e="1783264253"><span class="ptime" data-ts="1783262915"></span><span class="pshow">Teenage Mutant Ninja Turtles</span><span class="pep">Enter: The Fly</span></div>
+<div class="prog" data-s="1783264253" data-e="1783265409"><span class="ptime" data-ts="1783264253"></span><span class="pshow">Power Rangers</span><span class="pep">Big Sisters</span></div>
+<div class="prog" data-s="1783265409" data-e="1783266626"><span class="ptime" data-ts="1783265409"></span><span class="pshow">Power Rangers</span><span class="pep">Switching Places</span></div>
+<div class="prog" data-s="1783266626" data-e="1783267994"><span class="ptime" data-ts="1783266626"></span><span class="pshow">Jem and the Holograms</span><span class="pep">The Rock Fashion Book</span></div>
+<div class="prog" data-s="1783267994" data-e="1783269329"><span class="ptime" data-ts="1783267994"></span><span class="pshow">Jem and the Holograms</span><span class="pep">Broadway Magic</span></div>
+<div class="prog" data-s="1783269329" data-e="1783270792"><span class="ptime" data-ts="1783269329"></span><span class="pshow">Pee-wee's Playhouse</span><span class="pep">Episode 15</span></div>
+<div class="prog" data-s="1783270792" data-e="1783272255"><span class="ptime" data-ts="1783270792"></span><span class="pshow">Pee-wee's Playhouse</span><span class="pep">Episode 16</span></div>
+<div class="prog" data-s="1783272255" data-e="1783273590"><span class="ptime" data-ts="1783272255"></span><span class="pshow">Teenage Mutant Ninja Turtles</span><span class="pep">Invasion of the Punk Frogs</span></div>
+<div class="prog" data-s="1783273590" data-e="1783274924"><span class="ptime" data-ts="1783273590"></span><span class="pshow">Teenage Mutant Ninja Turtles</span><span class="pep">Splinter No More</span></div>
+<div class="prog" data-s="1783274924" data-e="1783276132"><span class="ptime" data-ts="1783274924"></span><span class="pshow">Power Rangers</span><span class="pep">Green with Evil Part 1: Out of Control</span></div>
+<div class="prog" data-s="1783276132" data-e="1783277351"><span class="ptime" data-ts="1783276132"></span><span class="pshow">Power Rangers</span><span class="pep">Green with Evil Part 2: Jason's Battle</span></div>
+<div class="prog" data-s="1783277351" data-e="1783278686"><span class="ptime" data-ts="1783277351"></span><span class="pshow">Jem and the Holograms</span><span class="pep">In Search of the Stolen Album</span></div>
+<div class="prog" data-s="1783278686" data-e="1783280023"><span class="ptime" data-ts="1783278686"></span><span class="pshow">Jem and the Holograms</span><span class="pep">Hot Time in Hawaii</span></div>
+<div class="prog" data-s="1783280023" data-e="1783281486"><span class="ptime" data-ts="1783280023"></span><span class="pshow">Pee-wee's Playhouse</span><span class="pep">Episode 17</span></div>
+<div class="prog" data-s="1783281486" data-e="1783282951"><span class="ptime" data-ts="1783281486"></span><span class="pshow">Pee-wee's Playhouse</span><span class="pep">Episode 18</span></div>
+<div class="prog" data-s="1783282951" data-e="1783284288"><span class="ptime" data-ts="1783282951"></span><span class="pshow">Teenage Mutant Ninja Turtles</span><span class="pep">New York's Shiniest</span></div>
+<div class="prog" data-s="1783284288" data-e="1783285624"><span class="ptime" data-ts="1783284288"></span><span class="pshow">Teenage Mutant Ninja Turtles</span><span class="pep">Teenagers from Dimension X</span></div>
+<div class="prog" data-s="1783285624" data-e="1783286772"><span class="ptime" data-ts="1783285624"></span><span class="pshow">Power Rangers</span><span class="pep">Green with Evil Part 3: The Rescue</span></div>
+<div class="prog" data-s="1783286772" data-e="1783287989"><span class="ptime" data-ts="1783286772"></span><span class="pshow">Power Rangers</span><span class="pep">Green with Evil Part 4: Eclipsing Megazord</span></div>
+<div class="prog" data-s="1783287989" data-e="1783289219"><span class="ptime" data-ts="1783287989"></span><span class="pshow">Jem and the Holograms</span><span class="pep">The Princess and the Singer</span></div>
+<div class="prog" data-s="1783289219" data-e="1783290558"><span class="ptime" data-ts="1783289219"></span><span class="pshow">Jem and the Holograms</span><span class="pep">Island of Deception</span></div>
+<div class="prog" data-s="1783290558" data-e="1783292023"><span class="ptime" data-ts="1783290558"></span><span class="pshow">Pee-wee's Playhouse</span><span class="pep">Episode 19</span></div>
+<div class="prog" data-s="1783292023" data-e="1783293488"><span class="ptime" data-ts="1783292023"></span><span class="pshow">Pee-wee's Playhouse</span><span class="pep">Episode 20</span></div>
+<div class="prog" data-s="1783293488" data-e="1783294825"><span class="ptime" data-ts="1783293488"></span><span class="pshow">Teenage Mutant Ninja Turtles</span><span class="pep">The Cat Woman of Channel Six</span></div>
+<div class="prog" data-s="1783294825" data-e="1783296163"><span class="ptime" data-ts="1783294825"></span><span class="pshow">Teenage Mutant Ninja Turtles</span><span class="pep">Return of the Technodrome</span></div>
+<div class="prog" data-s="1783296163" data-e="1783297310"><span class="ptime" data-ts="1783296163"></span><span class="pshow">Power Rangers</span><span class="pep">Green with Evil Part 5: Breaking the Spell</span></div></div>
+</div>
+<div class="chan">
+  <div class="chead"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/taba-tv-v1.png" loading="lazy"><div><div class="cnum">CH 7</div><div class="cname">Taba TV</div></div></div>
+  <div class="progs"><div class="prog" data-s="1783203515" data-e="1783204936"><span class="ptime" data-ts="1783203515"></span><span class="pshow">The Wonder Years</span><span class="pep">Angel</span></div>
+<div class="prog" data-s="1783204936" data-e="1783206248"><span class="ptime" data-ts="1783204936"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Clubba Hubba</span></div>
+<div class="prog" data-s="1783206248" data-e="1783207682"><span class="ptime" data-ts="1783206248"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Not with My Pig, You Don't</span></div>
+<div class="prog" data-s="1783207682" data-e="1783210455"><span class="ptime" data-ts="1783207682"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">One on One</span></div>
+<div class="prog" data-s="1783210455" data-e="1783213268"><span class="ptime" data-ts="1783210455"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">Higher Education</span></div>
+<div class="prog" data-s="1783213268" data-e="1783214634"><span class="ptime" data-ts="1783213268"></span><span class="pshow">Jem and the Holograms</span><span class="pep">The Mansion</span></div>
+<div class="prog" data-s="1783214634" data-e="1783216001"><span class="ptime" data-ts="1783214634"></span><span class="pshow">Jem and the Holograms</span><span class="pep">Starbright (1): Falling Star</span></div>
+<div class="prog" data-s="1783216001" data-e="1783217432"><span class="ptime" data-ts="1783216001"></span><span class="pshow">The Wonder Years</span><span class="pep">The Phone Call</span></div>
+<div class="prog" data-s="1783217432" data-e="1783218858"><span class="ptime" data-ts="1783217432"></span><span class="pshow">The Wonder Years</span><span class="pep">Dance With Me</span></div>
+<div class="prog" data-s="1783218858" data-e="1783220253"><span class="ptime" data-ts="1783218858"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Homeboy, Sweet Homeboy</span></div>
+<div class="prog" data-s="1783220253" data-e="1783221657"><span class="ptime" data-ts="1783220253"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Mistaken Identity</span></div>
+<div class="prog" data-s="1783221657" data-e="1783224405"><span class="ptime" data-ts="1783221657"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">Perfect Mom</span></div>
+<div class="prog" data-s="1783224405" data-e="1783227222"><span class="ptime" data-ts="1783224405"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">The 17-Year Itch</span></div>
+<div class="prog" data-s="1783227222" data-e="1783228587"><span class="ptime" data-ts="1783227222"></span><span class="pshow">Jem and the Holograms</span><span class="pep">Starbright (2): Colliding Stars</span></div>
+<div class="prog" data-s="1783228587" data-e="1783229952"><span class="ptime" data-ts="1783228587"></span><span class="pshow">Jem and the Holograms</span><span class="pep">Starbright (3): Rising Star</span></div>
+<div class="prog" data-s="1783229952" data-e="1783231177"><span class="ptime" data-ts="1783229952"></span><span class="pshow">The Wonder Years</span><span class="pep">Episode 7</span></div>
+<div class="prog" data-s="1783231177" data-e="1783232653"><span class="ptime" data-ts="1783231177"></span><span class="pshow">The Wonder Years</span><span class="pep">Episode 8</span></div>
+<div class="prog" data-s="1783232653" data-e="1783234083"><span class="ptime" data-ts="1783232653"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Def Poet's Society</span></div>
+<div class="prog" data-s="1783234083" data-e="1783236787"><span class="ptime" data-ts="1783234083"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Someday Your Prince Will Be in Effect (1)</span></div>
+<div class="prog" data-s="1783236787" data-e="1783239601"><span class="ptime" data-ts="1783236787"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">The Gentle Art of Listening</span></div>
+<div class="prog" data-s="1783239601" data-e="1783242416"><span class="ptime" data-ts="1783239601"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">Isn't It Romantic?</span></div>
+<div class="prog" data-s="1783242416" data-e="1783243779"><span class="ptime" data-ts="1783242416"></span><span class="pshow">Jem and the Holograms</span><span class="pep">The World Hunger Shindig</span></div>
+<div class="prog" data-s="1783243779" data-e="1783245145"><span class="ptime" data-ts="1783243779"></span><span class="pshow">Jem and the Holograms</span><span class="pep">Adventure in China</span></div>
+<div class="prog" data-s="1783245145" data-e="1783246911"><span class="ptime" data-ts="1783245145"></span><span class="pshow">The Wonder Years</span><span class="pep">Episode 9</span></div>
+<div class="prog" data-s="1783246911" data-e="1783248206"><span class="ptime" data-ts="1783246911"></span><span class="pshow">The Wonder Years</span><span class="pep">Episode 10</span></div>
+<div class="prog" data-s="1783248206" data-e="1783249640"><span class="ptime" data-ts="1783248206"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Someday Your Prince Will Be in Effect (2)</span></div>
+<div class="prog" data-s="1783249640" data-e="1783251065"><span class="ptime" data-ts="1783249640"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Kiss My Butler</span></div>
+<div class="prog" data-s="1783251065" data-e="1783253881"><span class="ptime" data-ts="1783251065"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">B.Y.O.B.</span></div>
+<div class="prog" data-s="1783253881" data-e="1783256666"><span class="ptime" data-ts="1783253881"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">One Man and a Baby</span></div>
+<div class="prog" data-s="1783256666" data-e="1783258031"><span class="ptime" data-ts="1783256666"></span><span class="pshow">Jem and the Holograms</span><span class="pep">Last Resorts</span></div>
+<div class="prog" data-s="1783258031" data-e="1783259397"><span class="ptime" data-ts="1783258031"></span><span class="pshow">Jem and the Holograms</span><span class="pep">In Stitches</span></div>
+<div class="prog" data-s="1783259397" data-e="1783260828"><span class="ptime" data-ts="1783259397"></span><span class="pshow">The Wonder Years</span><span class="pep">Heart of Darkness</span></div>
+<div class="prog" data-s="1783260828" data-e="1783262254"><span class="ptime" data-ts="1783260828"></span><span class="pshow">The Wonder Years</span><span class="pep">Our Miss White</span></div>
+<div class="prog" data-s="1783262254" data-e="1783263689"><span class="ptime" data-ts="1783262254"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Courting Disaster</span></div>
+<div class="prog" data-s="1783263689" data-e="1783265124"><span class="ptime" data-ts="1783263689"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Talking Turkey</span></div>
+<div class="prog" data-s="1783265124" data-e="1783267926"><span class="ptime" data-ts="1783265124"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">Slumber Party</span></div>
+<div class="prog" data-s="1783267926" data-e="1783270742"><span class="ptime" data-ts="1783267926"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">East Side Story</span></div>
+<div class="prog" data-s="1783270742" data-e="1783272095"><span class="ptime" data-ts="1783270742"></span><span class="pshow">Jem and the Holograms</span><span class="pep">The Music Awards (1)</span></div>
+<div class="prog" data-s="1783272095" data-e="1783273447"><span class="ptime" data-ts="1783272095"></span><span class="pshow">Jem and the Holograms</span><span class="pep">The Music Awards (2)</span></div>
+<div class="prog" data-s="1783273447" data-e="1783274672"><span class="ptime" data-ts="1783273447"></span><span class="pshow">The Wonder Years</span><span class="pep">Christmas</span></div>
+<div class="prog" data-s="1783274672" data-e="1783276148"><span class="ptime" data-ts="1783274672"></span><span class="pshow">The Wonder Years</span><span class="pep">Steady as She Goes</span></div>
+<div class="prog" data-s="1783276148" data-e="1783277553"><span class="ptime" data-ts="1783276148"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Knowledge is Power</span></div>
+<div class="prog" data-s="1783277553" data-e="1783278979"><span class="ptime" data-ts="1783277553"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Day Damn One</span></div>
+<div class="prog" data-s="1783278979" data-e="1783281794"><span class="ptime" data-ts="1783278979"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">A Fling in Palm Springs</span></div>
+<div class="prog" data-s="1783281794" data-e="1783284607"><span class="ptime" data-ts="1783281794"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">Fame Is Where You Find It</span></div>
+<div class="prog" data-s="1783284607" data-e="1783285975"><span class="ptime" data-ts="1783284607"></span><span class="pshow">Jem and the Holograms</span><span class="pep">The Rock Fashion Book</span></div>
+<div class="prog" data-s="1783285975" data-e="1783287310"><span class="ptime" data-ts="1783285975"></span><span class="pshow">Jem and the Holograms</span><span class="pep">Broadway Magic</span></div>
+<div class="prog" data-s="1783287310" data-e="1783288605"><span class="ptime" data-ts="1783287310"></span><span class="pshow">The Wonder Years</span><span class="pep">Just Between Me and You and Kirk and Paul and Carla and Becky</span></div>
+<div class="prog" data-s="1783288605" data-e="1783289973"><span class="ptime" data-ts="1783288605"></span><span class="pshow">The Wonder Years</span><span class="pep">Pottery Will Get You Nowhere</span></div>
+<div class="prog" data-s="1783289973" data-e="1783291388"><span class="ptime" data-ts="1783289973"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Deck the Halls</span></div>
+<div class="prog" data-s="1783291388" data-e="1783292818"><span class="ptime" data-ts="1783291388"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">The Lucky Charm</span></div>
+<div class="prog" data-s="1783292818" data-e="1783295635"><span class="ptime" data-ts="1783292818"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">Stand (Up) and Deliver</span></div>
+<div class="prog" data-s="1783295635" data-e="1783298449"><span class="ptime" data-ts="1783295635"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">It's Only a Test</span></div></div>
+</div>
+<div class="chan">
+  <div class="chead"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/y2k-v2.png" loading="lazy"><div><div class="cnum">CH 20</div><div class="cname">Y2K</div></div></div>
+  <div class="progs"><div class="prog" data-s="1783202404" data-e="1783204998"><span class="ptime" data-ts="1783202404"></span><span class="pshow">Glee</span><span class="pep">Preggers</span></div>
+<div class="prog" data-s="1783204998" data-e="1783206304"><span class="ptime" data-ts="1783204998"></span><span class="pshow">Raising Hope</span><span class="pep">Dream Hoarders</span></div>
+<div class="prog" data-s="1783206304" data-e="1783207608"><span class="ptime" data-ts="1783206304"></span><span class="pshow">Raising Hope</span><span class="pep">Say Cheese</span></div>
+<div class="prog" data-s="1783207608" data-e="1783208905"><span class="ptime" data-ts="1783207608"></span><span class="pshow">The Goldbergs (2013)</span><span class="pep">Mini Murray</span></div>
+<div class="prog" data-s="1783208905" data-e="1783210188"><span class="ptime" data-ts="1783208905"></span><span class="pshow">The Goldbergs (2013)</span><span class="pep">Why're You Hitting Yourself?</span></div>
+<div class="prog" data-s="1783210188" data-e="1783211494"><span class="ptime" data-ts="1783210188"></span><span class="pshow">Schitt's Creek</span><span class="pep">Don't Worry, It's His Sister</span></div>
+<div class="prog" data-s="1783211494" data-e="1783212800"><span class="ptime" data-ts="1783211494"></span><span class="pshow">Schitt's Creek</span><span class="pep">Bad Parents</span></div>
+<div class="prog" data-s="1783212800" data-e="1783215413"><span class="ptime" data-ts="1783212800"></span><span class="pshow">Glee</span><span class="pep">The Rhodes Not Taken</span></div>
+<div class="prog" data-s="1783215413" data-e="1783218020"><span class="ptime" data-ts="1783215413"></span><span class="pshow">Glee</span><span class="pep">Vitamin D</span></div>
+<div class="prog" data-s="1783218020" data-e="1783219292"><span class="ptime" data-ts="1783218020"></span><span class="pshow">Raising Hope</span><span class="pep">Happy Halloween</span></div>
+<div class="prog" data-s="1783219292" data-e="1783220593"><span class="ptime" data-ts="1783219292"></span><span class="pshow">Raising Hope</span><span class="pep">Family Secrets</span></div>
+<div class="prog" data-s="1783220593" data-e="1783221891"><span class="ptime" data-ts="1783220593"></span><span class="pshow">The Goldbergs (2013)</span><span class="pep">The Ring</span></div>
+<div class="prog" data-s="1783221891" data-e="1783223184"><span class="ptime" data-ts="1783221891"></span><span class="pshow">The Goldbergs (2013)</span><span class="pep">Who Are You Going to Telephone?</span></div>
+<div class="prog" data-s="1783223184" data-e="1783224490"><span class="ptime" data-ts="1783223184"></span><span class="pshow">Schitt's Creek</span><span class="pep">The Cabin</span></div>
+<div class="prog" data-s="1783224490" data-e="1783225796"><span class="ptime" data-ts="1783224490"></span><span class="pshow">Schitt's Creek</span><span class="pep">Wine and Roses</span></div>
+<div class="prog" data-s="1783225796" data-e="1783228405"><span class="ptime" data-ts="1783225796"></span><span class="pshow">Glee</span><span class="pep">Throwdown</span></div>
+<div class="prog" data-s="1783228405" data-e="1783230995"><span class="ptime" data-ts="1783228405"></span><span class="pshow">Glee</span><span class="pep">Mash-Up</span></div>
+<div class="prog" data-s="1783230995" data-e="1783232298"><span class="ptime" data-ts="1783230995"></span><span class="pshow">Raising Hope</span><span class="pep">The Sniffles</span></div>
+<div class="prog" data-s="1783232298" data-e="1783233591"><span class="ptime" data-ts="1783232298"></span><span class="pshow">Raising Hope</span><span class="pep">Blue Dots</span></div>
+<div class="prog" data-s="1783233591" data-e="1783234889"><span class="ptime" data-ts="1783233591"></span><span class="pshow">The Goldbergs (2013)</span><span class="pep">Call Me When You Get There</span></div>
+<div class="prog" data-s="1783234889" data-e="1783236179"><span class="ptime" data-ts="1783234889"></span><span class="pshow">The Goldbergs (2013)</span><span class="pep">The Kremps</span></div>
+<div class="prog" data-s="1783236179" data-e="1783237484"><span class="ptime" data-ts="1783236179"></span><span class="pshow">Schitt's Creek</span><span class="pep">Turkey Shoot</span></div>
+<div class="prog" data-s="1783237484" data-e="1783238790"><span class="ptime" data-ts="1783237484"></span><span class="pshow">Schitt's Creek</span><span class="pep">Allez Vous</span></div>
+<div class="prog" data-s="1783238790" data-e="1783241433"><span class="ptime" data-ts="1783238790"></span><span class="pshow">Glee</span><span class="pep">Wheels</span></div>
+<div class="prog" data-s="1783241433" data-e="1783244022"><span class="ptime" data-ts="1783241433"></span><span class="pshow">Glee</span><span class="pep">Ballad</span></div>
+<div class="prog" data-s="1783244022" data-e="1783245363"><span class="ptime" data-ts="1783244022"></span><span class="pshow">Raising Hope</span><span class="pep">Meet the Grandparents</span></div>
+<div class="prog" data-s="1783245363" data-e="1783246666"><span class="ptime" data-ts="1783245363"></span><span class="pshow">Raising Hope</span><span class="pep">Burt Rocks</span></div>
+<div class="prog" data-s="1783246666" data-e="1783247965"><span class="ptime" data-ts="1783246666"></span><span class="pshow">The Goldbergs (2013)</span><span class="pep">Stop Arguing and Start Thanking</span></div>
+<div class="prog" data-s="1783247965" data-e="1783249261"><span class="ptime" data-ts="1783247965"></span><span class="pshow">The Goldbergs (2013)</span><span class="pep">Shopping</span></div>
+<div class="prog" data-s="1783249261" data-e="1783250566"><span class="ptime" data-ts="1783249261"></span><span class="pshow">Schitt's Creek</span><span class="pep">Carl's Funeral</span></div>
+<div class="prog" data-s="1783250566" data-e="1783251872"><span class="ptime" data-ts="1783250566"></span><span class="pshow">Schitt's Creek</span><span class="pep">Honeymoon</span></div>
+<div class="prog" data-s="1783251872" data-e="1783254505"><span class="ptime" data-ts="1783251872"></span><span class="pshow">Glee</span><span class="pep">Hairography</span></div>
+<div class="prog" data-s="1783254505" data-e="1783257060"><span class="ptime" data-ts="1783254505"></span><span class="pshow">Glee</span><span class="pep">Mattress</span></div>
+<div class="prog" data-s="1783257060" data-e="1783258363"><span class="ptime" data-ts="1783257060"></span><span class="pshow">Raising Hope</span><span class="pep">Toy Story</span></div>
+<div class="prog" data-s="1783258363" data-e="1783259669"><span class="ptime" data-ts="1783258363"></span><span class="pshow">Raising Hope</span><span class="pep">Romeo and Romeo</span></div>
+<div class="prog" data-s="1783259669" data-e="1783260963"><span class="ptime" data-ts="1783259669"></span><span class="pshow">The Goldbergs (2013)</span><span class="pep">Kara-Te</span></div>
+<div class="prog" data-s="1783260963" data-e="1783262257"><span class="ptime" data-ts="1783260963"></span><span class="pshow">The Goldbergs (2013)</span><span class="pep">You're Under Foot</span></div>
+<div class="prog" data-s="1783262257" data-e="1783263563"><span class="ptime" data-ts="1783262257"></span><span class="pshow">Schitt's Creek</span><span class="pep">Little Sister</span></div>
+<div class="prog" data-s="1783263563" data-e="1783264867"><span class="ptime" data-ts="1783263563"></span><span class="pshow">Schitt's Creek</span><span class="pep">Surprise Party</span></div>
+<div class="prog" data-s="1783264867" data-e="1783267507"><span class="ptime" data-ts="1783264867"></span><span class="pshow">Glee</span><span class="pep">Sectionals</span></div>
+<div class="prog" data-s="1783267507" data-e="1783270262"><span class="ptime" data-ts="1783267507"></span><span class="pshow">Glee</span><span class="pep">Hell-O</span></div>
+<div class="prog" data-s="1783270262" data-e="1783271565"><span class="ptime" data-ts="1783270262"></span><span class="pshow">Raising Hope</span><span class="pep">A Germ of a Story</span></div>
+<div class="prog" data-s="1783271565" data-e="1783272869"><span class="ptime" data-ts="1783271565"></span><span class="pshow">Raising Hope</span><span class="pep">What Up, Cuz?</span></div>
+<div class="prog" data-s="1783272869" data-e="1783274166"><span class="ptime" data-ts="1783272869"></span><span class="pshow">The Goldbergs (2013)</span><span class="pep">The Other Smother</span></div>
+<div class="prog" data-s="1783274166" data-e="1783275464"><span class="ptime" data-ts="1783274166"></span><span class="pshow">The Goldbergs (2013)</span><span class="pep">You Opened the Door</span></div>
+<div class="prog" data-s="1783275464" data-e="1783276770"><span class="ptime" data-ts="1783275464"></span><span class="pshow">Schitt's Creek</span><span class="pep">Town for Sale</span></div>
+<div class="prog" data-s="1783276770" data-e="1783278080"><span class="ptime" data-ts="1783276770"></span><span class="pshow">Schitt's Creek</span><span class="pep">Finding David</span></div>
+<div class="prog" data-s="1783278080" data-e="1783280785"><span class="ptime" data-ts="1783278080"></span><span class="pshow">Glee</span><span class="pep">The Power of Madonna</span></div>
+<div class="prog" data-s="1783280785" data-e="1783283475"><span class="ptime" data-ts="1783280785"></span><span class="pshow">Glee</span><span class="pep">Home</span></div>
+<div class="prog" data-s="1783283475" data-e="1783284779"><span class="ptime" data-ts="1783283475"></span><span class="pshow">Raising Hope</span><span class="pep">Snip Snip</span></div>
+<div class="prog" data-s="1783284779" data-e="1783286082"><span class="ptime" data-ts="1783284779"></span><span class="pshow">Raising Hope</span><span class="pep">The Cultish Personality</span></div>
+<div class="prog" data-s="1783286082" data-e="1783287380"><span class="ptime" data-ts="1783286082"></span><span class="pshow">The Goldbergs (2013)</span><span class="pep">Muscles Mirsky</span></div>
+<div class="prog" data-s="1783287380" data-e="1783288674"><span class="ptime" data-ts="1783287380"></span><span class="pshow">The Goldbergs (2013)</span><span class="pep">Goldbergs Never Say Die!</span></div>
+<div class="prog" data-s="1783288674" data-e="1783289984"><span class="ptime" data-ts="1783288674"></span><span class="pshow">Schitt's Creek</span><span class="pep">Family Dinner</span></div>
+<div class="prog" data-s="1783289984" data-e="1783291294"><span class="ptime" data-ts="1783289984"></span><span class="pshow">Schitt's Creek</span><span class="pep">Jazzagals</span></div>
+<div class="prog" data-s="1783291294" data-e="1783293933"><span class="ptime" data-ts="1783291294"></span><span class="pshow">Glee</span><span class="pep">Bad Reputation</span></div>
+<div class="prog" data-s="1783293933" data-e="1783296926"><span class="ptime" data-ts="1783293933"></span><span class="pshow">Glee</span><span class="pep">Laryngitis</span></div>
+<div class="prog" data-s="1783296926" data-e="1783298231"><span class="ptime" data-ts="1783296926"></span><span class="pshow">Raising Hope</span><span class="pep">Mongooses</span></div></div>
+</div>
+<div class="chan">
+  <div class="chead"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/jukebox-v1.png" loading="lazy"><div><div class="cnum">CH 45</div><div class="cname">The Jukebox</div></div></div>
+  <div class="progs"><div class="prog" data-s="1783202175" data-e="1783204785"><span class="ptime" data-ts="1783202175"></span><span class="pshow">Glee</span><span class="pep">Throwdown</span></div>
+<div class="prog" data-s="1783204785" data-e="1783207374"><span class="ptime" data-ts="1783204785"></span><span class="pshow">Glee</span><span class="pep">Mash-Up</span></div>
+<div class="prog" data-s="1783207374" data-e="1783210017"><span class="ptime" data-ts="1783207374"></span><span class="pshow">Glee</span><span class="pep">Wheels</span></div>
+<div class="prog" data-s="1783210017" data-e="1783212606"><span class="ptime" data-ts="1783210017"></span><span class="pshow">Glee</span><span class="pep">Ballad</span></div>
+<div class="prog" data-s="1783212606" data-e="1783215238"><span class="ptime" data-ts="1783212606"></span><span class="pshow">Glee</span><span class="pep">Hairography</span></div>
+<div class="prog" data-s="1783215238" data-e="1783217793"><span class="ptime" data-ts="1783215238"></span><span class="pshow">Glee</span><span class="pep">Mattress</span></div>
+<div class="prog" data-s="1783217793" data-e="1783220433"><span class="ptime" data-ts="1783217793"></span><span class="pshow">Glee</span><span class="pep">Sectionals</span></div>
+<div class="prog" data-s="1783220433" data-e="1783223188"><span class="ptime" data-ts="1783220433"></span><span class="pshow">Glee</span><span class="pep">Hell-O</span></div>
+<div class="prog" data-s="1783223188" data-e="1783225893"><span class="ptime" data-ts="1783223188"></span><span class="pshow">Glee</span><span class="pep">The Power of Madonna</span></div>
+<div class="prog" data-s="1783225893" data-e="1783228583"><span class="ptime" data-ts="1783225893"></span><span class="pshow">Glee</span><span class="pep">Home</span></div>
+<div class="prog" data-s="1783228583" data-e="1783231222"><span class="ptime" data-ts="1783228583"></span><span class="pshow">Glee</span><span class="pep">Bad Reputation</span></div>
+<div class="prog" data-s="1783231222" data-e="1783234215"><span class="ptime" data-ts="1783231222"></span><span class="pshow">Glee</span><span class="pep">Laryngitis</span></div>
+<div class="prog" data-s="1783234215" data-e="1783236855"><span class="ptime" data-ts="1783234215"></span><span class="pshow">Glee</span><span class="pep">Dream On</span></div>
+<div class="prog" data-s="1783236855" data-e="1783239495"><span class="ptime" data-ts="1783236855"></span><span class="pshow">Glee</span><span class="pep">Theatricality</span></div>
+<div class="prog" data-s="1783239495" data-e="1783242135"><span class="ptime" data-ts="1783239495"></span><span class="pshow">Glee</span><span class="pep">Funk</span></div>
+<div class="prog" data-s="1783242135" data-e="1783244248"><span class="ptime" data-ts="1783242135"></span><span class="pshow">Glee</span><span class="pep">Journey to Regionals</span></div>
+<div class="prog" data-s="1783244248" data-e="1783247135"><span class="ptime" data-ts="1783244248"></span><span class="pshow">Glee</span><span class="pep">Pilot</span></div>
+<div class="prog" data-s="1783247135" data-e="1783249794"><span class="ptime" data-ts="1783247135"></span><span class="pshow">Glee</span><span class="pep">Showmance</span></div>
+<div class="prog" data-s="1783249794" data-e="1783252388"><span class="ptime" data-ts="1783249794"></span><span class="pshow">Glee</span><span class="pep">Acafellas</span></div>
+<div class="prog" data-s="1783252388" data-e="1783254982"><span class="ptime" data-ts="1783252388"></span><span class="pshow">Glee</span><span class="pep">Preggers</span></div>
+<div class="prog" data-s="1783254982" data-e="1783257596"><span class="ptime" data-ts="1783254982"></span><span class="pshow">Glee</span><span class="pep">The Rhodes Not Taken</span></div>
+<div class="prog" data-s="1783257596" data-e="1783260202"><span class="ptime" data-ts="1783257596"></span><span class="pshow">Glee</span><span class="pep">Vitamin D</span></div>
+<div class="prog" data-s="1783260202" data-e="1783262812"><span class="ptime" data-ts="1783260202"></span><span class="pshow">Glee</span><span class="pep">Throwdown</span></div>
+<div class="prog" data-s="1783262812" data-e="1783265401"><span class="ptime" data-ts="1783262812"></span><span class="pshow">Glee</span><span class="pep">Mash-Up</span></div>
+<div class="prog" data-s="1783265401" data-e="1783268044"><span class="ptime" data-ts="1783265401"></span><span class="pshow">Glee</span><span class="pep">Wheels</span></div>
+<div class="prog" data-s="1783268044" data-e="1783270633"><span class="ptime" data-ts="1783268044"></span><span class="pshow">Glee</span><span class="pep">Ballad</span></div>
+<div class="prog" data-s="1783270633" data-e="1783273266"><span class="ptime" data-ts="1783270633"></span><span class="pshow">Glee</span><span class="pep">Hairography</span></div>
+<div class="prog" data-s="1783273266" data-e="1783275820"><span class="ptime" data-ts="1783273266"></span><span class="pshow">Glee</span><span class="pep">Mattress</span></div>
+<div class="prog" data-s="1783275820" data-e="1783278460"><span class="ptime" data-ts="1783275820"></span><span class="pshow">Glee</span><span class="pep">Sectionals</span></div>
+<div class="prog" data-s="1783278460" data-e="1783281216"><span class="ptime" data-ts="1783278460"></span><span class="pshow">Glee</span><span class="pep">Hell-O</span></div>
+<div class="prog" data-s="1783281216" data-e="1783283920"><span class="ptime" data-ts="1783281216"></span><span class="pshow">Glee</span><span class="pep">The Power of Madonna</span></div>
+<div class="prog" data-s="1783283920" data-e="1783286610"><span class="ptime" data-ts="1783283920"></span><span class="pshow">Glee</span><span class="pep">Home</span></div>
+<div class="prog" data-s="1783286610" data-e="1783289249"><span class="ptime" data-ts="1783286610"></span><span class="pshow">Glee</span><span class="pep">Bad Reputation</span></div>
+<div class="prog" data-s="1783289249" data-e="1783292242"><span class="ptime" data-ts="1783289249"></span><span class="pshow">Glee</span><span class="pep">Laryngitis</span></div>
+<div class="prog" data-s="1783292242" data-e="1783294882"><span class="ptime" data-ts="1783292242"></span><span class="pshow">Glee</span><span class="pep">Dream On</span></div>
+<div class="prog" data-s="1783294882" data-e="1783297522"><span class="ptime" data-ts="1783294882"></span><span class="pshow">Glee</span><span class="pep">Theatricality</span></div></div>
+</div>
+<div class="chan">
+  <div class="chead"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/groovy-v2.png" loading="lazy"><div><div class="cnum">CH 70</div><div class="cname">Groovy TV</div></div></div>
+  <div class="progs"><div class="prog" data-s="1783199787" data-e="1783203857"><span class="ptime" data-ts="1783199787"></span><span class="pshow">Saturday Night Live</span><span class="pep">Candice Bergen with Esther Phillips</span></div>
+<div class="prog" data-s="1783203857" data-e="1783207856"><span class="ptime" data-ts="1783203857"></span><span class="pshow">Saturday Night Live</span><span class="pep">Robert Klein with ABBA and Loudon Wainwright III</span></div>
+<div class="prog" data-s="1783207856" data-e="1783211744"><span class="ptime" data-ts="1783207856"></span><span class="pshow">Saturday Night Live</span><span class="pep">Lily Tomlin</span></div>
+<div class="prog" data-s="1783211744" data-e="1783215725"><span class="ptime" data-ts="1783211744"></span><span class="pshow">Saturday Night Live</span><span class="pep">Richard Pryor with Gil Scott-Heron</span></div>
+<div class="prog" data-s="1783215725" data-e="1783219728"><span class="ptime" data-ts="1783215725"></span><span class="pshow">Saturday Night Live</span><span class="pep">Candice Bergen with Martha Reeves and The Stylistics</span></div>
+<div class="prog" data-s="1783219728" data-e="1783223802"><span class="ptime" data-ts="1783219728"></span><span class="pshow">Saturday Night Live</span><span class="pep">Elliott Gould with Anne Murray</span></div>
+<div class="prog" data-s="1783223802" data-e="1783227772"><span class="ptime" data-ts="1783223802"></span><span class="pshow">Saturday Night Live</span><span class="pep">Buck Henry with Bill Withers and Toni Basil</span></div>
+<div class="prog" data-s="1783227772" data-e="1783231779"><span class="ptime" data-ts="1783227772"></span><span class="pshow">Saturday Night Live</span><span class="pep">Peter Cook &amp; Dudley Moore with Neil Sedaka</span></div>
+<div class="prog" data-s="1783231779" data-e="1783235817"><span class="ptime" data-ts="1783231779"></span><span class="pshow">Saturday Night Live</span><span class="pep">Dick Cavett with Jimmy Cliff</span></div>
+<div class="prog" data-s="1783235817" data-e="1783239594"><span class="ptime" data-ts="1783235817"></span><span class="pshow">Saturday Night Live</span><span class="pep">Peter Boyle with Al Jarreau</span></div>
+<div class="prog" data-s="1783239594" data-e="1783243593"><span class="ptime" data-ts="1783239594"></span><span class="pshow">Saturday Night Live</span><span class="pep">Desi Arnaz with Desi Arnaz Jr.</span></div>
+<div class="prog" data-s="1783243593" data-e="1783247580"><span class="ptime" data-ts="1783243593"></span><span class="pshow">Saturday Night Live</span><span class="pep">Jill Clayburgh with Leon Redbone</span></div>
+<div class="prog" data-s="1783247580" data-e="1783251638"><span class="ptime" data-ts="1783247580"></span><span class="pshow">Saturday Night Live</span><span class="pep">Anthony Perkins with Betty Carter</span></div>
+<div class="prog" data-s="1783251638" data-e="1783255641"><span class="ptime" data-ts="1783251638"></span><span class="pshow">Saturday Night Live</span><span class="pep">Ron Nessen with the Patti Smith Group</span></div>
+<div class="prog" data-s="1783255641" data-e="1783259707"><span class="ptime" data-ts="1783255641"></span><span class="pshow">Saturday Night Live</span><span class="pep">Raquel Welch with Phoebe Snow and John Sebastian</span></div>
+<div class="prog" data-s="1783259707" data-e="1783263669"><span class="ptime" data-ts="1783259707"></span><span class="pshow">Saturday Night Live</span><span class="pep">Madeline Kahn with Carly Simon</span></div>
+<div class="prog" data-s="1783263669" data-e="1783267659"><span class="ptime" data-ts="1783263669"></span><span class="pshow">Saturday Night Live</span><span class="pep">Dyan Cannon with Leon &amp; Mary Russell</span></div>
+<div class="prog" data-s="1783267659" data-e="1783271673"><span class="ptime" data-ts="1783267659"></span><span class="pshow">Saturday Night Live</span><span class="pep">Buck Henry with Gordon Lightfoot</span></div>
+<div class="prog" data-s="1783271673" data-e="1783275638"><span class="ptime" data-ts="1783271673"></span><span class="pshow">Saturday Night Live</span><span class="pep">Elliott Gould with Leon Redbone and Harlan Collins &amp; Joyce Everson</span></div>
+<div class="prog" data-s="1783275638" data-e="1783279638"><span class="ptime" data-ts="1783275638"></span><span class="pshow">Saturday Night Live</span><span class="pep">Louise Lasser with the Preservation Hall Jazz Band</span></div>
+<div class="prog" data-s="1783279638" data-e="1783283631"><span class="ptime" data-ts="1783279638"></span><span class="pshow">Saturday Night Live</span><span class="pep">Kris Kristofferson with Rita Coolidge</span></div>
+<div class="prog" data-s="1783283631" data-e="1783287569"><span class="ptime" data-ts="1783283631"></span><span class="pshow">Saturday Night Live</span><span class="pep">George Carlin with Billy Preston and Janis Ian</span></div>
+<div class="prog" data-s="1783287569" data-e="1783291526"><span class="ptime" data-ts="1783287569"></span><span class="pshow">Saturday Night Live</span><span class="pep">Paul Simon with Randy Newman and Phoebe Snow</span></div>
+<div class="prog" data-s="1783291526" data-e="1783295472"><span class="ptime" data-ts="1783291526"></span><span class="pshow">Saturday Night Live</span><span class="pep">Rob Reiner</span></div>
+<div class="prog" data-s="1783295472" data-e="1783299542"><span class="ptime" data-ts="1783295472"></span><span class="pshow">Saturday Night Live</span><span class="pep">Candice Bergen with Esther Phillips</span></div></div>
+</div>
+<div class="chan">
+  <div class="chead"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/late-nite-v2.png" loading="lazy"><div><div class="cnum">CH 75</div><div class="cname">Late Nite</div></div></div>
+  <div class="progs"><div class="prog" data-s="1783201755" data-e="1783205825"><span class="ptime" data-ts="1783201755"></span><span class="pshow">Saturday Night Live</span><span class="pep">Candice Bergen with Esther Phillips</span></div>
+<div class="prog" data-s="1783205825" data-e="1783207204"><span class="ptime" data-ts="1783205825"></span><span class="pshow">In Living Color</span><span class="pep">Lean On Me Beautiful</span></div>
+<div class="prog" data-s="1783207204" data-e="1783208597"><span class="ptime" data-ts="1783207204"></span><span class="pshow">In Living Color</span><span class="pep">Transitions</span></div>
+<div class="prog" data-s="1783208597" data-e="1783209275"><span class="ptime" data-ts="1783208597"></span><span class="pshow">Robot Chicken</span><span class="pep">Gold Dust Gasoline</span></div>
+<div class="prog" data-s="1783209275" data-e="1783209957"><span class="ptime" data-ts="1783209275"></span><span class="pshow">Robot Chicken</span><span class="pep">Plastic Buffet</span></div>
+<div class="prog" data-s="1783209957" data-e="1783213955"><span class="ptime" data-ts="1783209957"></span><span class="pshow">Saturday Night Live</span><span class="pep">Robert Klein with ABBA and Loudon Wainwright III</span></div>
+<div class="prog" data-s="1783213955" data-e="1783217843"><span class="ptime" data-ts="1783213955"></span><span class="pshow">Saturday Night Live</span><span class="pep">Lily Tomlin</span></div>
+<div class="prog" data-s="1783217843" data-e="1783219225"><span class="ptime" data-ts="1783217843"></span><span class="pshow">In Living Color</span><span class="pep">A Date With Grace Jones</span></div>
+<div class="prog" data-s="1783219225" data-e="1783220613"><span class="ptime" data-ts="1783219225"></span><span class="pshow">In Living Color</span><span class="pep">Jheri's Kids</span></div>
+<div class="prog" data-s="1783220613" data-e="1783221309"><span class="ptime" data-ts="1783220613"></span><span class="pshow">Robot Chicken</span><span class="pep">Toyz in the Hood</span></div>
+<div class="prog" data-s="1783221309" data-e="1783222007"><span class="ptime" data-ts="1783221309"></span><span class="pshow">Robot Chicken</span><span class="pep">Vegetable Fun Fest</span></div>
+<div class="prog" data-s="1783222007" data-e="1783225988"><span class="ptime" data-ts="1783222007"></span><span class="pshow">Saturday Night Live</span><span class="pep">Richard Pryor with Gil Scott-Heron</span></div>
+<div class="prog" data-s="1783225988" data-e="1783229992"><span class="ptime" data-ts="1783225988"></span><span class="pshow">Saturday Night Live</span><span class="pep">Candice Bergen with Martha Reeves and The Stylistics</span></div>
+<div class="prog" data-s="1783229992" data-e="1783231383"><span class="ptime" data-ts="1783229992"></span><span class="pshow">In Living Color</span><span class="pep">Don King - The Early Years</span></div>
+<div class="prog" data-s="1783231383" data-e="1783232776"><span class="ptime" data-ts="1783231383"></span><span class="pshow">In Living Color</span><span class="pep">Endangered Species</span></div>
+<div class="prog" data-s="1783232776" data-e="1783233440"><span class="ptime" data-ts="1783232776"></span><span class="pshow">Robot Chicken</span><span class="pep">A Piece of the Action</span></div>
+<div class="prog" data-s="1783233440" data-e="1783234095"><span class="ptime" data-ts="1783233440"></span><span class="pshow">Robot Chicken</span><span class="pep">The Deep End</span></div>
+<div class="prog" data-s="1783234095" data-e="1783238169"><span class="ptime" data-ts="1783234095"></span><span class="pshow">Saturday Night Live</span><span class="pep">Elliott Gould with Anne Murray</span></div>
+<div class="prog" data-s="1783238169" data-e="1783242139"><span class="ptime" data-ts="1783238169"></span><span class="pshow">Saturday Night Live</span><span class="pep">Buck Henry with Bill Withers and Toni Basil</span></div>
+<div class="prog" data-s="1783242139" data-e="1783243531"><span class="ptime" data-ts="1783242139"></span><span class="pshow">In Living Color</span><span class="pep">Introducing...Homey D. Clown</span></div>
+<div class="prog" data-s="1783243531" data-e="1783244923"><span class="ptime" data-ts="1783243531"></span><span class="pshow">In Living Color</span><span class="pep">Vera DeMilo</span></div>
+<div class="prog" data-s="1783244923" data-e="1783245562"><span class="ptime" data-ts="1783244923"></span><span class="pshow">Robot Chicken</span><span class="pep">S&amp;M Present</span></div>
+<div class="prog" data-s="1783245562" data-e="1783246254"><span class="ptime" data-ts="1783245562"></span><span class="pshow">Robot Chicken</span><span class="pep">Badunkadunk</span></div>
+<div class="prog" data-s="1783246254" data-e="1783250261"><span class="ptime" data-ts="1783246254"></span><span class="pshow">Saturday Night Live</span><span class="pep">Peter Cook &amp; Dudley Moore with Neil Sedaka</span></div>
+<div class="prog" data-s="1783250261" data-e="1783254299"><span class="ptime" data-ts="1783250261"></span><span class="pshow">Saturday Night Live</span><span class="pep">Dick Cavett with Jimmy Cliff</span></div>
+<div class="prog" data-s="1783254299" data-e="1783255690"><span class="ptime" data-ts="1783254299"></span><span class="pshow">In Living Color</span><span class="pep">Anton In The People's Court</span></div>
+<div class="prog" data-s="1783255690" data-e="1783257081"><span class="ptime" data-ts="1783255690"></span><span class="pshow">In Living Color</span><span class="pep">Conspiracy</span></div>
+<div class="prog" data-s="1783257081" data-e="1783257782"><span class="ptime" data-ts="1783257081"></span><span class="pshow">Robot Chicken</span><span class="pep">Toy Meets Girl</span></div>
+<div class="prog" data-s="1783257782" data-e="1783258431"><span class="ptime" data-ts="1783257782"></span><span class="pshow">Robot Chicken</span><span class="pep">Midnight Snack</span></div>
+<div class="prog" data-s="1783258431" data-e="1783262207"><span class="ptime" data-ts="1783258431"></span><span class="pshow">Saturday Night Live</span><span class="pep">Peter Boyle with Al Jarreau</span></div>
+<div class="prog" data-s="1783262207" data-e="1783266206"><span class="ptime" data-ts="1783262207"></span><span class="pshow">Saturday Night Live</span><span class="pep">Desi Arnaz with Desi Arnaz Jr.</span></div>
+<div class="prog" data-s="1783266206" data-e="1783267596"><span class="ptime" data-ts="1783266206"></span><span class="pshow">In Living Color</span><span class="pep">Homey D. Clown Returns</span></div>
+<div class="prog" data-s="1783267596" data-e="1783268989"><span class="ptime" data-ts="1783267596"></span><span class="pshow">In Living Color</span><span class="pep">Bigger Brothers</span></div>
+<div class="prog" data-s="1783268989" data-e="1783269666"><span class="ptime" data-ts="1783268989"></span><span class="pshow">Robot Chicken</span><span class="pep">Atta Toy</span></div>
+<div class="prog" data-s="1783269666" data-e="1783270302"><span class="ptime" data-ts="1783269666"></span><span class="pshow">Robot Chicken</span><span class="pep">Joint Point</span></div>
+<div class="prog" data-s="1783270302" data-e="1783274288"><span class="ptime" data-ts="1783270302"></span><span class="pshow">Saturday Night Live</span><span class="pep">Jill Clayburgh with Leon Redbone</span></div>
+<div class="prog" data-s="1783274288" data-e="1783278347"><span class="ptime" data-ts="1783274288"></span><span class="pshow">Saturday Night Live</span><span class="pep">Anthony Perkins with Betty Carter</span></div>
+<div class="prog" data-s="1783278347" data-e="1783279729"><span class="ptime" data-ts="1783278347"></span><span class="pshow">In Living Color</span><span class="pep">Anton at the Recruiter</span></div>
+<div class="prog" data-s="1783279729" data-e="1783281035"><span class="ptime" data-ts="1783279729"></span><span class="pshow">In Living Color</span><span class="pep">Spike's Joint</span></div>
+<div class="prog" data-s="1783281035" data-e="1783281732"><span class="ptime" data-ts="1783281035"></span><span class="pshow">Robot Chicken</span><span class="pep">Kiddie Pool</span></div>
+<div class="prog" data-s="1783281732" data-e="1783282449"><span class="ptime" data-ts="1783281732"></span><span class="pshow">Robot Chicken</span><span class="pep">Nightmare Generator</span></div>
+<div class="prog" data-s="1783282449" data-e="1783286452"><span class="ptime" data-ts="1783282449"></span><span class="pshow">Saturday Night Live</span><span class="pep">Ron Nessen with the Patti Smith Group</span></div>
+<div class="prog" data-s="1783286452" data-e="1783290517"><span class="ptime" data-ts="1783286452"></span><span class="pshow">Saturday Night Live</span><span class="pep">Raquel Welch with Phoebe Snow and John Sebastian</span></div>
+<div class="prog" data-s="1783290517" data-e="1783291909"><span class="ptime" data-ts="1783290517"></span><span class="pshow">In Living Color</span><span class="pep">Hour of Power</span></div>
+<div class="prog" data-s="1783291909" data-e="1783293302"><span class="ptime" data-ts="1783291909"></span><span class="pshow">In Living Color</span><span class="pep">Miss Black Person USA</span></div>
+<div class="prog" data-s="1783293302" data-e="1783293982"><span class="ptime" data-ts="1783293302"></span><span class="pshow">Robot Chicken</span><span class="pep">Operation Rich in Spirit</span></div>
+<div class="prog" data-s="1783293982" data-e="1783294618"><span class="ptime" data-ts="1783293982"></span><span class="pshow">Robot Chicken</span><span class="pep">The Sack</span></div>
+<div class="prog" data-s="1783294618" data-e="1783298581"><span class="ptime" data-ts="1783294618"></span><span class="pshow">Saturday Night Live</span><span class="pep">Madeline Kahn with Carly Simon</span></div></div>
+</div>
+<div class="chan">
+  <div class="chead"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/iheart80s-v2.png" loading="lazy"><div><div class="cnum">CH 80</div><div class="cname">I Heart 80s</div></div></div>
+  <div class="progs"><div class="prog" data-s="1783203278" data-e="1783204644"><span class="ptime" data-ts="1783203278"></span><span class="pshow">Jem and the Holograms</span><span class="pep">Nowhere To Go</span></div>
+<div class="prog" data-s="1783204644" data-e="1783206014"><span class="ptime" data-ts="1783204644"></span><span class="pshow">Teenage Mutant Ninja Turtles</span><span class="pep">A Thing about Rats</span></div>
+<div class="prog" data-s="1783206014" data-e="1783207384"><span class="ptime" data-ts="1783206014"></span><span class="pshow">Teenage Mutant Ninja Turtles</span><span class="pep">Hot Rodding Teenagers from Dimension X</span></div>
+<div class="prog" data-s="1783207384" data-e="1783208845"><span class="ptime" data-ts="1783207384"></span><span class="pshow">Pee-wee's Playhouse</span><span class="pep">Rainy Day</span></div>
+<div class="prog" data-s="1783208845" data-e="1783210374"><span class="ptime" data-ts="1783208845"></span><span class="pshow">Pee-wee's Playhouse</span><span class="pep">Now You See Me, Now You Don't</span></div>
+<div class="prog" data-s="1783210374" data-e="1783211806"><span class="ptime" data-ts="1783210374"></span><span class="pshow">The Wonder Years</span><span class="pep">The Phone Call</span></div>
+<div class="prog" data-s="1783211806" data-e="1783213232"><span class="ptime" data-ts="1783211806"></span><span class="pshow">The Wonder Years</span><span class="pep">Dance With Me</span></div>
+<div class="prog" data-s="1783213232" data-e="1783214598"><span class="ptime" data-ts="1783213232"></span><span class="pshow">Jem and the Holograms</span><span class="pep">The Mansion</span></div>
+<div class="prog" data-s="1783214598" data-e="1783215965"><span class="ptime" data-ts="1783214598"></span><span class="pshow">Jem and the Holograms</span><span class="pep">Starbright (1): Falling Star</span></div>
+<div class="prog" data-s="1783215965" data-e="1783217334"><span class="ptime" data-ts="1783215965"></span><span class="pshow">Teenage Mutant Ninja Turtles</span><span class="pep">Shredder &amp; Splintered</span></div>
+<div class="prog" data-s="1783217334" data-e="1783218750"><span class="ptime" data-ts="1783217334"></span><span class="pshow">Teenage Mutant Ninja Turtles</span><span class="pep">Episode 6</span></div>
+<div class="prog" data-s="1783218750" data-e="1783220213"><span class="ptime" data-ts="1783218750"></span><span class="pshow">Pee-wee's Playhouse</span><span class="pep">Just Another Day</span></div>
+<div class="prog" data-s="1783220213" data-e="1783221677"><span class="ptime" data-ts="1783220213"></span><span class="pshow">Pee-wee's Playhouse</span><span class="pep">Beauty Makeover</span></div>
+<div class="prog" data-s="1783221677" data-e="1783222901"><span class="ptime" data-ts="1783221677"></span><span class="pshow">The Wonder Years</span><span class="pep">Episode 7</span></div>
+<div class="prog" data-s="1783222901" data-e="1783224377"><span class="ptime" data-ts="1783222901"></span><span class="pshow">The Wonder Years</span><span class="pep">Episode 8</span></div>
+<div class="prog" data-s="1783224377" data-e="1783225742"><span class="ptime" data-ts="1783224377"></span><span class="pshow">Jem and the Holograms</span><span class="pep">Starbright (2): Colliding Stars</span></div>
+<div class="prog" data-s="1783225742" data-e="1783227107"><span class="ptime" data-ts="1783225742"></span><span class="pshow">Jem and the Holograms</span><span class="pep">Starbright (3): Rising Star</span></div>
+<div class="prog" data-s="1783227107" data-e="1783228524"><span class="ptime" data-ts="1783227107"></span><span class="pshow">Teenage Mutant Ninja Turtles</span><span class="pep">Episode 7</span></div>
+<div class="prog" data-s="1783228524" data-e="1783229934"><span class="ptime" data-ts="1783228524"></span><span class="pshow">Teenage Mutant Ninja Turtles</span><span class="pep">Episode 8</span></div>
+<div class="prog" data-s="1783229934" data-e="1783231395"><span class="ptime" data-ts="1783229934"></span><span class="pshow">Pee-wee's Playhouse</span><span class="pep">Restaurant</span></div>
+<div class="prog" data-s="1783231395" data-e="1783232859"><span class="ptime" data-ts="1783231395"></span><span class="pshow">Pee-wee's Playhouse</span><span class="pep">Ants In Your Pants</span></div>
+<div class="prog" data-s="1783232859" data-e="1783234625"><span class="ptime" data-ts="1783232859"></span><span class="pshow">The Wonder Years</span><span class="pep">Episode 9</span></div>
+<div class="prog" data-s="1783234625" data-e="1783235920"><span class="ptime" data-ts="1783234625"></span><span class="pshow">The Wonder Years</span><span class="pep">Episode 10</span></div>
+<div class="prog" data-s="1783235920" data-e="1783237283"><span class="ptime" data-ts="1783235920"></span><span class="pshow">Jem and the Holograms</span><span class="pep">The World Hunger Shindig</span></div>
+<div class="prog" data-s="1783237283" data-e="1783238649"><span class="ptime" data-ts="1783237283"></span><span class="pshow">Jem and the Holograms</span><span class="pep">Adventure in China</span></div>
+<div class="prog" data-s="1783238649" data-e="1783240066"><span class="ptime" data-ts="1783238649"></span><span class="pshow">Teenage Mutant Ninja Turtles</span><span class="pep">Episode 9</span></div>
+<div class="prog" data-s="1783240066" data-e="1783241402"><span class="ptime" data-ts="1783240066"></span><span class="pshow">Teenage Mutant Ninja Turtles</span><span class="pep">Return of the Shredder</span></div>
+<div class="prog" data-s="1783241402" data-e="1783242864"><span class="ptime" data-ts="1783241402"></span><span class="pshow">Pee-wee's Playhouse</span><span class="pep">Monster In the Playhouse</span></div>
+<div class="prog" data-s="1783242864" data-e="1783244328"><span class="ptime" data-ts="1783242864"></span><span class="pshow">Pee-wee's Playhouse</span><span class="pep">The Cowboy and the Cowntess</span></div>
+<div class="prog" data-s="1783244328" data-e="1783245759"><span class="ptime" data-ts="1783244328"></span><span class="pshow">The Wonder Years</span><span class="pep">Heart of Darkness</span></div>
+<div class="prog" data-s="1783245759" data-e="1783247186"><span class="ptime" data-ts="1783245759"></span><span class="pshow">The Wonder Years</span><span class="pep">Our Miss White</span></div>
+<div class="prog" data-s="1783247186" data-e="1783248551"><span class="ptime" data-ts="1783247186"></span><span class="pshow">Jem and the Holograms</span><span class="pep">Last Resorts</span></div>
+<div class="prog" data-s="1783248551" data-e="1783249917"><span class="ptime" data-ts="1783248551"></span><span class="pshow">Jem and the Holograms</span><span class="pep">In Stitches</span></div>
+<div class="prog" data-s="1783249917" data-e="1783251254"><span class="ptime" data-ts="1783249917"></span><span class="pshow">Teenage Mutant Ninja Turtles</span><span class="pep">The Incredible Shrinking Turtles</span></div>
+<div class="prog" data-s="1783251254" data-e="1783252592"><span class="ptime" data-ts="1783251254"></span><span class="pshow">Teenage Mutant Ninja Turtles</span><span class="pep">It Came from Beneath the Sewers</span></div>
+<div class="prog" data-s="1783252592" data-e="1783254056"><span class="ptime" data-ts="1783252592"></span><span class="pshow">Pee-wee's Playhouse</span><span class="pep">Stolen Apples</span></div>
+<div class="prog" data-s="1783254056" data-e="1783255520"><span class="ptime" data-ts="1783254056"></span><span class="pshow">Pee-wee's Playhouse</span><span class="pep">The Gang's All Here</span></div>
+<div class="prog" data-s="1783255520" data-e="1783256744"><span class="ptime" data-ts="1783255520"></span><span class="pshow">The Wonder Years</span><span class="pep">Christmas</span></div>
+<div class="prog" data-s="1783256744" data-e="1783258221"><span class="ptime" data-ts="1783256744"></span><span class="pshow">The Wonder Years</span><span class="pep">Steady as She Goes</span></div>
+<div class="prog" data-s="1783258221" data-e="1783259573"><span class="ptime" data-ts="1783258221"></span><span class="pshow">Jem and the Holograms</span><span class="pep">The Music Awards (1)</span></div>
+<div class="prog" data-s="1783259573" data-e="1783260926"><span class="ptime" data-ts="1783259573"></span><span class="pshow">Jem and the Holograms</span><span class="pep">The Music Awards (2)</span></div>
+<div class="prog" data-s="1783260926" data-e="1783262262"><span class="ptime" data-ts="1783260926"></span><span class="pshow">Teenage Mutant Ninja Turtles</span><span class="pep">The Mean Machines</span></div>
+<div class="prog" data-s="1783262262" data-e="1783263594"><span class="ptime" data-ts="1783262262"></span><span class="pshow">Teenage Mutant Ninja Turtles</span><span class="pep">Curse of the Evil Eye</span></div>
+<div class="prog" data-s="1783263594" data-e="1783265057"><span class="ptime" data-ts="1783263594"></span><span class="pshow">Pee-wee's Playhouse</span><span class="pep">Party</span></div>
+<div class="prog" data-s="1783265057" data-e="1783266519"><span class="ptime" data-ts="1783265057"></span><span class="pshow">Pee-wee's Playhouse</span><span class="pep">Episode 14</span></div>
+<div class="prog" data-s="1783266519" data-e="1783267815"><span class="ptime" data-ts="1783266519"></span><span class="pshow">The Wonder Years</span><span class="pep">Just Between Me and You and Kirk and Paul and Carla and Becky</span></div>
+<div class="prog" data-s="1783267815" data-e="1783269183"><span class="ptime" data-ts="1783267815"></span><span class="pshow">The Wonder Years</span><span class="pep">Pottery Will Get You Nowhere</span></div>
+<div class="prog" data-s="1783269183" data-e="1783270551"><span class="ptime" data-ts="1783269183"></span><span class="pshow">Jem and the Holograms</span><span class="pep">The Rock Fashion Book</span></div>
+<div class="prog" data-s="1783270551" data-e="1783271886"><span class="ptime" data-ts="1783270551"></span><span class="pshow">Jem and the Holograms</span><span class="pep">Broadway Magic</span></div>
+<div class="prog" data-s="1783271886" data-e="1783273222"><span class="ptime" data-ts="1783271886"></span><span class="pshow">Teenage Mutant Ninja Turtles</span><span class="pep">The Case of the Killer Pizzas</span></div>
+<div class="prog" data-s="1783273222" data-e="1783274560"><span class="ptime" data-ts="1783273222"></span><span class="pshow">Teenage Mutant Ninja Turtles</span><span class="pep">Enter: The Fly</span></div>
+<div class="prog" data-s="1783274560" data-e="1783276024"><span class="ptime" data-ts="1783274560"></span><span class="pshow">Pee-wee's Playhouse</span><span class="pep">Episode 15</span></div>
+<div class="prog" data-s="1783276024" data-e="1783277486"><span class="ptime" data-ts="1783276024"></span><span class="pshow">Pee-wee's Playhouse</span><span class="pep">Episode 16</span></div>
+<div class="prog" data-s="1783277486" data-e="1783278888"><span class="ptime" data-ts="1783277486"></span><span class="pshow">The Wonder Years</span><span class="pep">Coda</span></div>
+<div class="prog" data-s="1783278888" data-e="1783280289"><span class="ptime" data-ts="1783278888"></span><span class="pshow">The Wonder Years</span><span class="pep">Hiroshima, Mon Frere</span></div>
+<div class="prog" data-s="1783280289" data-e="1783281624"><span class="ptime" data-ts="1783280289"></span><span class="pshow">Jem and the Holograms</span><span class="pep">In Search of the Stolen Album</span></div>
+<div class="prog" data-s="1783281624" data-e="1783282961"><span class="ptime" data-ts="1783281624"></span><span class="pshow">Jem and the Holograms</span><span class="pep">Hot Time in Hawaii</span></div>
+<div class="prog" data-s="1783282961" data-e="1783284296"><span class="ptime" data-ts="1783282961"></span><span class="pshow">Teenage Mutant Ninja Turtles</span><span class="pep">Invasion of the Punk Frogs</span></div>
+<div class="prog" data-s="1783284296" data-e="1783285630"><span class="ptime" data-ts="1783284296"></span><span class="pshow">Teenage Mutant Ninja Turtles</span><span class="pep">Splinter No More</span></div>
+<div class="prog" data-s="1783285630" data-e="1783287093"><span class="ptime" data-ts="1783285630"></span><span class="pshow">Pee-wee's Playhouse</span><span class="pep">Episode 17</span></div>
+<div class="prog" data-s="1783287093" data-e="1783288558"><span class="ptime" data-ts="1783287093"></span><span class="pshow">Pee-wee's Playhouse</span><span class="pep">Episode 18</span></div>
+<div class="prog" data-s="1783288558" data-e="1783289945"><span class="ptime" data-ts="1783288558"></span><span class="pshow">The Wonder Years</span><span class="pep">Loosiers</span></div>
+<div class="prog" data-s="1783289945" data-e="1783291339"><span class="ptime" data-ts="1783289945"></span><span class="pshow">The Wonder Years</span><span class="pep">Walk Out</span></div>
+<div class="prog" data-s="1783291339" data-e="1783292569"><span class="ptime" data-ts="1783291339"></span><span class="pshow">Jem and the Holograms</span><span class="pep">The Princess and the Singer</span></div>
+<div class="prog" data-s="1783292569" data-e="1783293908"><span class="ptime" data-ts="1783292569"></span><span class="pshow">Jem and the Holograms</span><span class="pep">Island of Deception</span></div>
+<div class="prog" data-s="1783293908" data-e="1783295246"><span class="ptime" data-ts="1783293908"></span><span class="pshow">Teenage Mutant Ninja Turtles</span><span class="pep">New York's Shiniest</span></div>
+<div class="prog" data-s="1783295246" data-e="1783296582"><span class="ptime" data-ts="1783295246"></span><span class="pshow">Teenage Mutant Ninja Turtles</span><span class="pep">Teenagers from Dimension X</span></div>
+<div class="prog" data-s="1783296582" data-e="1783298046"><span class="ptime" data-ts="1783296582"></span><span class="pshow">Pee-wee's Playhouse</span><span class="pep">Episode 19</span></div></div>
+</div>
+<div class="chan">
+  <div class="chead"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/peachpit-v1.png" loading="lazy"><div><div class="cnum">CH 90</div><div class="cname">The Peach Pit</div></div></div>
+  <div class="progs"><div class="prog" data-s="1783202223" data-e="1783205039"><span class="ptime" data-ts="1783202223"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">B.Y.O.B.</span></div>
+<div class="prog" data-s="1783205039" data-e="1783207824"><span class="ptime" data-ts="1783205039"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">One Man and a Baby</span></div>
+<div class="prog" data-s="1783207824" data-e="1783210626"><span class="ptime" data-ts="1783207824"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">Slumber Party</span></div>
+<div class="prog" data-s="1783210626" data-e="1783213443"><span class="ptime" data-ts="1783210626"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">East Side Story</span></div>
+<div class="prog" data-s="1783213443" data-e="1783216257"><span class="ptime" data-ts="1783213443"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">A Fling in Palm Springs</span></div>
+<div class="prog" data-s="1783216257" data-e="1783219071"><span class="ptime" data-ts="1783216257"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">Fame Is Where You Find It</span></div>
+<div class="prog" data-s="1783219071" data-e="1783221887"><span class="ptime" data-ts="1783219071"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">Stand (Up) and Deliver</span></div>
+<div class="prog" data-s="1783221887" data-e="1783224701"><span class="ptime" data-ts="1783221887"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">It's Only a Test</span></div>
+<div class="prog" data-s="1783224701" data-e="1783227516"><span class="ptime" data-ts="1783224701"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">April Is the Cruelest Month</span></div>
+<div class="prog" data-s="1783227516" data-e="1783230213"><span class="ptime" data-ts="1783227516"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">Spring Training</span></div>
+<div class="prog" data-s="1783230213" data-e="1783232997"><span class="ptime" data-ts="1783230213"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">Spring Dance</span></div>
+<div class="prog" data-s="1783232997" data-e="1783235782"><span class="ptime" data-ts="1783232997"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">Home Again</span></div>
+<div class="prog" data-s="1783235782" data-e="1783238524"><span class="ptime" data-ts="1783235782"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">Beach Blanket Brandon</span></div>
+<div class="prog" data-s="1783238524" data-e="1783241306"><span class="ptime" data-ts="1783238524"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">The Party Fish</span></div>
+<div class="prog" data-s="1783241306" data-e="1783244094"><span class="ptime" data-ts="1783241306"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">Summer Storm</span></div>
+<div class="prog" data-s="1783244094" data-e="1783246850"><span class="ptime" data-ts="1783244094"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">Anaconda</span></div>
+<div class="prog" data-s="1783246850" data-e="1783249605"><span class="ptime" data-ts="1783246850"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">Play It Again, David</span></div>
+<div class="prog" data-s="1783249605" data-e="1783252356"><span class="ptime" data-ts="1783249605"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">Pass/Not Pass</span></div>
+<div class="prog" data-s="1783252356" data-e="1783255111"><span class="ptime" data-ts="1783252356"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">Camping Trip</span></div>
+<div class="prog" data-s="1783255111" data-e="1783257793"><span class="ptime" data-ts="1783255111"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">Wildfire</span></div>
+<div class="prog" data-s="1783257793" data-e="1783260521"><span class="ptime" data-ts="1783257793"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">Ashes to Ashes</span></div>
+<div class="prog" data-s="1783260521" data-e="1783263257"><span class="ptime" data-ts="1783260521"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">Necessity Is a Mother</span></div>
+<div class="prog" data-s="1783263257" data-e="1783266006"><span class="ptime" data-ts="1783263257"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">Leading From the Heart</span></div>
+<div class="prog" data-s="1783266006" data-e="1783268760"><span class="ptime" data-ts="1783266006"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">Down and Out of District in Beverly Hills</span></div>
+<div class="prog" data-s="1783268760" data-e="1783271514"><span class="ptime" data-ts="1783268760"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">Halloween</span></div>
+<div class="prog" data-s="1783271514" data-e="1783274270"><span class="ptime" data-ts="1783271514"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">The Next 50 Years</span></div>
+<div class="prog" data-s="1783274270" data-e="1783277017"><span class="ptime" data-ts="1783274270"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">U4EA</span></div>
+<div class="prog" data-s="1783277017" data-e="1783279773"><span class="ptime" data-ts="1783277017"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">My Desperate Valentine</span></div>
+<div class="prog" data-s="1783279773" data-e="1783282534"><span class="ptime" data-ts="1783279773"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">Chuckie's Back</span></div>
+<div class="prog" data-s="1783282534" data-e="1783285319"><span class="ptime" data-ts="1783282534"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">A Walsh Family Christmas</span></div>
+<div class="prog" data-s="1783285319" data-e="1783289438"><span class="ptime" data-ts="1783285319"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">Fire and Ice</span></div>
+<div class="prog" data-s="1783289438" data-e="1783292223"><span class="ptime" data-ts="1783289438"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">A Competitive Edge</span></div>
+<div class="prog" data-s="1783292223" data-e="1783294948"><span class="ptime" data-ts="1783292223"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">Everybody's Talkin' 'Bout It</span></div>
+<div class="prog" data-s="1783294948" data-e="1783297704"><span class="ptime" data-ts="1783294948"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">Baby Makes Five</span></div></div>
+</div>
+<div class="chan">
+  <div class="chead"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/prime-time-v2.png" loading="lazy"><div><div class="cnum">CH 95</div><div class="cname">Prime Time</div></div></div>
+  <div class="progs"><div class="prog" data-s="1783202316" data-e="1783203628"><span class="ptime" data-ts="1783202316"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Clubba Hubba</span></div>
+<div class="prog" data-s="1783203628" data-e="1783205062"><span class="ptime" data-ts="1783203628"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Not with My Pig, You Don't</span></div>
+<div class="prog" data-s="1783205062" data-e="1783206400"><span class="ptime" data-ts="1783205062"></span><span class="pshow">Saved by the Bell</span><span class="pep">The Gift</span></div>
+<div class="prog" data-s="1783206400" data-e="1783207738"><span class="ptime" data-ts="1783206400"></span><span class="pshow">Saved by the Bell</span><span class="pep">Fatal Distraction</span></div>
+<div class="prog" data-s="1783207738" data-e="1783209118"><span class="ptime" data-ts="1783207738"></span><span class="pshow">In Living Color</span><span class="pep">Lean On Me Beautiful</span></div>
+<div class="prog" data-s="1783209118" data-e="1783210510"><span class="ptime" data-ts="1783209118"></span><span class="pshow">In Living Color</span><span class="pep">Transitions</span></div>
+<div class="prog" data-s="1783210510" data-e="1783211950"><span class="ptime" data-ts="1783210510"></span><span class="pshow">Sex and the City</span><span class="pep">Bay of Married Pigs</span></div>
+<div class="prog" data-s="1783211950" data-e="1783213364"><span class="ptime" data-ts="1783211950"></span><span class="pshow">Sex and the City</span><span class="pep">Valley of the Twenty-Something Guys</span></div>
+<div class="prog" data-s="1783213364" data-e="1783216136"><span class="ptime" data-ts="1783213364"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">One on One</span></div>
+<div class="prog" data-s="1783216136" data-e="1783218949"><span class="ptime" data-ts="1783216136"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">Higher Education</span></div>
+<div class="prog" data-s="1783218949" data-e="1783220344"><span class="ptime" data-ts="1783218949"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Homeboy, Sweet Homeboy</span></div>
+<div class="prog" data-s="1783220344" data-e="1783221748"><span class="ptime" data-ts="1783220344"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Mistaken Identity</span></div>
+<div class="prog" data-s="1783221748" data-e="1783223086"><span class="ptime" data-ts="1783221748"></span><span class="pshow">Saved by the Bell</span><span class="pep">Screech's Woman</span></div>
+<div class="prog" data-s="1783223086" data-e="1783224423"><span class="ptime" data-ts="1783223086"></span><span class="pshow">Saved by the Bell</span><span class="pep">Aloha Slater</span></div>
+<div class="prog" data-s="1783224423" data-e="1783225804"><span class="ptime" data-ts="1783224423"></span><span class="pshow">In Living Color</span><span class="pep">A Date With Grace Jones</span></div>
+<div class="prog" data-s="1783225804" data-e="1783227192"><span class="ptime" data-ts="1783225804"></span><span class="pshow">In Living Color</span><span class="pep">Jheri's Kids</span></div>
+<div class="prog" data-s="1783227192" data-e="1783228693"><span class="ptime" data-ts="1783227192"></span><span class="pshow">Sex and the City</span><span class="pep">The Power of Female Sex</span></div>
+<div class="prog" data-s="1783228693" data-e="1783230122"><span class="ptime" data-ts="1783228693"></span><span class="pshow">Sex and the City</span><span class="pep">Secret Sex</span></div>
+<div class="prog" data-s="1783230122" data-e="1783232870"><span class="ptime" data-ts="1783230122"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">Perfect Mom</span></div>
+<div class="prog" data-s="1783232870" data-e="1783235686"><span class="ptime" data-ts="1783232870"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">The 17-Year Itch</span></div>
+<div class="prog" data-s="1783235686" data-e="1783237117"><span class="ptime" data-ts="1783235686"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Def Poet's Society</span></div>
+<div class="prog" data-s="1783237117" data-e="1783239821"><span class="ptime" data-ts="1783237117"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Someday Your Prince Will Be in Effect (1)</span></div>
+<div class="prog" data-s="1783239821" data-e="1783241222"><span class="ptime" data-ts="1783239821"></span><span class="pshow">Saved by the Bell</span><span class="pep">The Substitute</span></div>
+<div class="prog" data-s="1783241222" data-e="1783242567"><span class="ptime" data-ts="1783241222"></span><span class="pshow">Saved by the Bell</span><span class="pep">Cream for a Day</span></div>
+<div class="prog" data-s="1783242567" data-e="1783243958"><span class="ptime" data-ts="1783242567"></span><span class="pshow">In Living Color</span><span class="pep">Don King - The Early Years</span></div>
+<div class="prog" data-s="1783243958" data-e="1783245351"><span class="ptime" data-ts="1783243958"></span><span class="pshow">In Living Color</span><span class="pep">Endangered Species</span></div>
+<div class="prog" data-s="1783245351" data-e="1783246844"><span class="ptime" data-ts="1783245351"></span><span class="pshow">Sex and the City</span><span class="pep">The Monogamists</span></div>
+<div class="prog" data-s="1783246844" data-e="1783248318"><span class="ptime" data-ts="1783246844"></span><span class="pshow">Sex and the City</span><span class="pep">Three's a Crowd</span></div>
+<div class="prog" data-s="1783248318" data-e="1783251132"><span class="ptime" data-ts="1783248318"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">The Gentle Art of Listening</span></div>
+<div class="prog" data-s="1783251132" data-e="1783253947"><span class="ptime" data-ts="1783251132"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">Isn't It Romantic?</span></div>
+<div class="prog" data-s="1783253947" data-e="1783255381"><span class="ptime" data-ts="1783253947"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Someday Your Prince Will Be in Effect (2)</span></div>
+<div class="prog" data-s="1783255381" data-e="1783256805"><span class="ptime" data-ts="1783255381"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Kiss My Butler</span></div>
+<div class="prog" data-s="1783256805" data-e="1783258187"><span class="ptime" data-ts="1783256805"></span><span class="pshow">Saved by the Bell</span><span class="pep">Pinned to the Mat</span></div>
+<div class="prog" data-s="1783258187" data-e="1783259561"><span class="ptime" data-ts="1783258187"></span><span class="pshow">Saved by the Bell</span><span class="pep">Beauty and the Screech</span></div>
+<div class="prog" data-s="1783259561" data-e="1783260952"><span class="ptime" data-ts="1783259561"></span><span class="pshow">In Living Color</span><span class="pep">Introducing...Homey D. Clown</span></div>
+<div class="prog" data-s="1783260952" data-e="1783262344"><span class="ptime" data-ts="1783260952"></span><span class="pshow">In Living Color</span><span class="pep">Vera DeMilo</span></div>
+<div class="prog" data-s="1783262344" data-e="1783263757"><span class="ptime" data-ts="1783262344"></span><span class="pshow">Sex and the City</span><span class="pep">The Turtle and the Hare</span></div>
+<div class="prog" data-s="1783263757" data-e="1783265164"><span class="ptime" data-ts="1783263757"></span><span class="pshow">Sex and the City</span><span class="pep">The Baby Shower</span></div>
+<div class="prog" data-s="1783265164" data-e="1783267980"><span class="ptime" data-ts="1783265164"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">B.Y.O.B.</span></div>
+<div class="prog" data-s="1783267980" data-e="1783270765"><span class="ptime" data-ts="1783267980"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">One Man and a Baby</span></div>
+<div class="prog" data-s="1783270765" data-e="1783272199"><span class="ptime" data-ts="1783270765"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Courting Disaster</span></div>
+<div class="prog" data-s="1783272199" data-e="1783273634"><span class="ptime" data-ts="1783272199"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Talking Turkey</span></div>
+<div class="prog" data-s="1783273634" data-e="1783275038"><span class="ptime" data-ts="1783273634"></span><span class="pshow">Saved by the Bell</span><span class="pep">The Friendship Business</span></div>
+<div class="prog" data-s="1783275038" data-e="1783276410"><span class="ptime" data-ts="1783275038"></span><span class="pshow">Saved by the Bell</span><span class="pep">The Mamas and the Papas</span></div>
+<div class="prog" data-s="1783276410" data-e="1783277800"><span class="ptime" data-ts="1783276410"></span><span class="pshow">In Living Color</span><span class="pep">Anton In The People's Court</span></div>
+<div class="prog" data-s="1783277800" data-e="1783279191"><span class="ptime" data-ts="1783277800"></span><span class="pshow">In Living Color</span><span class="pep">Conspiracy</span></div>
+<div class="prog" data-s="1783279191" data-e="1783280741"><span class="ptime" data-ts="1783279191"></span><span class="pshow">Sex and the City</span><span class="pep">The Drought</span></div>
+<div class="prog" data-s="1783280741" data-e="1783282358"><span class="ptime" data-ts="1783280741"></span><span class="pshow">Sex and the City</span><span class="pep">Oh Come All Ye Faithful</span></div>
+<div class="prog" data-s="1783282358" data-e="1783285160"><span class="ptime" data-ts="1783282358"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">Slumber Party</span></div>
+<div class="prog" data-s="1783285160" data-e="1783287976"><span class="ptime" data-ts="1783285160"></span><span class="pshow">Beverly Hills, 90210</span><span class="pep">East Side Story</span></div>
+<div class="prog" data-s="1783287976" data-e="1783289382"><span class="ptime" data-ts="1783287976"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Knowledge is Power</span></div>
+<div class="prog" data-s="1783289382" data-e="1783290807"><span class="ptime" data-ts="1783289382"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Day Damn One</span></div>
+<div class="prog" data-s="1783290807" data-e="1783292211"><span class="ptime" data-ts="1783290807"></span><span class="pshow">Saved by the Bell</span><span class="pep">The Election</span></div>
+<div class="prog" data-s="1783292211" data-e="1783293588"><span class="ptime" data-ts="1783292211"></span><span class="pshow">Saved by the Bell</span><span class="pep">The Zack Tapes</span></div>
+<div class="prog" data-s="1783293588" data-e="1783294978"><span class="ptime" data-ts="1783293588"></span><span class="pshow">In Living Color</span><span class="pep">Homey D. Clown Returns</span></div>
+<div class="prog" data-s="1783294978" data-e="1783296371"><span class="ptime" data-ts="1783294978"></span><span class="pshow">In Living Color</span><span class="pep">Bigger Brothers</span></div>
+<div class="prog" data-s="1783296371" data-e="1783297894"><span class="ptime" data-ts="1783296371"></span><span class="pshow">Sex and the City</span><span class="pep">Take Me Out to the Ballgame</span></div></div>
+</div>
+<div class="chan">
+  <div class="chead"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/savage-at-nite-v4.png" loading="lazy"><div><div class="cnum">CH 111</div><div class="cname">Savage at Nite</div></div></div>
+  <div class="progs"><div class="prog" data-s="1783203267" data-e="1783204640"><span class="ptime" data-ts="1783203267"></span><span class="pshow">Saved by the Bell</span><span class="pep">Beauty and the Screech</span></div>
+<div class="prog" data-s="1783204640" data-e="1783205986"><span class="ptime" data-ts="1783204640"></span><span class="pshow">That '70s Show</span><span class="pep">Eric's Buddy</span></div>
+<div class="prog" data-s="1783205986" data-e="1783207332"><span class="ptime" data-ts="1783205986"></span><span class="pshow">That '70s Show</span><span class="pep">The Best Christmas Ever</span></div>
+<div class="prog" data-s="1783207332" data-e="1783208766"><span class="ptime" data-ts="1783207332"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Courting Disaster</span></div>
+<div class="prog" data-s="1783208766" data-e="1783210201"><span class="ptime" data-ts="1783208766"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Talking Turkey</span></div>
+<div class="prog" data-s="1783210201" data-e="1783211495"><span class="ptime" data-ts="1783210201"></span><span class="pshow">The Goldbergs (2013)</span><span class="pep">Kara-Te</span></div>
+<div class="prog" data-s="1783211495" data-e="1783212790"><span class="ptime" data-ts="1783211495"></span><span class="pshow">The Goldbergs (2013)</span><span class="pep">You're Under Foot</span></div>
+<div class="prog" data-s="1783212790" data-e="1783214221"><span class="ptime" data-ts="1783212790"></span><span class="pshow">The Wonder Years</span><span class="pep">Heart of Darkness</span></div>
+<div class="prog" data-s="1783214221" data-e="1783215647"><span class="ptime" data-ts="1783214221"></span><span class="pshow">The Wonder Years</span><span class="pep">Our Miss White</span></div>
+<div class="prog" data-s="1783215647" data-e="1783216951"><span class="ptime" data-ts="1783215647"></span><span class="pshow">Raising Hope</span><span class="pep">Toy Story</span></div>
+<div class="prog" data-s="1783216951" data-e="1783218257"><span class="ptime" data-ts="1783216951"></span><span class="pshow">Raising Hope</span><span class="pep">Romeo and Romeo</span></div>
+<div class="prog" data-s="1783218257" data-e="1783219661"><span class="ptime" data-ts="1783218257"></span><span class="pshow">Saved by the Bell</span><span class="pep">The Friendship Business</span></div>
+<div class="prog" data-s="1783219661" data-e="1783221032"><span class="ptime" data-ts="1783219661"></span><span class="pshow">Saved by the Bell</span><span class="pep">The Mamas and the Papas</span></div>
+<div class="prog" data-s="1783221032" data-e="1783222379"><span class="ptime" data-ts="1783221032"></span><span class="pshow">That '70s Show</span><span class="pep">Ski Trip</span></div>
+<div class="prog" data-s="1783222379" data-e="1783223726"><span class="ptime" data-ts="1783222379"></span><span class="pshow">That '70s Show</span><span class="pep">Stolen Car</span></div>
+<div class="prog" data-s="1783223726" data-e="1783225131"><span class="ptime" data-ts="1783223726"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Knowledge is Power</span></div>
+<div class="prog" data-s="1783225131" data-e="1783226556"><span class="ptime" data-ts="1783225131"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Day Damn One</span></div>
+<div class="prog" data-s="1783226556" data-e="1783227853"><span class="ptime" data-ts="1783226556"></span><span class="pshow">The Goldbergs (2013)</span><span class="pep">The Other Smother</span></div>
+<div class="prog" data-s="1783227853" data-e="1783229151"><span class="ptime" data-ts="1783227853"></span><span class="pshow">The Goldbergs (2013)</span><span class="pep">You Opened the Door</span></div>
+<div class="prog" data-s="1783229151" data-e="1783230376"><span class="ptime" data-ts="1783229151"></span><span class="pshow">The Wonder Years</span><span class="pep">Christmas</span></div>
+<div class="prog" data-s="1783230376" data-e="1783231852"><span class="ptime" data-ts="1783230376"></span><span class="pshow">The Wonder Years</span><span class="pep">Steady as She Goes</span></div>
+<div class="prog" data-s="1783231852" data-e="1783233155"><span class="ptime" data-ts="1783231852"></span><span class="pshow">Raising Hope</span><span class="pep">A Germ of a Story</span></div>
+<div class="prog" data-s="1783233155" data-e="1783234459"><span class="ptime" data-ts="1783233155"></span><span class="pshow">Raising Hope</span><span class="pep">What Up, Cuz?</span></div>
+<div class="prog" data-s="1783234459" data-e="1783235863"><span class="ptime" data-ts="1783234459"></span><span class="pshow">Saved by the Bell</span><span class="pep">The Election</span></div>
+<div class="prog" data-s="1783235863" data-e="1783237240"><span class="ptime" data-ts="1783235863"></span><span class="pshow">Saved by the Bell</span><span class="pep">The Zack Tapes</span></div>
+<div class="prog" data-s="1783237240" data-e="1783238587"><span class="ptime" data-ts="1783237240"></span><span class="pshow">That '70s Show</span><span class="pep">That Wrestling Show</span></div>
+<div class="prog" data-s="1783238587" data-e="1783239934"><span class="ptime" data-ts="1783238587"></span><span class="pshow">That '70s Show</span><span class="pep">First Date</span></div>
+<div class="prog" data-s="1783239934" data-e="1783241348"><span class="ptime" data-ts="1783239934"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Deck the Halls</span></div>
+<div class="prog" data-s="1783241348" data-e="1783242779"><span class="ptime" data-ts="1783241348"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">The Lucky Charm</span></div>
+<div class="prog" data-s="1783242779" data-e="1783244076"><span class="ptime" data-ts="1783242779"></span><span class="pshow">The Goldbergs (2013)</span><span class="pep">Muscles Mirsky</span></div>
+<div class="prog" data-s="1783244076" data-e="1783245370"><span class="ptime" data-ts="1783244076"></span><span class="pshow">The Goldbergs (2013)</span><span class="pep">Goldbergs Never Say Die!</span></div>
+<div class="prog" data-s="1783245370" data-e="1783246665"><span class="ptime" data-ts="1783245370"></span><span class="pshow">The Wonder Years</span><span class="pep">Just Between Me and You and Kirk and Paul and Carla and Becky</span></div>
+<div class="prog" data-s="1783246665" data-e="1783248033"><span class="ptime" data-ts="1783246665"></span><span class="pshow">The Wonder Years</span><span class="pep">Pottery Will Get You Nowhere</span></div>
+<div class="prog" data-s="1783248033" data-e="1783249337"><span class="ptime" data-ts="1783248033"></span><span class="pshow">Raising Hope</span><span class="pep">Snip Snip</span></div>
+<div class="prog" data-s="1783249337" data-e="1783250641"><span class="ptime" data-ts="1783249337"></span><span class="pshow">Raising Hope</span><span class="pep">The Cultish Personality</span></div>
+<div class="prog" data-s="1783250641" data-e="1783251986"><span class="ptime" data-ts="1783250641"></span><span class="pshow">Saved by the Bell</span><span class="pep">King of the Hill</span></div>
+<div class="prog" data-s="1783251986" data-e="1783253325"><span class="ptime" data-ts="1783251986"></span><span class="pshow">Saved by the Bell</span><span class="pep">Save That Tiger</span></div>
+<div class="prog" data-s="1783253325" data-e="1783254672"><span class="ptime" data-ts="1783253325"></span><span class="pshow">That '70s Show</span><span class="pep">The Pill</span></div>
+<div class="prog" data-s="1783254672" data-e="1783256018"><span class="ptime" data-ts="1783254672"></span><span class="pshow">That '70s Show</span><span class="pep">Career Day</span></div>
+<div class="prog" data-s="1783256018" data-e="1783257448"><span class="ptime" data-ts="1783256018"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">The Ethnic Tip</span></div>
+<div class="prog" data-s="1783257448" data-e="1783258882"><span class="ptime" data-ts="1783257448"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">The Young and the Restless</span></div>
+<div class="prog" data-s="1783258882" data-e="1783260176"><span class="ptime" data-ts="1783258882"></span><span class="pshow">The Goldbergs (2013)</span><span class="pep">Lame Gretzky</span></div>
+<div class="prog" data-s="1783260176" data-e="1783261471"><span class="ptime" data-ts="1783260176"></span><span class="pshow">The Goldbergs (2013)</span><span class="pep">For Your Own Good</span></div>
+<div class="prog" data-s="1783261471" data-e="1783262872"><span class="ptime" data-ts="1783261471"></span><span class="pshow">The Wonder Years</span><span class="pep">Coda</span></div>
+<div class="prog" data-s="1783262872" data-e="1783264273"><span class="ptime" data-ts="1783262872"></span><span class="pshow">The Wonder Years</span><span class="pep">Hiroshima, Mon Frere</span></div>
+<div class="prog" data-s="1783264273" data-e="1783265578"><span class="ptime" data-ts="1783264273"></span><span class="pshow">Raising Hope</span><span class="pep">Mongooses</span></div>
+<div class="prog" data-s="1783265578" data-e="1783266883"><span class="ptime" data-ts="1783265578"></span><span class="pshow">Raising Hope</span><span class="pep">Cheaters</span></div>
+<div class="prog" data-s="1783266883" data-e="1783268221"><span class="ptime" data-ts="1783266883"></span><span class="pshow">Saved by the Bell</span><span class="pep">Episode 17</span></div>
+<div class="prog" data-s="1783268221" data-e="1783269559"><span class="ptime" data-ts="1783268221"></span><span class="pshow">Saved by the Bell</span><span class="pep">Episode 18</span></div>
+<div class="prog" data-s="1783269559" data-e="1783270907"><span class="ptime" data-ts="1783269559"></span><span class="pshow">That '70s Show</span><span class="pep">Prom Night</span></div>
+<div class="prog" data-s="1783270907" data-e="1783272253"><span class="ptime" data-ts="1783270907"></span><span class="pshow">That '70s Show</span><span class="pep">A New Hope</span></div>
+<div class="prog" data-s="1783272253" data-e="1783273668"><span class="ptime" data-ts="1783272253"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">It Had to Be You</span></div>
+<div class="prog" data-s="1783273668" data-e="1783275104"><span class="ptime" data-ts="1783273668"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Nice Lady</span></div>
+<div class="prog" data-s="1783275104" data-e="1783276400"><span class="ptime" data-ts="1783275104"></span><span class="pshow">The Goldbergs (2013)</span><span class="pep">The President's Fitness Test</span></div>
+<div class="prog" data-s="1783276400" data-e="1783277697"><span class="ptime" data-ts="1783276400"></span><span class="pshow">The Goldbergs (2013)</span><span class="pep">You're Not Invited</span></div>
+<div class="prog" data-s="1783277697" data-e="1783279084"><span class="ptime" data-ts="1783277697"></span><span class="pshow">The Wonder Years</span><span class="pep">Loosiers</span></div>
+<div class="prog" data-s="1783279084" data-e="1783280479"><span class="ptime" data-ts="1783279084"></span><span class="pshow">The Wonder Years</span><span class="pep">Walk Out</span></div>
+<div class="prog" data-s="1783280479" data-e="1783281781"><span class="ptime" data-ts="1783280479"></span><span class="pshow">Raising Hope</span><span class="pep">Sleep Training</span></div>
+<div class="prog" data-s="1783281781" data-e="1783283079"><span class="ptime" data-ts="1783281781"></span><span class="pshow">Raising Hope</span><span class="pep">Everybody Flirts... Sometimes</span></div>
+<div class="prog" data-s="1783283079" data-e="1783284418"><span class="ptime" data-ts="1783283079"></span><span class="pshow">Saved by the Bell</span><span class="pep">Episode 19</span></div>
+<div class="prog" data-s="1783284418" data-e="1783285829"><span class="ptime" data-ts="1783284418"></span><span class="pshow">Saved by the Bell</span><span class="pep">Episode 20</span></div>
+<div class="prog" data-s="1783285829" data-e="1783287175"><span class="ptime" data-ts="1783285829"></span><span class="pshow">That '70s Show</span><span class="pep">Water Tower</span></div>
+<div class="prog" data-s="1783287175" data-e="1783288522"><span class="ptime" data-ts="1783287175"></span><span class="pshow">That '70s Show</span><span class="pep">Punk Chick</span></div>
+<div class="prog" data-s="1783288522" data-e="1783289958"><span class="ptime" data-ts="1783288522"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Love at First Fight</span></div>
+<div class="prog" data-s="1783289958" data-e="1783291396"><span class="ptime" data-ts="1783289958"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Banks Shot</span></div>
+<div class="prog" data-s="1783291396" data-e="1783292693"><span class="ptime" data-ts="1783291396"></span><span class="pshow">The Goldbergs (2013)</span><span class="pep">The Age of Darkness</span></div>
+<div class="prog" data-s="1783292693" data-e="1783293990"><span class="ptime" data-ts="1783292693"></span><span class="pshow">The Goldbergs (2013)</span><span class="pep">A Wrestler Named Goldberg</span></div>
+<div class="prog" data-s="1783293990" data-e="1783295390"><span class="ptime" data-ts="1783293990"></span><span class="pshow">The Wonder Years</span><span class="pep">Nemesis</span></div>
+<div class="prog" data-s="1783295390" data-e="1783296760"><span class="ptime" data-ts="1783295390"></span><span class="pshow">The Wonder Years</span><span class="pep">Fate</span></div>
+<div class="prog" data-s="1783296760" data-e="1783298058"><span class="ptime" data-ts="1783296760"></span><span class="pshow">Raising Hope</span><span class="pep">Baby Monitor</span></div></div>
+</div>
+<div class="chan">
+  <div class="chead"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/belair-v1.png" loading="lazy"><div><div class="cnum">CH 215</div><div class="cname">Bel-Air</div></div></div>
+  <div class="progs"><div class="prog" data-s="1783202460" data-e="1783203896"><span class="ptime" data-ts="1783202460"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Nice Lady</span></div>
+<div class="prog" data-s="1783203896" data-e="1783205332"><span class="ptime" data-ts="1783203896"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Love at First Fight</span></div>
+<div class="prog" data-s="1783205332" data-e="1783206770"><span class="ptime" data-ts="1783205332"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Banks Shot</span></div>
+<div class="prog" data-s="1783206770" data-e="1783208165"><span class="ptime" data-ts="1783206770"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">72 Hours</span></div>
+<div class="prog" data-s="1783208165" data-e="1783209571"><span class="ptime" data-ts="1783208165"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Just Infatuation</span></div>
+<div class="prog" data-s="1783209571" data-e="1783210966"><span class="ptime" data-ts="1783209571"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Did the Earth Move for You?</span></div>
+<div class="prog" data-s="1783210966" data-e="1783212292"><span class="ptime" data-ts="1783210966"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">The Mother of All Battles</span></div>
+<div class="prog" data-s="1783212292" data-e="1783213681"><span class="ptime" data-ts="1783212292"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Will Gets a Job</span></div>
+<div class="prog" data-s="1783213681" data-e="1783215075"><span class="ptime" data-ts="1783213681"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">PSAT Pstory</span></div>
+<div class="prog" data-s="1783215075" data-e="1783216469"><span class="ptime" data-ts="1783215075"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Granny Gets Busy</span></div>
+<div class="prog" data-s="1783216469" data-e="1783217863"><span class="ptime" data-ts="1783216469"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Guess Who's Coming to Marry?</span></div>
+<div class="prog" data-s="1783217863" data-e="1783219256"><span class="ptime" data-ts="1783217863"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">The Big Four-Oh</span></div>
+<div class="prog" data-s="1783219256" data-e="1783220651"><span class="ptime" data-ts="1783219256"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">She Ain't Heavy</span></div>
+<div class="prog" data-s="1783220651" data-e="1783222044"><span class="ptime" data-ts="1783220651"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Cased Up</span></div>
+<div class="prog" data-s="1783222044" data-e="1783223418"><span class="ptime" data-ts="1783222044"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Hi-Ho Silver</span></div>
+<div class="prog" data-s="1783223418" data-e="1783224813"><span class="ptime" data-ts="1783223418"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">The Butler Did It</span></div>
+<div class="prog" data-s="1783224813" data-e="1783226201"><span class="ptime" data-ts="1783224813"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Something for Nothing</span></div>
+<div class="prog" data-s="1783226201" data-e="1783227595"><span class="ptime" data-ts="1783226201"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Christmas Show</span></div>
+<div class="prog" data-s="1783227595" data-e="1783228991"><span class="ptime" data-ts="1783227595"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Hilary Gets a Life</span></div>
+<div class="prog" data-s="1783228991" data-e="1783230385"><span class="ptime" data-ts="1783228991"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">My Brother's Keeper</span></div>
+<div class="prog" data-s="1783230385" data-e="1783231780"><span class="ptime" data-ts="1783230385"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Geoffrey Cleans Up</span></div>
+<div class="prog" data-s="1783231780" data-e="1783233174"><span class="ptime" data-ts="1783231780"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Community Action</span></div>
+<div class="prog" data-s="1783233174" data-e="1783234568"><span class="ptime" data-ts="1783233174"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Ill Will</span></div>
+<div class="prog" data-s="1783234568" data-e="1783235962"><span class="ptime" data-ts="1783234568"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Eyes on the Prize</span></div>
+<div class="prog" data-s="1783235962" data-e="1783237349"><span class="ptime" data-ts="1783235962"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Those Were the Days</span></div>
+<div class="prog" data-s="1783237349" data-e="1783238743"><span class="ptime" data-ts="1783237349"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Vying for Attention</span></div>
+<div class="prog" data-s="1783238743" data-e="1783240136"><span class="ptime" data-ts="1783238743"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">The Aunt Who Came to Dinner</span></div>
+<div class="prog" data-s="1783240136" data-e="1783241530"><span class="ptime" data-ts="1783240136"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Be My Baby Tonight</span></div>
+<div class="prog" data-s="1783241530" data-e="1783242905"><span class="ptime" data-ts="1783241530"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Strip-Tease for Two</span></div>
+<div class="prog" data-s="1783242905" data-e="1783244300"><span class="ptime" data-ts="1783242905"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">How I Spent My Summer Vacation</span></div>
+<div class="prog" data-s="1783244300" data-e="1783245694"><span class="ptime" data-ts="1783244300"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Will Gets Committed</span></div>
+<div class="prog" data-s="1783245694" data-e="1783247089"><span class="ptime" data-ts="1783245694"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">That's No Lady, That's My Cousin</span></div>
+<div class="prog" data-s="1783247089" data-e="1783248484"><span class="ptime" data-ts="1783247089"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Hilary Gets a Job</span></div>
+<div class="prog" data-s="1783248484" data-e="1783249879"><span class="ptime" data-ts="1783248484"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Mama's Baby, Carlton's Maybe</span></div>
+<div class="prog" data-s="1783249879" data-e="1783251274"><span class="ptime" data-ts="1783249879"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">P.S. I Love You</span></div>
+<div class="prog" data-s="1783251274" data-e="1783252668"><span class="ptime" data-ts="1783251274"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Here Comes the Judge</span></div>
+<div class="prog" data-s="1783252668" data-e="1783254063"><span class="ptime" data-ts="1783252668"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Boyz in the Woods</span></div>
+<div class="prog" data-s="1783254063" data-e="1783255458"><span class="ptime" data-ts="1783254063"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">A Night at the Oprah</span></div>
+<div class="prog" data-s="1783255458" data-e="1783256854"><span class="ptime" data-ts="1783255458"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Asses to Ashes</span></div>
+<div class="prog" data-s="1783256854" data-e="1783258209"><span class="ptime" data-ts="1783256854"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">A Funny Thing Happened on the Way to the Forum</span></div>
+<div class="prog" data-s="1783258209" data-e="1783259603"><span class="ptime" data-ts="1783258209"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">The Cold War</span></div>
+<div class="prog" data-s="1783259603" data-e="1783260999"><span class="ptime" data-ts="1783259603"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Mommy Nearest</span></div>
+<div class="prog" data-s="1783260999" data-e="1783262394"><span class="ptime" data-ts="1783260999"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Winner Takes Off</span></div>
+<div class="prog" data-s="1783262394" data-e="1783263789"><span class="ptime" data-ts="1783262394"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Robbing the Banks</span></div>
+<div class="prog" data-s="1783263789" data-e="1783265033"><span class="ptime" data-ts="1783263789"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Bundle of Joy</span></div>
+<div class="prog" data-s="1783265033" data-e="1783266428"><span class="ptime" data-ts="1783265033"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">The Best Laid Plans</span></div>
+<div class="prog" data-s="1783266428" data-e="1783267822"><span class="ptime" data-ts="1783266428"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">The Alma Matter</span></div>
+<div class="prog" data-s="1783267822" data-e="1783269216"><span class="ptime" data-ts="1783267822"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Just Say Yo</span></div>
+<div class="prog" data-s="1783269216" data-e="1783270591"><span class="ptime" data-ts="1783269216"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">The Baby Comes Out</span></div>
+<div class="prog" data-s="1783270591" data-e="1783271986"><span class="ptime" data-ts="1783270591"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">You Bet Your Life</span></div>
+<div class="prog" data-s="1783271986" data-e="1783273381"><span class="ptime" data-ts="1783271986"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Ain't No Business Like Show Business</span></div>
+<div class="prog" data-s="1783273381" data-e="1783274776"><span class="ptime" data-ts="1783273381"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">The Way We Were</span></div>
+<div class="prog" data-s="1783274776" data-e="1783276171"><span class="ptime" data-ts="1783274776"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Six Degrees of Graduation</span></div>
+<div class="prog" data-s="1783276171" data-e="1783277437"><span class="ptime" data-ts="1783276171"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Where There's a Will, There's a Way (1)</span></div>
+<div class="prog" data-s="1783277437" data-e="1783278803"><span class="ptime" data-ts="1783277437"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Where There's a Will, There's a Way (2)</span></div>
+<div class="prog" data-s="1783278803" data-e="1783280170"><span class="ptime" data-ts="1783278803"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">All Guts, No Glory</span></div>
+<div class="prog" data-s="1783280170" data-e="1783281531"><span class="ptime" data-ts="1783280170"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Father of the Year</span></div>
+<div class="prog" data-s="1783281531" data-e="1783282862"><span class="ptime" data-ts="1783281531"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">It's Better to Have Loved and Lost It...</span></div>
+<div class="prog" data-s="1783282862" data-e="1783284182"><span class="ptime" data-ts="1783282862"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Will Goes a-Courtin'</span></div>
+<div class="prog" data-s="1783284182" data-e="1783285548"><span class="ptime" data-ts="1783284182"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Hex and the Single Guy</span></div>
+<div class="prog" data-s="1783285548" data-e="1783286842"><span class="ptime" data-ts="1783285548"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Blood is Thicker Than Mud</span></div>
+<div class="prog" data-s="1783286842" data-e="1783288178"><span class="ptime" data-ts="1783286842"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Fresh Prince After Dark</span></div>
+<div class="prog" data-s="1783288178" data-e="1783289544"><span class="ptime" data-ts="1783288178"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Home is Where the Heart Attack Is</span></div>
+<div class="prog" data-s="1783289544" data-e="1783290879"><span class="ptime" data-ts="1783289544"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Take My Cousin... Please</span></div>
+<div class="prog" data-s="1783290879" data-e="1783292244"><span class="ptime" data-ts="1783290879"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">You've Got to Be a Football Hero</span></div>
+<div class="prog" data-s="1783292244" data-e="1783293609"><span class="ptime" data-ts="1783292244"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">'Twas the Night Before Christening</span></div>
+<div class="prog" data-s="1783293609" data-e="1783294975"><span class="ptime" data-ts="1783293609"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Sleepless in Bel-Air</span></div>
+<div class="prog" data-s="1783294975" data-e="1783296325"><span class="ptime" data-ts="1783294975"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">Who's the Boss</span></div>
+<div class="prog" data-s="1783296325" data-e="1783297690"><span class="ptime" data-ts="1783296325"></span><span class="pshow">The Fresh Prince of Bel-Air</span><span class="pep">I Know Why the Caged Bird Screams</span></div></div>
+</div>
+<div class="stamp" id="stamp"></div>
+<footer>☾ A Savage Family Production</footer>
+</div>
+<script>
+const GEN = 1783203639;
+function fmt(ts) {
+  return new Date(ts*1000).toLocaleTimeString([], {hour:'numeric', minute:'2-digit'});
+}
+function paint() {
+  const now = Date.now()/1000;
+  document.querySelectorAll('.ptime[data-ts]').forEach(e => e.textContent = fmt(+e.dataset.ts));
+  document.querySelectorAll('.prog').forEach(p => {
+    const s=+p.dataset.s, e=+p.dataset.e;
+    p.classList.toggle('now', now>=s && now<e);
+    p.classList.toggle('past', e<=now);
+  });
+  const age = Math.round((now-GEN)/3600);
+  document.getElementById('stamp').textContent =
+    'Schedule published ' + new Date(GEN*1000).toLocaleString([], {weekday:'long', hour:'numeric', minute:'2-digit'}) +
+    (age>26 ? ' — check the Plex guide for live times.' : '');
+}
+paint(); setInterval(paint, 30000);
+</script>
+</body></html>
