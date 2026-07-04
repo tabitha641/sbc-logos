@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Savage Broadcasting Company — Channel Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#0f1c2e; --blue:#1d3a6e; --pink:#e0218a; --yellow:#f5c744; --cream:#f5ecd7; --teal:#00b4a6; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--navy); color:var(--cream); font-family:'Inter',sans-serif; width:1100px; margin:0 auto; }
+  .wrap { padding:48px 56px 40px; }
+  /* header */
+  .masthead { text-align:center; position:relative; padding:26px 0 30px; }
+  .moon { position:absolute; left:50%; top:-8px; transform:translateX(-190px); width:150px; height:150px;
+          border-radius:50%; background:var(--pink); opacity:.9; z-index:0; }
+  .moon::after { content:""; position:absolute; left:-34px; top:-20px; width:150px; height:150px;
+          border-radius:50%; background:var(--navy); }
+  .masthead h1 { font-family:'Alfa Slab One',serif; font-size:78px; letter-spacing:2px; color:var(--yellow);
+          text-shadow:5px 5px 0 #000; position:relative; z-index:1; transform:rotate(-2deg); }
+  .masthead .sub { font-size:19px; font-weight:800; letter-spacing:5px; color:var(--cream); margin-top:6px; text-transform:uppercase; position:relative; z-index:1; }
+  .masthead .slogan { font-size:22px; font-style:italic; color:var(--teal); margin-top:12px; position:relative; z-index:1; }
+  /* section titles */
+  h2 { font-family:'Alfa Slab One',serif; font-size:30px; color:var(--pink); margin:38px 0 18px;
+       text-shadow:3px 3px 0 #000; transform:rotate(-1deg); }
+  h2 span { color:var(--yellow); }
+  /* channel grid */
+  .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+  .card { background:rgba(255,255,255,.05); border-radius:14px; padding:14px; display:flex; gap:14px; align-items:center;
+          border:1px solid rgba(255,255,255,.09); }
+  .card img { width:86px; height:86px; border-radius:12px; flex-shrink:0; }
+  .card .num { font-family:'Alfa Slab One',serif; font-size:15px; color:var(--yellow); }
+  .card .name { font-weight:800; font-size:17px; margin:1px 0 3px; }
+  .card .desc { font-size:13px; color:#c9c2b4; line-height:1.35; }
+  .friday { border:2px solid var(--yellow); background:rgba(245,199,68,.08); }
+  .friday .badge { display:inline-block; background:var(--yellow); color:#000; font-size:10px; font-weight:800;
+          border-radius:4px; padding:1px 6px; margin-left:4px; letter-spacing:.5px; }
+  /* seasonal */
+  .seasonal { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+  .season-card { text-align:center; background:rgba(255,255,255,.05); border-radius:14px; padding:16px 10px;
+          border:1px solid rgba(255,255,255,.09); }
+  .season-card img { width:110px; height:110px; border-radius:14px; }
+  .season-card .name { font-weight:800; font-size:16px; margin-top:8px; }
+  .season-card .when { font-size:13px; color:var(--teal); font-weight:600; }
+  /* coming soon */
+  .soon { display:grid; grid-template-columns:repeat(6,1fr); gap:22px 18px; }
+  .soon .soon-item { text-align:center; }
+  .soon img { width:104px; height:104px; border-radius:12px; opacity:.9; }
+  .soon .soon-name { font-size:12.5px; font-weight:600; color:#c9c2b4; margin-top:6px; }
+  .soon-note { font-size:13px; color:#c9c2b4; margin-top:16px; font-style:italic; }
+  /* how to watch */
+  .howto { background:rgba(0,180,166,.09); border:2px solid var(--teal); border-radius:16px; padding:26px 30px; margin-top:14px; }
+  .howto h2 { margin-top:0; color:var(--teal); }
+  .howto ol { margin-left:22px; font-size:16.5px; line-height:1.9; }
+  .howto li b { color:var(--yellow); }
+  .howto .fine { font-size:13px; color:#c9c2b4; margin-top:12px; }
+  footer { text-align:center; margin-top:36px; padding-top:20px; border-top:1px dashed rgba(255,255,255,.2);
+          font-size:14px; color:#c9c2b4; }
+  footer .moonlet { color:var(--pink); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="masthead">
+    <div class="moon"></div>
+    <h1>SBC</h1>
+    <div class="sub">Savage Broadcasting Company</div>
+    <div class="slogan">“Television the way you remember it.”</div>
+  </div>
+
+  <h2>The <span>Channels</span></h2>
+  <div class="grid">
+    <div class="card"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/silver-screen-v2.png"><div><div class="num">CH 1</div><div class="name">The Silver Screen</div><div class="desc">Classics from the black &amp; white era</div></div></div>
+    <div class="card"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/machovision-v3.png"><div><div class="num">CH 3</div><div class="name">MachoVision</div><div class="desc">Wrestling legends, all match long</div></div></div>
+    <div class="card"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/fifth-dimension-v2.png"><div><div class="num">CH 5</div><div class="name">The Fifth Dimension</div><div class="desc">Sci-fi &amp; strange tales</div></div></div>
+    <div class="card"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/saturday-morning-v1.png"><div><div class="num">CH 6</div><div class="name">Saturday Morning</div><div class="desc">Cartoons &amp; cereal energy, any day of the week</div></div></div>
+    <div class="card"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/taba-tv-v1.png"><div><div class="num">CH 7</div><div class="name">Taba TV</div><div class="desc">Tabitha's hand-picked favorites</div></div></div>
+    <div class="card friday"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/tgif.png"><div><div class="num">CH 8 <span class="badge">FRIDAYS ONLY</span></div><div class="name">TGIF</div><div class="desc">Feel-good family sitcoms, Fridays 6&nbsp;PM–midnight</div></div></div>
+    <div class="card"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/y2k-v2.png"><div><div class="num">CH 20</div><div class="name">Y2K</div><div class="desc">Hits of the 2000s &amp; beyond</div></div></div>
+    <div class="card"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/jukebox-v1.png"><div><div class="num">CH 45</div><div class="name">The Jukebox</div><div class="desc">Music, musicals &amp; concerts</div></div></div>
+    <div class="card"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/groovy-v2.png"><div><div class="num">CH 70</div><div class="name">Groovy TV</div><div class="desc">The far-out 60s &amp; 70s</div></div></div>
+    <div class="card"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/late-nite-v2.png"><div><div class="num">CH 75</div><div class="name">Late Nite</div><div class="desc">Sketch comedy after hours</div></div></div>
+    <div class="card"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/iheart80s-v2.png"><div><div class="num">CH 80</div><div class="name">I ♥ 80s</div><div class="desc">80s favorites, neon included</div></div></div>
+    <div class="card"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/peachpit-v1.png"><div><div class="num">CH 90</div><div class="name">The Peach Pit</div><div class="desc">All 90210, all the time</div></div></div>
+    <div class="card"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/prime-time-v2.png"><div><div class="num">CH 95</div><div class="name">Prime Time</div><div class="desc">The 90s block</div></div></div>
+    <div class="card"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/savage-at-nite-v4.png"><div><div class="num">CH 111</div><div class="name">Savage at Nite</div><div class="desc">Retro sitcoms, all nite long</div></div></div>
+    <div class="card"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/belair-v1.png"><div><div class="num">CH 215</div><div class="name">Bel-Air</div><div class="desc">All Fresh Prince, born and raised</div></div></div>
+  </div>
+
+  <h2>Seasonal <span>Pop-Ups</span></h2>
+  <div class="seasonal">
+    <div class="season-card"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/fright-nite.png"><div class="name">Fright Nite</div><div class="when">Every October</div></div>
+    <div class="season-card"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/harvest-nite.png"><div class="name">Harvest Nite</div><div class="when">Thanksgiving season</div></div>
+    <div class="season-card"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/silent-nite.png"><div class="name">Silent Nite</div><div class="when">November &amp; December</div></div>
+    <div class="season-card"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/be-mine-tv.png"><div class="name">Be Mine TV</div><div class="when">Jan 14 – Valentine's Day</div></div>
+  </div>
+
+  <h2>Coming <span>Soon</span></h2>
+  <div class="soon">
+    <div class="soon-item"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/dead-air.png"><div class="soon-name">Dead Air</div></div>
+    <div class="soon-item"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/terror-tv.png"><div class="soon-name">Terror TV</div></div>
+    <div class="soon-item"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/drive-in-v1.png"><div class="soon-name">The Drive-In</div></div>
+    <div class="soon-item"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/kaboom.png"><div class="soon-name">Kaboom</div></div>
+    <div class="soon-item"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/lol-tv.png"><div class="soon-name">LOL</div></div>
+    <div class="soon-item"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/clue-tv.png"><div class="soon-name">Clue TV</div></div>
+    <div class="soon-item"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/wwf.png"><div class="soon-name">WWF</div></div>
+    <div class="soon-item"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/wcw.png"><div class="soon-name">WCW</div></div>
+    <div class="soon-item"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/ecw.png"><div class="soon-name">ECW</div></div>
+    <div class="soon-item"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/tna.png"><div class="soon-name">TNA</div></div>
+    <div class="soon-item"><img src="https://raw.githubusercontent.com/tabitha641/sbc-logos/master/nxt.png"><div class="soon-name">NXT</div></div>
+  </div>
+  <div class="soon-note">New channels light up automatically as the collection grows — the wrestling block premieres with the big rip.</div>
+
+  <div class="howto">
+    <h2>How to <span>Watch</span></h2>
+    <ol>
+      <li><b>Download Plex</b> (free) on your phone, tablet, Apple TV, smart TV, or computer.</li>
+      <li><b>Sign in</b> with the account or SBC guest pass you were given.</li>
+      <li>Find the server named <b>Home</b>, then open <b>Live TV &amp; Guide</b> in the menu.</li>
+      <li><b>Pick a channel and surf</b> — whatever's on is on, just like cable. Prefer to choose? The TV Shows &amp; Movies libraries are right there for on-demand.</li>
+    </ol>
+    <div class="fine">Tip: if something looks stuck or new channels don't appear, fully close the Plex app and reopen it. Fixes almost everything.</div>
+  </div>
+
+  <footer>
+    <span class="moonlet">☾</span> &nbsp;A Savage Family Production · Est. 2026 · Broadcasting nightly from the living room&nbsp; <span class="moonlet">☾</span>
+  </footer>
+</div>
+</body>
+</html>
