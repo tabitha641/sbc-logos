@@ -256,7 +256,7 @@
 // swipe nav
 (function(){var NAV=['index.html','channels.html','schedule.html','flix.html','this-week.html','access.html'];var cur='index.html';var ci=NAV.indexOf(cur);var sx=null;document.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;},{passive:true});document.addEventListener('touchend',function(e){if(sx===null)return;var dx=e.changedTouches[0].clientX-sx;sx=null;if(Math.abs(dx)<60)return;var ni=(ci+(dx<0?1:-1)+NAV.length)%NAV.length;location.href=NAV[ni];});})();
 // service worker
-if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
+if('serviceWorker' in navigator){navigator.serviceWorker.getRegistrations().then(function(rs){rs.forEach(function(r){r.unregister();});});if(window.caches){caches.keys().then(function(ks){ks.forEach(function(k){caches.delete(k);});});}}
 </script>
 </body>
 </html>
